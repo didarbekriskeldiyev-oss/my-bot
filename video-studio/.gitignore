@@ -1,2 +1,4 @@
 node_modules/
 out/
+projects/*/broll/
+projects/*/talk/
