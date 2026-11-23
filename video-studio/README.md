@@ -10,3 +10,9 @@ Reels / YouTube / таргет видеоларын монтаждауға ар�
 | yt-dlp | Интернеттен видео жүктеу |
 
 Сынақ: `npx remotion render src/index.ts Test out/test.mp4`
+
+## Стиль базалары
+
+- `style-base/asyl-ine/` — «Асыл ине» Stories стилі: `STYLE.md` (толық талдау), `style.json` (баптаулар), `frames/` (әр 0,5 с кадрлар).
+- Компоненттер: `src/style/` (`Subtitles`, `Title`, `Stat`, `EndCard`).
+- Демо: `npx remotion render src/index.ts AsylDemo out/asyl-demo.mp4`
