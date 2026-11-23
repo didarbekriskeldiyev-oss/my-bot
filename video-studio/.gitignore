@@ -2,3 +2,5 @@ node_modules/
 out/
 projects/*/broll/
 projects/*/talk/
+public/p0*/
+projects/*/audio/*.wav
