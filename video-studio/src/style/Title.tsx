@@ -16,7 +16,7 @@ export const Title: React.FC<{start: number; end: number; bold: string; italic?:
     <AbsoluteFill>
       <div style={{position: 'absolute', top: height * y, width: '100%', textAlign: 'center', whiteSpace: 'nowrap',
         // shrink long titles so they always fit on one line (~0.62 em per letter)
-        fontSize: Math.min(T.titleSize * 0.85, 960 / (0.62 * (bold.length + (italic?.length ?? 0) + 2))),
+        fontSize: Math.min(T.titleSize * 0.85, 960 / (0.72 * (bold.length + (italic?.length ?? 0) + 2))),
         color: T.white, textShadow: '0 3px 18px rgba(0,0,0,0.6)', transform: `scale(${interpolate(s, [0, 1], [0.7, 1])})`, opacity: s}}>
         {num ? <div style={{fontFamily: T.serif, fontStyle: 'italic', fontWeight: 700, fontSize: '0.6em', color: T.mint, marginBottom: 6}}>{num}</div> : null}
         {icon ? <svg viewBox="0 0 24 24" style={{height: '0.8em', marginRight: 14, verticalAlign: '-0.05em'}}>
@@ -24,7 +24,7 @@ export const Title: React.FC<{start: number; end: number; bold: string; italic?:
         <span style={{fontFamily: T.sans, fontWeight: 800}}>{bold}</span>{' '}
         {italic ? <span style={{fontFamily: T.serif, fontStyle: 'italic', fontWeight: 600, color: T.mint}}>
           {italic.slice(0, chars)}</span> : null}
-        {italic && chars === italic.length ? <span style={{color: T.mint}}>.</span> : null}
+        {italic && chars === italic.length && !/[?!]$/.test(italic) ? <span style={{color: T.mint}}>.</span> : null}
       </div>
     </AbsoluteFill>
   );

@@ -1,0 +1,636 @@
+{
+ "fps": 30,
+ "segs": [
+  {
+   "at": 0.0,
+   "dur": 2.26,
+   "voice": {
+    "src": "p05/voice_IMG_2300.wav",
+    "from": 0.48
+   },
+   "video": {
+    "src": "p01/IMG_1875.mp4",
+    "from": 0.2,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 2.26,
+   "dur": 0.62,
+   "voice": {
+    "src": "p05/voice_IMG_2300.wav",
+    "from": 2.74
+   },
+   "video": {
+    "src": "p05/IMG_2300.mp4",
+    "from": 2.74,
+    "zoom": [
+     1.0,
+     1.02
+    ]
+   },
+   "flash": true
+  },
+  {
+   "at": 2.88,
+   "dur": 2.1,
+   "voice": {
+    "src": "p05/voice_IMG_2300.wav",
+    "from": 3.36
+   },
+   "video": {
+    "src": "p05/IMG_2300.mp4",
+    "from": 3.36,
+    "zoom": [
+     1.14,
+     1.16
+    ]
+   }
+  },
+  {
+   "at": 4.98,
+   "dur": 2.84,
+   "voice": {
+    "src": "p05/voice_IMG_2300.wav",
+    "from": 5.46
+   },
+   "video": {
+    "src": "p05/IMG_2300.mp4",
+    "from": 5.46,
+    "zoom": [
+     1.0,
+     1.02
+    ]
+   }
+  },
+  {
+   "at": 7.82,
+   "dur": 4.22,
+   "voice": {
+    "src": "p05/voice_IMG_2303.wav",
+    "from": 0
+   },
+   "video": {
+    "src": "p01/IMG_1866.mp4",
+    "from": 0.3,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 12.04,
+   "dur": 2.88,
+   "voice": {
+    "src": "p05/voice_IMG_2303.wav",
+    "from": 4.22
+   },
+   "video": {
+    "src": "p01/IMG_1865.mp4",
+    "from": 0.0,
+    "zoom": [
+     1.1,
+     1.14
+    ],
+    "blur": 20
+   },
+   "flash": true
+  },
+  {
+   "at": 14.92,
+   "dur": 3.62,
+   "voice": {
+    "src": "p05/voice_IMG_2303.wav",
+    "from": 7.1
+   },
+   "video": {
+    "src": "p01/IMG_1889.mp4",
+    "from": 1.0,
+    "zoom": [
+     1.1,
+     1.14
+    ],
+    "blur": 20
+   },
+   "flash": true
+  },
+  {
+   "at": 18.54,
+   "dur": 2.02,
+   "voice": {
+    "src": "p05/voice_IMG_2303.wav",
+    "from": 10.72
+   },
+   "video": {
+    "src": "p01/IMG_1866.mp4",
+    "from": 2.0,
+    "zoom": [
+     1.1,
+     1.14
+    ],
+    "blur": 20
+   },
+   "flash": true
+  },
+  {
+   "at": 20.56,
+   "dur": 2.3,
+   "voice": {
+    "src": "p05/voice_IMG_2303.wav",
+    "from": 12.74
+   },
+   "video": {
+    "src": "p01/IMG_1869.mp4",
+    "from": 0.2,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 22.86,
+   "dur": 2.76,
+   "voice": {
+    "src": "p05/voice_IMG_2303.wav",
+    "from": 15.04
+   },
+   "video": {
+    "src": "p01/IMG_1870.mp4",
+    "from": 0.6,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  }
+ ],
+ "phrases": [
+  {
+   "start": 0.06,
+   "end": 1.58,
+   "words": [
+    {
+     "text": "Ұзақ",
+     "start": 0.06,
+     "end": 0.92
+    },
+    {
+     "text": "уақыт",
+     "start": 0.92,
+     "end": 1.18
+    },
+    {
+     "text": "отырып",
+     "start": 1.18,
+     "end": 1.58,
+     "style": "accent"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 1.58,
+   "end": 2.3,
+   "words": [
+    {
+     "text": "жұмыс",
+     "start": 1.58,
+     "end": 1.98
+    },
+    {
+     "text": "істеп",
+     "start": 1.98,
+     "end": 2.2
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 2.3,
+   "end": 3.84,
+   "words": [
+    {
+     "text": "күн",
+     "start": 2.3,
+     "end": 2.46
+    },
+    {
+     "text": "соңында",
+     "start": 2.46,
+     "end": 2.92
+    },
+    {
+     "text": "беліңізде",
+     "start": 2.92,
+     "end": 3.84,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 3.84,
+   "end": 5.02,
+   "words": [
+    {
+     "text": "ауырлық",
+     "start": 3.84,
+     "end": 4.32,
+     "style": "accent"
+    },
+    {
+     "text": "сезесіз",
+     "start": 4.32,
+     "end": 4.698
+    },
+    {
+     "text": "бе?",
+     "start": 4.698,
+     "end": 4.84
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 5.02,
+   "end": 6.78,
+   "words": [
+    {
+     "text": "Онда",
+     "start": 5.02,
+     "end": 5.62
+    },
+    {
+     "text": "мына",
+     "start": 5.62,
+     "end": 5.942
+    },
+    {
+     "text": "жаттығуларды",
+     "start": 5.942,
+     "end": 6.78,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 6.78,
+   "end": 7.82,
+   "words": [
+    {
+     "text": "жасап",
+     "start": 6.78,
+     "end": 7.26
+    },
+    {
+     "text": "көріңіз",
+     "start": 7.26,
+     "end": 7.7
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 7.82,
+   "end": 11.72,
+   "words": [
+    {
+     "text": "Бастапқы",
+     "start": 7.82,
+     "end": 9.0
+    },
+    {
+     "text": "қалып:",
+     "start": 9.0,
+     "end": 9.0
+    },
+    {
+     "text": "шалқаңыздан",
+     "start": 9.0,
+     "end": 11.72,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 11.72,
+   "end": 12.08,
+   "words": [
+    {
+     "text": "жатып",
+     "start": 11.72,
+     "end": 12.08
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 12.08,
+   "end": 13.42,
+   "words": [
+    {
+     "text": "бір",
+     "start": 12.08,
+     "end": 12.28
+    },
+    {
+     "text": "тізеңізді",
+     "start": 12.28,
+     "end": 12.82,
+     "style": "accent"
+    },
+    {
+     "text": "кеудеңізге",
+     "start": 12.82,
+     "end": 13.42,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 13.42,
+   "end": 14.96,
+   "words": [
+    {
+     "text": "қарай",
+     "start": 13.42,
+     "end": 13.76
+    },
+    {
+     "text": "ақырын",
+     "start": 13.76,
+     "end": 14.18,
+     "style": "accent"
+    },
+    {
+     "text": "жақындатыңыз",
+     "start": 14.18,
+     "end": 14.96
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 14.96,
+   "end": 16.62,
+   "words": [
+    {
+     "text": "Осы",
+     "start": 14.96,
+     "end": 15.78
+    },
+    {
+     "text": "қалыпта",
+     "start": 15.78,
+     "end": 16.18
+    },
+    {
+     "text": "5–10",
+     "start": 16.18,
+     "end": 16.62,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 16.62,
+   "end": 17.32,
+   "words": [
+    {
+     "text": "секунд",
+     "start": 16.62,
+     "end": 17.0,
+     "style": "box"
+    },
+    {
+     "text": "ұстап",
+     "start": 17.0,
+     "end": 17.32
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 17.32,
+   "end": 18.58,
+   "words": [
+    {
+     "text": "аяғыңызды",
+     "start": 17.32,
+     "end": 18.0
+    },
+    {
+     "text": "түсіріңіз",
+     "start": 18.0,
+     "end": 18.58
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 18.58,
+   "end": 20.6,
+   "words": [
+    {
+     "text": "Екінші",
+     "start": 18.58,
+     "end": 19.54,
+     "style": "accent"
+    },
+    {
+     "text": "аяқпен",
+     "start": 19.54,
+     "end": 19.92
+    },
+    {
+     "text": "қайталаңыз",
+     "start": 19.92,
+     "end": 20.6
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 20.6,
+   "end": 22.1,
+   "words": [
+    {
+     "text": "Бұл",
+     "start": 20.6,
+     "end": 21.48
+    },
+    {
+     "text": "жаттығу",
+     "start": 21.48,
+     "end": 21.9
+    },
+    {
+     "text": "бел",
+     "start": 21.9,
+     "end": 22.1,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 22.1,
+   "end": 23.74,
+   "words": [
+    {
+     "text": "айналасындағы",
+     "start": 22.1,
+     "end": 22.9
+    },
+    {
+     "text": "бұлшықеттердің",
+     "start": 22.9,
+     "end": 23.74
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 23.74,
+   "end": 26.0,
+   "words": [
+    {
+     "text": "жеңіл",
+     "start": 23.74,
+     "end": 24.04,
+     "style": "pop"
+    },
+    {
+     "text": "созылуына",
+     "start": 24.04,
+     "end": 24.66,
+     "style": "accent"
+    },
+    {
+     "text": "көмектеседі",
+     "start": 24.66,
+     "end": 25.5
+    }
+   ],
+   "dot": true
+  }
+ ],
+ "titles": [
+  {
+   "start": 2.92,
+   "end": 5.02,
+   "bold": "БЕЛ",
+   "italic": "ауырады ма?",
+   "y": 0.14
+  },
+  {
+   "start": 5.942,
+   "end": 7.7,
+   "bold": "ЖАТТЫҒУ",
+   "italic": "жасаңыз",
+   "y": 0.14
+  },
+  {
+   "start": 7.82,
+   "end": 12.08,
+   "bold": "ШАЛҚАДАН",
+   "italic": "жатыңыз",
+   "y": 0.14
+  },
+  {
+   "start": 20.6,
+   "end": 25.5,
+   "bold": "БЕЛ",
+   "italic": "бұлшықеттері созылады",
+   "y": 0.14
+  }
+ ],
+ "sfx": [
+  {
+   "src": "whoosh.wav",
+   "at": 2.72,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 5.742,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 7.62,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 20.4,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 11.78,
+   "volume": 0.35
+  },
+  {
+   "src": "pop.wav",
+   "at": 14.96,
+   "volume": 0.4
+  },
+  {
+   "src": "pop.wav",
+   "at": 18.58,
+   "volume": 0.4
+  }
+ ],
+ "lists": [],
+ "icons": [],
+ "stats": [],
+ "exercises": [
+  {
+   "kind": "kneeChest",
+   "start": 11.98,
+   "end": 20.55,
+   "bold": "ТІЗЕНІ",
+   "italic": "кеудеге",
+   "holdAt": 14.96,
+   "switchAt": 18.58
+  }
+ ],
+ "endCard": {
+  "at": 25.92,
+  "brand": "Asyl Ine",
+  "tagline": "ШЫҒЫС МЕДИЦИНАСЫ ОРТАЛЫҒЫ",
+  "line": "Бел ауырса — маманға жүгініңіз",
+  "wish": "Деніңіз сау болсын!",
+  "logo": true
+ },
+ "duration": 28.92,
+ "music": {
+  "src": "p05/music.wav",
+  "volume": 0.36,
+  "duckTo": 0.6,
+  "duck": [
+   [
+    -0.02,
+    25.62
+   ]
+  ]
+ }
+}
