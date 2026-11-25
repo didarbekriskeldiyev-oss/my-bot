@@ -17,7 +17,7 @@ export type PromoSpec = {
   impacts: number[];
   phrases: Phrase[];
   voice: {src: string; from: number};
-  music: {src: string; volume: number};
+  music: {src: string; volume: number; duckTo?: number; duck?: [number, number][]};
   sfx: {src: string; at: number; volume: number}[];
   endCard: {at: number; brand: string; tagline: string; line: string; wish: string};
 };
@@ -375,8 +375,16 @@ export const Promo: React.FC<{spec: PromoSpec}> = ({spec}) => {
         <BrandEnd line={spec.endCard.line} wish={spec.endCard.wish} /><Flash />
       </Sequence>
       <Audio src={staticFile(spec.voice.src)} startFrom={fr(spec.voice.from)} />
-      <Audio src={staticFile(spec.music.src)} volume={(f) =>
-        interpolate(f, [fr(spec.duration) - fps * 1.5, fr(spec.duration)], [spec.music.volume, 0], clamp)} />
+      <Audio src={staticFile(spec.music.src)} volume={(f) => {
+        // duck the music under the voice (smooth 0.15 s ramps), fade out at the very end
+        const t = f / fps; const ramp = 0.15;
+        let d = 0;
+        for (const [a0, b0] of spec.music.duck ?? []) {
+          d = Math.max(d, Math.min(interpolate(t, [a0 - ramp, a0], [0, 1], clamp), interpolate(t, [b0, b0 + ramp], [1, 0], clamp)));
+        }
+        const level = spec.music.volume * (1 - d * (1 - (spec.music.duckTo ?? 1)));
+        return level * interpolate(f, [fr(spec.duration) - fps * 1.0, fr(spec.duration)], [1, 0], clamp);
+      }} />
       {spec.sfx.map((x, i) => <Sequence key={i} from={fr(x.at)}><Audio src={staticFile(x.src)} volume={x.volume} /></Sequence>)}
     </AbsoluteFill>
   );

@@ -99,11 +99,18 @@ spec = {
     },
     'phrases': phrases,
     'voice': {'src': 'p03/voice.wav', 'from': LEAD},
-    'music': {'src': 'p03/music.wav', 'volume': 0.32},
+    'music': {'src': 'p03/music.wav', 'volume': 0.36, 'duckTo': 0.6},
     'endCard': {'at': end_at, 'brand': 'Asyl Ine', 'tagline': 'ШЫҒЫС МЕДИЦИНАСЫ ОРТАЛЫҒЫ',
                 'line': '24 айға дейін пайызсыз бөліп төлеу', 'wish': 'Деніңіз сау болсын!'},
 }
 spec['duration'] = round(end_at + 3.0, 3)
+# speech intervals: music is turned down while the voice speaks (ducking)
+iv = []
+for w in words:
+    a0, b0 = w['start'] - 0.08, w['end'] + 0.12
+    if iv and a0 - iv[-1][1] < 0.35: iv[-1][1] = b0
+    else: iv.append([a0, b0])
+spec['music']['duck'] = [[round(a0, 3), round(b0, 3)] for a0, b0 in iv]
 IMPACT = ['news_bang', 'brand', 'em', 'access_word', 'strike', 'count', 'zero', 'tick1', 'tick2', 'zhazylu', 'send']
 spec['impacts'] = [spec['marks'][k] for k in IMPACT]
 spec['sfx'] = [{'src': 'whoosh.wav', 'at': round(max(0, s['start'] - 0.15), 3), 'volume': 0.4} for s in spec['scenes'][1:]] + \
