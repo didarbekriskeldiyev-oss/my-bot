@@ -2,458 +2,482 @@
  "fps": 30,
  "scenes": [
   {
-   "kind": "news",
+   "kind": "logo",
    "start": 0.0,
-   "end": 2.15
+   "end": 0.94
+  },
+  {
+   "kind": "news",
+   "start": 0.94,
+   "end": 3.08
+  },
+  {
+   "kind": "now",
+   "start": 3.08,
+   "end": 3.86
+  },
+  {
+   "kind": "brand",
+   "start": 3.86,
+   "end": 5.78
   },
   {
    "kind": "access",
-   "start": 2.15,
-   "end": 7.43
+   "start": 5.78,
+   "end": 8.36
   },
   {
    "kind": "nofull",
-   "start": 7.43,
-   "end": 10.77
+   "start": 8.36,
+   "end": 11.7
   },
   {
    "kind": "installment",
-   "start": 10.77,
-   "end": 15.05
+   "start": 11.7,
+   "end": 15.98
   },
   {
    "kind": "benefit",
-   "start": 15.05,
-   "end": 19.09
+   "start": 15.98,
+   "end": 20.02
+  },
+  {
+   "kind": "info",
+   "start": 20.02,
+   "end": 22.36
   },
   {
    "kind": "dm",
-   "start": 19.09,
-   "end": 25.06
+   "start": 22.36,
+   "end": 25.96
   }
  ],
  "marks": {
-  "news_bang": 1.0,
-  "brand": 3.08,
-  "access_word": 6.4,
-  "strike": 10.3,
-  "count": 12.22,
-  "zero": 13.64,
-  "tick1": 17.82,
-  "tick2": 18.5,
-  "type": 22.1,
-  "send": 23.0
+  "news_bang": 1.9,
+  "brand": 3.98,
+  "access_word": 7.3,
+  "strike": 11.2,
+  "count": 13.12,
+  "zero": 14.54,
+  "tick1": 18.72,
+  "tick2": 19.4,
+  "type": 23.0,
+  "send": 23.9,
+  "em": 5.9,
+  "qabyldau": 6.26,
+  "info": 20.84,
+  "zhazylu": 21.82
  },
  "phrases": [
   {
-   "start": 0.16,
-   "end": 2.3,
+   "start": 1.06,
+   "end": 3.2,
    "words": [
     {
      "text": "Сіздерге",
-     "start": 0.16,
-     "end": 1.0
+     "start": 1.06,
+     "end": 1.9
     },
     {
      "text": "керемет",
-     "start": 1.0,
-     "end": 1.52,
+     "start": 1.9,
+     "end": 2.42,
      "style": "accent"
     },
     {
      "text": "жаңалығымыз",
-     "start": 1.52,
-     "end": 2.1,
+     "start": 2.42,
+     "end": 3.0,
      "style": "box"
     },
     {
      "text": "бар!",
-     "start": 2.1,
-     "end": 2.3
+     "start": 3.0,
+     "end": 3.2
     }
    ],
    "dot": false
   },
   {
-   "start": 2.3,
-   "end": 3.7,
+   "start": 3.2,
+   "end": 4.554,
    "words": [
     {
      "text": "Енді",
-     "start": 2.3,
-     "end": 3.08
+     "start": 3.2,
+     "end": 3.98
     },
     {
-     "text": "Асыл",
-     "start": 3.08,
-     "end": 3.5,
+     "text": "Asyl",
+     "start": 3.98,
+     "end": 4.299,
      "style": "box"
     },
     {
-     "text": "ине",
-     "start": 3.5,
-     "end": 3.7,
+     "text": "Ine",
+     "start": 4.299,
+     "end": 4.554,
      "style": "box"
     }
    ],
    "dot": false
   },
   {
-   "start": 3.7,
-   "end": 5.0,
+   "start": 4.554,
+   "end": 5.9,
    "words": [
     {
      "text": "медициналық",
-     "start": 3.7,
-     "end": 4.42
+     "start": 4.554,
+     "end": 5.32
     },
     {
      "text": "орталығында",
-     "start": 4.42,
-     "end": 5.0
+     "start": 5.32,
+     "end": 5.9
     }
    ],
    "dot": false
   },
   {
-   "start": 5.0,
-   "end": 6.216,
+   "start": 5.9,
+   "end": 7.116,
    "words": [
     {
      "text": "ем",
-     "start": 5.0,
-     "end": 5.36
+     "start": 5.9,
+     "end": 6.26
     },
     {
      "text": "қабылдау",
-     "start": 5.36,
-     "end": 5.911
+     "start": 6.26,
+     "end": 6.811
     },
     {
      "text": "одан",
-     "start": 5.911,
-     "end": 6.216
+     "start": 6.811,
+     "end": 7.116
     }
    ],
    "dot": false
   },
   {
-   "start": 6.216,
-   "end": 7.58,
+   "start": 7.116,
+   "end": 8.48,
    "words": [
     {
      "text": "да",
-     "start": 6.216,
-     "end": 6.4
+     "start": 7.116,
+     "end": 7.3
     },
     {
      "text": "қолжетімді",
-     "start": 6.4,
-     "end": 7.02,
+     "start": 7.3,
+     "end": 7.92,
      "style": "accent"
     },
     {
      "text": "бола",
-     "start": 7.02,
-     "end": 7.28
+     "start": 7.92,
+     "end": 8.18
     },
     {
      "text": "түсті!",
-     "start": 7.28,
-     "end": 7.58
+     "start": 8.18,
+     "end": 8.48
     }
    ],
    "dot": false
   },
   {
-   "start": 7.58,
-   "end": 9.14,
+   "start": 8.48,
+   "end": 10.04,
    "words": [
     {
      "text": "Енді",
-     "start": 7.58,
-     "end": 8.38
+     "start": 8.48,
+     "end": 9.28
     },
     {
      "text": "емделу",
-     "start": 8.38,
-     "end": 8.9
+     "start": 9.28,
+     "end": 9.8
     },
     {
      "text": "құнын",
-     "start": 8.9,
-     "end": 9.14
+     "start": 9.8,
+     "end": 10.04
     }
    ],
    "dot": false
   },
   {
-   "start": 9.14,
-   "end": 10.3,
+   "start": 10.04,
+   "end": 11.2,
    "words": [
     {
      "text": "бірден",
-     "start": 9.14,
-     "end": 9.54,
+     "start": 10.04,
+     "end": 10.44,
      "style": "pop"
     },
     {
      "text": "толық",
-     "start": 9.54,
-     "end": 9.9
+     "start": 10.44,
+     "end": 10.8
     },
     {
      "text": "төлеудің",
-     "start": 9.9,
-     "end": 10.3
+     "start": 10.8,
+     "end": 11.2
     }
    ],
    "dot": false
   },
   {
-   "start": 10.3,
-   "end": 10.92,
+   "start": 11.2,
+   "end": 11.82,
    "words": [
     {
      "text": "қажеті",
-     "start": 10.3,
-     "end": 10.7,
+     "start": 11.2,
+     "end": 11.6,
      "style": "accent"
     },
     {
      "text": "жоқ",
-     "start": 10.7,
-     "end": 10.92
+     "start": 11.6,
+     "end": 11.82
     }
    ],
    "dot": true
   },
   {
-   "start": 10.92,
-   "end": 12.22,
+   "start": 11.82,
+   "end": 13.12,
    "words": [
     {
      "text": "Сіз",
-     "start": 10.92,
-     "end": 11.4
+     "start": 11.82,
+     "end": 12.3
     },
     {
      "text": "емнің",
-     "start": 11.4,
-     "end": 11.8
+     "start": 12.3,
+     "end": 12.7
     },
     {
      "text": "ақысын",
-     "start": 11.8,
-     "end": 12.22
+     "start": 12.7,
+     "end": 13.12
     }
    ],
    "dot": false
   },
   {
-   "start": 12.22,
-   "end": 13.64,
+   "start": 13.12,
+   "end": 14.54,
    "words": [
     {
      "text": "24",
-     "start": 12.22,
-     "end": 12.78,
+     "start": 13.12,
+     "end": 13.68,
      "style": "box"
     },
     {
      "text": "айға",
-     "start": 12.78,
-     "end": 13.42,
+     "start": 13.68,
+     "end": 14.32,
      "style": "box"
     },
     {
      "text": "дейін",
-     "start": 13.42,
-     "end": 13.64
+     "start": 14.32,
+     "end": 14.54
     }
    ],
    "dot": false
   },
   {
-   "start": 13.64,
-   "end": 15.2,
+   "start": 14.54,
+   "end": 16.1,
    "words": [
     {
      "text": "пайызсыз",
-     "start": 13.64,
-     "end": 14.22,
+     "start": 14.54,
+     "end": 15.12,
      "style": "accent"
     },
     {
      "text": "бөліп",
-     "start": 14.22,
-     "end": 14.48
+     "start": 15.12,
+     "end": 15.38
     },
     {
      "text": "төлей",
-     "start": 14.48,
-     "end": 14.7
+     "start": 15.38,
+     "end": 15.6
     },
     {
      "text": "аласыз!",
-     "start": 14.7,
-     "end": 15.2
+     "start": 15.6,
+     "end": 16.1
     }
    ],
    "dot": false
   },
   {
-   "start": 15.2,
-   "end": 17.0,
+   "start": 16.1,
+   "end": 17.9,
    "words": [
     {
      "text": "Денсаулығыңызға",
-     "start": 15.2,
-     "end": 16.42,
+     "start": 16.1,
+     "end": 17.32,
      "style": "accent"
     },
     {
      "text": "қамқорлық",
-     "start": 16.42,
-     "end": 17.0
+     "start": 17.32,
+     "end": 17.9
     }
    ],
    "dot": false
   },
   {
-   "start": 17.0,
-   "end": 18.3,
+   "start": 17.9,
+   "end": 19.2,
    "words": [
     {
      "text": "жасау",
-     "start": 17.0,
-     "end": 17.36
+     "start": 17.9,
+     "end": 18.26
     },
     {
      "text": "енді",
-     "start": 17.36,
-     "end": 17.82
+     "start": 18.26,
+     "end": 18.72
     },
     {
      "text": "тиімді",
-     "start": 17.82,
-     "end": 18.3,
+     "start": 18.72,
+     "end": 19.2,
      "style": "box"
     }
    ],
    "dot": false
   },
   {
-   "start": 18.3,
-   "end": 19.24,
+   "start": 19.2,
+   "end": 20.14,
    "words": [
     {
      "text": "әрі",
-     "start": 18.3,
-     "end": 18.5
+     "start": 19.2,
+     "end": 19.4
     },
     {
      "text": "қолжетімді!",
-     "start": 18.5,
-     "end": 19.24,
+     "start": 19.4,
+     "end": 20.14,
      "style": "accent"
     }
    ],
    "dot": false
   },
   {
-   "start": 19.24,
-   "end": 20.64,
+   "start": 20.14,
+   "end": 21.54,
    "words": [
     {
      "text": "Толық",
-     "start": 19.24,
-     "end": 19.94
+     "start": 20.14,
+     "end": 20.84
     },
     {
      "text": "ақпарат",
-     "start": 19.94,
-     "end": 20.38
+     "start": 20.84,
+     "end": 21.28
     },
     {
      "text": "алу",
-     "start": 20.38,
-     "end": 20.64
+     "start": 21.28,
+     "end": 21.54
     }
    ],
    "dot": false
   },
   {
-   "start": 20.64,
-   "end": 21.58,
+   "start": 21.54,
+   "end": 22.48,
    "words": [
     {
      "text": "және",
-     "start": 20.64,
-     "end": 20.92
+     "start": 21.54,
+     "end": 21.82
     },
     {
      "text": "жазылу",
-     "start": 20.92,
-     "end": 21.4
+     "start": 21.82,
+     "end": 22.3
     },
     {
      "text": "үшін",
-     "start": 21.4,
-     "end": 21.58
+     "start": 22.3,
+     "end": 22.48
     }
    ],
    "dot": false
   },
   {
-   "start": 21.58,
-   "end": 23.0,
+   "start": 22.48,
+   "end": 23.9,
    "words": [
     {
      "text": "жекеге",
-     "start": 21.58,
-     "end": 22.1,
+     "start": 22.48,
+     "end": 23.0,
      "style": "accent"
     },
     {
      "text": "Үлгеремін",
-     "start": 22.1,
-     "end": 23.0,
+     "start": 23.0,
+     "end": 23.9,
      "style": "box"
     }
    ],
    "dot": false
   },
   {
-   "start": 23.0,
-   "end": 23.78,
+   "start": 23.9,
+   "end": 24.68,
    "words": [
     {
      "text": "сөзін",
-     "start": 23.0,
-     "end": 23.32
+     "start": 23.9,
+     "end": 24.22
     },
     {
      "text": "жазып",
-     "start": 23.32,
-     "end": 23.68
+     "start": 24.22,
+     "end": 24.58
     }
    ],
    "dot": false
   },
   {
-   "start": 23.78,
-   "end": 25.16,
+   "start": 24.68,
+   "end": 26.06,
    "words": [
     {
      "text": "үлгеріп",
-     "start": 23.78,
-     "end": 24.2
+     "start": 24.68,
+     "end": 25.1
     },
     {
      "text": "қалыңыз!",
-     "start": 24.2,
-     "end": 24.66
+     "start": 25.1,
+     "end": 25.56
     }
    ],
    "dot": false
@@ -461,50 +485,138 @@
  ],
  "voice": {
   "src": "p03/voice.wav",
-  "from": 0.9
+  "from": 0.0
  },
  "music": {
   "src": "p03/music.wav",
-  "volume": 0.3
+  "volume": 0.32
  },
  "endCard": {
-  "at": 25.06,
-  "brand": "Асыл ине",
+  "at": 25.96,
+  "brand": "Asyl Ine",
   "tagline": "ШЫҒЫС МЕДИЦИНАСЫ ОРТАЛЫҒЫ",
   "line": "24 айға дейін пайызсыз бөліп төлеу",
   "wish": "Деніңіз сау болсын!"
  },
- "duration": 28.06,
+ "duration": 28.96,
+ "impacts": [
+  1.9,
+  3.98,
+  5.9,
+  7.3,
+  11.2,
+  13.12,
+  14.54,
+  18.72,
+  19.4,
+  21.82,
+  23.9
+ ],
  "sfx": [
   {
    "src": "whoosh.wav",
-   "at": 2.0,
+   "at": 0.79,
    "volume": 0.4
   },
   {
    "src": "whoosh.wav",
-   "at": 7.28,
+   "at": 2.93,
    "volume": 0.4
   },
   {
    "src": "whoosh.wav",
-   "at": 10.62,
+   "at": 3.71,
    "volume": 0.4
   },
   {
    "src": "whoosh.wav",
-   "at": 14.9,
+   "at": 5.63,
    "volume": 0.4
   },
   {
    "src": "whoosh.wav",
-   "at": 18.94,
+   "at": 8.21,
    "volume": 0.4
   },
   {
    "src": "whoosh.wav",
-   "at": 24.91,
+   "at": 11.55,
    "volume": 0.4
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 15.83,
+   "volume": 0.4
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 19.87,
+   "volume": 0.4
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 22.21,
+   "volume": 0.4
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 25.81,
+   "volume": 0.4
+  },
+  {
+   "src": "pop.wav",
+   "at": 1.9,
+   "volume": 0.45
+  },
+  {
+   "src": "pop.wav",
+   "at": 3.98,
+   "volume": 0.45
+  },
+  {
+   "src": "pop.wav",
+   "at": 5.9,
+   "volume": 0.45
+  },
+  {
+   "src": "pop.wav",
+   "at": 7.3,
+   "volume": 0.45
+  },
+  {
+   "src": "pop.wav",
+   "at": 11.2,
+   "volume": 0.45
+  },
+  {
+   "src": "pop.wav",
+   "at": 13.12,
+   "volume": 0.45
+  },
+  {
+   "src": "pop.wav",
+   "at": 14.54,
+   "volume": 0.45
+  },
+  {
+   "src": "pop.wav",
+   "at": 18.72,
+   "volume": 0.45
+  },
+  {
+   "src": "pop.wav",
+   "at": 19.4,
+   "volume": 0.45
+  },
+  {
+   "src": "pop.wav",
+   "at": 21.82,
+   "volume": 0.45
+  },
+  {
+   "src": "pop.wav",
+   "at": 23.9,
+   "volume": 0.45
   }
  ]
 }

@@ -4,13 +4,13 @@ Writes ../../src/edit/p03.json."""
 import json, re, difflib, pathlib
 
 HERE = pathlib.Path(__file__).parent
-LEAD = 0.9  # voice starts at ~1.1 s in the recording; video starts 0.2 s before
+LEAD = 0.0  # voice starts at ~1.1 s in the recording; the first second is the logo intro
 
-SPOKEN = ('Сіздерге керемет жаңалығымыз бар! Енді «Асыл ине» медициналық орталығында ем қабылдау одан да '
+SPOKEN = ('Сіздерге керемет жаңалығымыз бар! Енді «Asyl Ine» медициналық орталығында ем қабылдау одан да '
           'қолжетімді бола түсті! Енді емделу құнын бірден толық төлеудің қажеті жоқ. Сіз емнің ақысын 24 айға '
           'дейін пайызсыз бөліп төлей аласыз! Денсаулығыңызға қамқорлық жасау енді тиімді әрі қолжетімді! '
           'Толық ақпарат алу және жазылу үшін жекеге «Үлгеремін» сөзін жазып, үлгеріп қалыңыз!')
-EMPH = {'керемет': 'accent', 'жаңалығымыз': 'box', 'асыл': 'box', 'ине': 'box', 'қолжетімді': 'accent',
+EMPH = {'керемет': 'accent', 'жаңалығымыз': 'box', 'asyl': 'box', 'ine': 'box', 'қолжетімді': 'accent',
         'бірден': 'pop', 'қажеті': 'accent', '24': 'box', 'айға': 'box', 'пайызсыз': 'accent',
         'денсаулығыңызға': 'accent', 'тиімді': 'box', 'үлгеремін': 'box', 'жекеге': 'accent'}
 
@@ -72,14 +72,19 @@ def at(prefix, n=1, exact=False):
     hit = [w['start'] for w in words if (norm(w['text']) == prefix if exact else norm(w['text']).startswith(prefix))]
     return round(hit[n - 1], 3)
 
-# Scene starts (a new scene starts a little before its first word)
+# Scene starts (a new scene starts a little before its first word) — short beats for a fast pace
+P = 0.12
 scenes = [
-    ('news', 0.0),
-    ('access', at('енді', 1) - 0.15),
-    ('nofull', at('енді', 2) - 0.15),
-    ('installment', at('сіз', exact=True) - 0.15),
-    ('benefit', at('денсаулығыңызға') - 0.15),
-    ('dm', at('толық', 2) - 0.15),
+    ('logo', 0.0),
+    ('news', at('сіздерге') - P),
+    ('now', at('енді', 1) - P),
+    ('brand', at('asyl') - P),
+    ('access', at('ем', exact=True) - P),
+    ('nofull', at('енді', 2) - P),
+    ('installment', at('сіз', exact=True) - P),
+    ('benefit', at('денсаулығыңызға') - P),
+    ('info', at('толық', 2) - P),
+    ('dm', at('жекеге') - P),
 ]
 end_at = round(voice_end + 0.4, 3)
 spec = {
@@ -87,19 +92,23 @@ spec = {
     'scenes': [{'kind': k, 'start': round(s, 3), 'end': round((scenes[i + 1][1] if i + 1 < len(scenes) else end_at), 3)}
                for i, (k, s) in enumerate(scenes)],
     'marks': {  # word times that trigger animations inside scenes
-        'news_bang': at('керемет'), 'brand': at('асыл'), 'access_word': at('қолжетімді', 1), 'strike': at('қажеті'),
+        'news_bang': at('керемет'), 'brand': at('asyl'), 'access_word': at('қолжетімді', 1), 'strike': at('қажеті'),
         'count': at('24'), 'zero': at('пайызсыз'), 'tick1': at('тиімді'), 'tick2': at('қолжетімді', 2),
         'type': at('үлгеремін'), 'send': at('сөзін'),
+        'em': at('ем', exact=True), 'qabyldau': at('қабылдау'), 'info': at('ақпарат'), 'zhazylu': at('жазылу'),
     },
     'phrases': phrases,
     'voice': {'src': 'p03/voice.wav', 'from': LEAD},
-    'music': {'src': 'p03/music.wav', 'volume': 0.3},
-    'endCard': {'at': end_at, 'brand': 'Асыл ине', 'tagline': 'ШЫҒЫС МЕДИЦИНАСЫ ОРТАЛЫҒЫ',
+    'music': {'src': 'p03/music.wav', 'volume': 0.32},
+    'endCard': {'at': end_at, 'brand': 'Asyl Ine', 'tagline': 'ШЫҒЫС МЕДИЦИНАСЫ ОРТАЛЫҒЫ',
                 'line': '24 айға дейін пайызсыз бөліп төлеу', 'wish': 'Деніңіз сау болсын!'},
 }
 spec['duration'] = round(end_at + 3.0, 3)
+IMPACT = ['news_bang', 'brand', 'em', 'access_word', 'strike', 'count', 'zero', 'tick1', 'tick2', 'zhazylu', 'send']
+spec['impacts'] = [spec['marks'][k] for k in IMPACT]
 spec['sfx'] = [{'src': 'whoosh.wav', 'at': round(max(0, s['start'] - 0.15), 3), 'volume': 0.4} for s in spec['scenes'][1:]] + \
-              [{'src': 'whoosh.wav', 'at': round(end_at - 0.15, 3), 'volume': 0.4}]
+              [{'src': 'whoosh.wav', 'at': round(end_at - 0.15, 3), 'volume': 0.4}] + \
+              [{'src': 'pop.wav', 'at': round(t, 3), 'volume': 0.45} for t in spec['impacts']]
 json.dump(spec, open(HERE / '../../src/edit/p03.json', 'w'), ensure_ascii=False, indent=1)
 print('duration', spec['duration'])
 for s in spec['scenes']:
