@@ -1,0 +1,510 @@
+{
+ "fps": 30,
+ "scenes": [
+  {
+   "kind": "news",
+   "start": 0.0,
+   "end": 2.15
+  },
+  {
+   "kind": "access",
+   "start": 2.15,
+   "end": 7.43
+  },
+  {
+   "kind": "nofull",
+   "start": 7.43,
+   "end": 10.77
+  },
+  {
+   "kind": "installment",
+   "start": 10.77,
+   "end": 15.05
+  },
+  {
+   "kind": "benefit",
+   "start": 15.05,
+   "end": 19.09
+  },
+  {
+   "kind": "dm",
+   "start": 19.09,
+   "end": 25.06
+  }
+ ],
+ "marks": {
+  "news_bang": 1.0,
+  "brand": 3.08,
+  "access_word": 6.4,
+  "strike": 10.3,
+  "count": 12.22,
+  "zero": 13.64,
+  "tick1": 17.82,
+  "tick2": 18.5,
+  "type": 22.1,
+  "send": 23.0
+ },
+ "phrases": [
+  {
+   "start": 0.16,
+   "end": 2.3,
+   "words": [
+    {
+     "text": "Сіздерге",
+     "start": 0.16,
+     "end": 1.0
+    },
+    {
+     "text": "керемет",
+     "start": 1.0,
+     "end": 1.52,
+     "style": "accent"
+    },
+    {
+     "text": "жаңалығымыз",
+     "start": 1.52,
+     "end": 2.1,
+     "style": "box"
+    },
+    {
+     "text": "бар!",
+     "start": 2.1,
+     "end": 2.3
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 2.3,
+   "end": 3.7,
+   "words": [
+    {
+     "text": "Енді",
+     "start": 2.3,
+     "end": 3.08
+    },
+    {
+     "text": "Асыл",
+     "start": 3.08,
+     "end": 3.5,
+     "style": "box"
+    },
+    {
+     "text": "ине",
+     "start": 3.5,
+     "end": 3.7,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 3.7,
+   "end": 5.0,
+   "words": [
+    {
+     "text": "медициналық",
+     "start": 3.7,
+     "end": 4.42
+    },
+    {
+     "text": "орталығында",
+     "start": 4.42,
+     "end": 5.0
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 5.0,
+   "end": 6.216,
+   "words": [
+    {
+     "text": "ем",
+     "start": 5.0,
+     "end": 5.36
+    },
+    {
+     "text": "қабылдау",
+     "start": 5.36,
+     "end": 5.911
+    },
+    {
+     "text": "одан",
+     "start": 5.911,
+     "end": 6.216
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 6.216,
+   "end": 7.58,
+   "words": [
+    {
+     "text": "да",
+     "start": 6.216,
+     "end": 6.4
+    },
+    {
+     "text": "қолжетімді",
+     "start": 6.4,
+     "end": 7.02,
+     "style": "accent"
+    },
+    {
+     "text": "бола",
+     "start": 7.02,
+     "end": 7.28
+    },
+    {
+     "text": "түсті!",
+     "start": 7.28,
+     "end": 7.58
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 7.58,
+   "end": 9.14,
+   "words": [
+    {
+     "text": "Енді",
+     "start": 7.58,
+     "end": 8.38
+    },
+    {
+     "text": "емделу",
+     "start": 8.38,
+     "end": 8.9
+    },
+    {
+     "text": "құнын",
+     "start": 8.9,
+     "end": 9.14
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 9.14,
+   "end": 10.3,
+   "words": [
+    {
+     "text": "бірден",
+     "start": 9.14,
+     "end": 9.54,
+     "style": "pop"
+    },
+    {
+     "text": "толық",
+     "start": 9.54,
+     "end": 9.9
+    },
+    {
+     "text": "төлеудің",
+     "start": 9.9,
+     "end": 10.3
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 10.3,
+   "end": 10.92,
+   "words": [
+    {
+     "text": "қажеті",
+     "start": 10.3,
+     "end": 10.7,
+     "style": "accent"
+    },
+    {
+     "text": "жоқ",
+     "start": 10.7,
+     "end": 10.92
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 10.92,
+   "end": 12.22,
+   "words": [
+    {
+     "text": "Сіз",
+     "start": 10.92,
+     "end": 11.4
+    },
+    {
+     "text": "емнің",
+     "start": 11.4,
+     "end": 11.8
+    },
+    {
+     "text": "ақысын",
+     "start": 11.8,
+     "end": 12.22
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 12.22,
+   "end": 13.64,
+   "words": [
+    {
+     "text": "24",
+     "start": 12.22,
+     "end": 12.78,
+     "style": "box"
+    },
+    {
+     "text": "айға",
+     "start": 12.78,
+     "end": 13.42,
+     "style": "box"
+    },
+    {
+     "text": "дейін",
+     "start": 13.42,
+     "end": 13.64
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 13.64,
+   "end": 15.2,
+   "words": [
+    {
+     "text": "пайызсыз",
+     "start": 13.64,
+     "end": 14.22,
+     "style": "accent"
+    },
+    {
+     "text": "бөліп",
+     "start": 14.22,
+     "end": 14.48
+    },
+    {
+     "text": "төлей",
+     "start": 14.48,
+     "end": 14.7
+    },
+    {
+     "text": "аласыз!",
+     "start": 14.7,
+     "end": 15.2
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 15.2,
+   "end": 17.0,
+   "words": [
+    {
+     "text": "Денсаулығыңызға",
+     "start": 15.2,
+     "end": 16.42,
+     "style": "accent"
+    },
+    {
+     "text": "қамқорлық",
+     "start": 16.42,
+     "end": 17.0
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 17.0,
+   "end": 18.3,
+   "words": [
+    {
+     "text": "жасау",
+     "start": 17.0,
+     "end": 17.36
+    },
+    {
+     "text": "енді",
+     "start": 17.36,
+     "end": 17.82
+    },
+    {
+     "text": "тиімді",
+     "start": 17.82,
+     "end": 18.3,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 18.3,
+   "end": 19.24,
+   "words": [
+    {
+     "text": "әрі",
+     "start": 18.3,
+     "end": 18.5
+    },
+    {
+     "text": "қолжетімді!",
+     "start": 18.5,
+     "end": 19.24,
+     "style": "accent"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 19.24,
+   "end": 20.64,
+   "words": [
+    {
+     "text": "Толық",
+     "start": 19.24,
+     "end": 19.94
+    },
+    {
+     "text": "ақпарат",
+     "start": 19.94,
+     "end": 20.38
+    },
+    {
+     "text": "алу",
+     "start": 20.38,
+     "end": 20.64
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 20.64,
+   "end": 21.58,
+   "words": [
+    {
+     "text": "және",
+     "start": 20.64,
+     "end": 20.92
+    },
+    {
+     "text": "жазылу",
+     "start": 20.92,
+     "end": 21.4
+    },
+    {
+     "text": "үшін",
+     "start": 21.4,
+     "end": 21.58
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 21.58,
+   "end": 23.0,
+   "words": [
+    {
+     "text": "жекеге",
+     "start": 21.58,
+     "end": 22.1,
+     "style": "accent"
+    },
+    {
+     "text": "Үлгеремін",
+     "start": 22.1,
+     "end": 23.0,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 23.0,
+   "end": 23.78,
+   "words": [
+    {
+     "text": "сөзін",
+     "start": 23.0,
+     "end": 23.32
+    },
+    {
+     "text": "жазып",
+     "start": 23.32,
+     "end": 23.68
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 23.78,
+   "end": 25.16,
+   "words": [
+    {
+     "text": "үлгеріп",
+     "start": 23.78,
+     "end": 24.2
+    },
+    {
+     "text": "қалыңыз!",
+     "start": 24.2,
+     "end": 24.66
+    }
+   ],
+   "dot": false
+  }
+ ],
+ "voice": {
+  "src": "p03/voice.wav",
+  "from": 0.9
+ },
+ "music": {
+  "src": "p03/music.wav",
+  "volume": 0.3
+ },
+ "endCard": {
+  "at": 25.06,
+  "brand": "Асыл ине",
+  "tagline": "ШЫҒЫС МЕДИЦИНАСЫ ОРТАЛЫҒЫ",
+  "line": "24 айға дейін пайызсыз бөліп төлеу",
+  "wish": "Деніңіз сау болсын!"
+ },
+ "duration": 28.06,
+ "sfx": [
+  {
+   "src": "whoosh.wav",
+   "at": 2.0,
+   "volume": 0.4
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 7.28,
+   "volume": 0.4
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 10.62,
+   "volume": 0.4
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 14.9,
+   "volume": 0.4
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 18.94,
+   "volume": 0.4
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 24.91,
+   "volume": 0.4
+  }
+ ]
+}

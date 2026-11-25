@@ -36,7 +36,9 @@
 5. Proxy: H.264, 1080×1920, 30 fps, `public/pNN/` (бүйірінен түсірілсе `transpose=1`).
 6. План: үлгі ретінде көшір —
    - `projects/p01/plan.py` — спикер кадрлары + B-roll + ЗКТ клиптер;
-   - `projects/p02/plan.py` — тек ЗКТ жазбасы + B-roll + `Exercise`.
+   - `projects/p02/plan.py` — тек ЗКТ жазбасы + B-roll + `Exercise`;
+   - `projects/p03/plan.py` + `src/promo/Promo.tsx` — кадрсыз **анимациялық промо** (Асыл ине + Kaspi тәрізді «бір экран — бір үлкен хабар/сан»,
+     тегіс жасыл және күңгірт премиум фон). Kaspi логотипі/қызылы қолданылмайды. Талдау: `style-base/kaspi-reference/ANALYSIS.md`.
    Нәтиже `src/edit/pNN.json` → `src/Root.tsx`-ке `Composition` қос.
 7. Тексер: әр B-roll үзіндісі клип ұзындығынан аспасын; `npx tsc --noEmit`; бірнеше `remotion still` кадр.
 8. Рендер (`--concurrency=4`, фонда), сосын loudnorm −14, әр секундтан кадр алып қара.
