@@ -81,7 +81,8 @@ scenes = [
     ('brand', at('asyl') - P),
     ('access', at('ем', exact=True) - P),
     ('nofull', at('енді', 2) - P),
-    ('installment', at('сіз', exact=True) - P),
+    ('kaspi', at('сіз', exact=True) - P),                 # Kaspi red banner: logo, then 24, then 0·0·
+    ('kaspi_dark', at('пайызсыз') + 0.55),                  # Kaspi dark premium banner 0·0·24
     ('benefit', at('денсаулығыңызға') - P),
     ('info', at('толық', 2) - P),
     ('dm', at('жекеге') - P),
@@ -95,13 +96,14 @@ spec = {
         'news_bang': at('керемет'), 'brand': at('asyl'), 'access_word': at('қолжетімді', 1), 'strike': at('қажеті'),
         'count': at('24'), 'zero': at('пайызсыз'), 'tick1': at('тиімді'), 'tick2': at('қолжетімді', 2),
         'type': at('үлгеремін'), 'send': at('сөзін'),
+        'kaspi_dark': round(at('пайызсыз') + 0.55, 3),
         'em': at('ем', exact=True), 'qabyldau': at('қабылдау'), 'info': at('ақпарат'), 'zhazylu': at('жазылу'),
     },
     'phrases': phrases,
     'voice': {'src': 'p03/voice.wav', 'from': LEAD},
     'music': {'src': 'p03/music.wav', 'volume': 0.36, 'duckTo': 0.6},
     'endCard': {'at': end_at, 'brand': 'Asyl Ine', 'tagline': 'ШЫҒЫС МЕДИЦИНАСЫ ОРТАЛЫҒЫ',
-                'line': '24 айға дейін пайызсыз бөліп төлеу', 'wish': 'Деніңіз сау болсын!'},
+                'line': '24 айға дейін пайызсыз бөліп төлеу', 'wish': 'Деніңіз сау болсын!', 'kaspi': True},
 }
 spec['duration'] = round(end_at + 3.0, 3)
 # speech intervals: music is turned down while the voice speaks (ducking)
@@ -111,7 +113,7 @@ for w in words:
     if iv and a0 - iv[-1][1] < 0.35: iv[-1][1] = b0
     else: iv.append([a0, b0])
 spec['music']['duck'] = [[round(a0, 3), round(b0, 3)] for a0, b0 in iv]
-IMPACT = ['news_bang', 'brand', 'em', 'access_word', 'strike', 'count', 'zero', 'tick1', 'tick2', 'zhazylu', 'send']
+IMPACT = ['news_bang', 'brand', 'em', 'access_word', 'strike', 'count', 'zero', 'kaspi_dark', 'tick1', 'tick2', 'zhazylu', 'send']
 spec['impacts'] = [spec['marks'][k] for k in IMPACT]
 spec['sfx'] = [{'src': 'whoosh.wav', 'at': round(max(0, s['start'] - 0.15), 3), 'volume': 0.4} for s in spec['scenes'][1:]] + \
               [{'src': 'whoosh.wav', 'at': round(end_at - 0.15, 3), 'volume': 0.4}] + \

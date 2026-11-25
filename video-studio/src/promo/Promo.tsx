@@ -1,9 +1,10 @@
 import React from 'react';
-import {AbsoluteFill, Audio, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Audio, Img, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {ensureFonts} from '../style/fonts';
 import {Subtitles, Phrase} from '../style/Subtitle';
 import {LogoAnim} from '../style/LogoAnim';
 import {T} from '../style/tokens';
+import kaspiAssets from './kaspiAssets.json';
 
 ensureFonts();
 
@@ -19,7 +20,7 @@ export type PromoSpec = {
   voice: {src: string; from: number};
   music: {src: string; volume: number; duckTo?: number; duck?: [number, number][]};
   sfx: {src: string; at: number; volume: number}[];
-  endCard: {at: number; brand: string; tagline: string; line: string; wish: string};
+  endCard: {at: number; brand: string; tagline: string; line: string; wish: string; kaspi?: boolean};
 };
 
 const PREMIUM = new Set(['logo', 'brand', 'installment']);
@@ -42,8 +43,11 @@ const Flat: React.FC = () => (
   <AbsoluteFill style={{background: `radial-gradient(circle at 50% 38%, #22947A 0%, ${T.greenDeep} 55%, #0F5243 100%)`}} />
 );
 
-const Premium: React.FC = () => {
+const KASPI_RED = '#F14635';
+const KASPI_DARK = '#1A0702';
+const Premium: React.FC<{kaspi?: boolean}> = ({kaspi = false}) => {
   const t = useT();
+  const c0 = kaspi ? '#FFD2B8' : '#C8F7E7', c1 = kaspi ? '#F14635' : T.mint, c2 = kaspi ? '#5A0D04' : '#0B5A47';
   const ribbon = (cx: number, cy: number, r: number, rot: number, i: number) => (
     <g key={i} transform={`rotate(${rot + t * (i % 2 ? -22 : 22)} ${cx} ${cy})`}>
       {[0, 1, 2, 3, 4, 5].map((k) => (
@@ -53,12 +57,13 @@ const Premium: React.FC = () => {
     </g>
   );
   return (
-    <AbsoluteFill style={{background: `radial-gradient(circle at 50% 42%, #10523F 0%, ${DARK} 62%)`}}>
+    <AbsoluteFill style={{background: kaspi ? `radial-gradient(circle at 50% 45%, #4A0E05 0%, ${KASPI_DARK} 60%)`
+      : `radial-gradient(circle at 50% 42%, #10523F 0%, ${DARK} 62%)`}}>
       <svg width="1080" height="1920" style={{position: 'absolute'}}>
         <defs>
           {[0, 1, 2].map((i) => (
             <linearGradient key={i} id={`rg${i}`} x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stopColor="#C8F7E7" /><stop offset="0.45" stopColor={T.mint} /><stop offset="1" stopColor="#0B5A47" />
+              <stop offset="0" stopColor={c0} /><stop offset="0.45" stopColor={c1} /><stop offset="1" stopColor={c2} />
             </linearGradient>
           ))}
         </defs>
@@ -233,6 +238,60 @@ const Installment: React.FC<SP> = ({m, s}) => {
   );
 };
 
+// ---------- Kaspi banners (Kaspi's own look: flat red + white, and dark premium) ----------
+const KaspiAsterisk: React.FC<{size: number}> = ({size}) => (
+  <svg width={size} height={size} viewBox="-10 -10 20 20" style={{margin: `0 ${size * 0.12}px`, transform: `translateY(-${size * 0.55}px)`}}>
+    {[0, 60, 120].map((r) => <rect key={r} x="-1.6" y="-8" width="3.2" height="16" rx="1.6" fill={T.white} transform={`rotate(${r})`} />)}
+  </svg>
+);
+const KaspiLogo: React.FC<{width: number; dark?: boolean}> = ({width, dark}) => {
+  if (!dark) {
+    const k = width / kaspiAssets.logo_white.w;
+    return <Img src={staticFile('kaspi/logo_white.png')} style={{width, height: kaspiAssets.logo_white.h * k}} />;
+  }
+  const h = width * 0.27;
+  return (
+    <div style={{display: 'flex', alignItems: 'center', gap: h * 0.18}}>
+      <Img src={staticFile('kaspi/icon_red.png')} style={{width: h, height: h}} />
+      <Img src={staticFile('kaspi/text_white.png')} style={{height: h * 0.62}} />
+    </div>
+  );
+};
+const rubik = (size: number): React.CSSProperties =>
+  ({fontFamily: 'Rubik', fontWeight: 800, fontSize: size, color: T.white, lineHeight: 1, whiteSpace: 'nowrap'});
+
+const Kaspi: React.FC<SP> = ({m, s}) => {
+  const t = useT(); const {fps} = useVideoConfig();
+  const logo = pop(t, s + 0.08, fps, 11);
+  const n24 = pop(t, m.count, fps, 8);
+  const zz = pop(t, m.zero, fps, 9);
+  const cap = pop(t, m.zero + 0.25, fps);
+  return (
+    <Center top={470}>
+      <div style={{transform: `scale(${interpolate(logo, [0, 1], [0.4, 1])})`, opacity: logo}}><KaspiLogo width={560} /></div>
+      <div style={{display: 'flex', alignItems: 'center', marginTop: 90}}>
+        <div style={{display: 'flex', alignItems: 'center', overflow: 'hidden', maxWidth: interpolate(zz, [0, 1], [0, 520]),
+          opacity: zz, transform: `translateX(${(1 - zz) * -80}px)`}}>
+          <span style={rubik(250)}>0</span><KaspiAsterisk size={70} /><span style={rubik(250)}>0</span><KaspiAsterisk size={70} />
+        </div>
+        <span style={{...rubik(250), opacity: n24, display: 'inline-block', transform: `scale(${interpolate(n24, [0, 1], [2.2, 1])})`}}>24</span>
+      </div>
+      <div style={{...rubik(46), fontWeight: 700, marginTop: 70, opacity: cap, letterSpacing: 2}}>24 АЙҒА ДЕЙІН · ПАЙЫЗСЫЗ</div>
+    </Center>
+  );
+};
+const KaspiDark: React.FC<SP> = ({s}) => {
+  const t = useT(); const {fps} = useVideoConfig();
+  const a = pop(t, s + 0.02, fps, 12);
+  return (
+    <Center top={560}>
+      <div style={{opacity: a, transform: `translateY(${(1 - a) * -40}px)`}}><KaspiLogo width={600} dark /></div>
+      <div style={{...rubik(260), marginTop: 70, transform: `scale(${interpolate(a, [0, 1], [1.4, 1])})`, opacity: a,
+        textShadow: '0 0 60px rgba(241,70,53,0.55)'}}>0·0·24</div>
+    </Center>
+  );
+};
+
 const Check: React.FC<{p: number}> = ({p}) => (
   <svg width="120" height="120" viewBox="0 0 120 120" style={{transform: `scale(${p})`}}>
     <circle cx="60" cy="60" r="56" fill={T.mint} />
@@ -329,7 +388,7 @@ const DM: React.FC<SP> = ({m, s}) => {
   );
 };
 
-const BrandEnd: React.FC<{line: string; wish: string}> = ({line, wish}) => {
+const BrandEnd: React.FC<{line: string; wish: string; kaspi?: boolean}> = ({line, wish, kaspi}) => {
   const f = useCurrentFrame(); const {fps} = useVideoConfig();
   const b = spring({frame: f - 24, fps, config: {damping: 14}});
   return (
@@ -339,6 +398,12 @@ const BrandEnd: React.FC<{line: string; wish: string}> = ({line, wish}) => {
         <LogoAnim width={860} startFrame={2} />
         <div style={{...sans(50, T.white), marginTop: 70, opacity: b, transform: `translateY(${(1 - b) * 30}px)`, textAlign: 'center',
           whiteSpace: 'normal', width: 820, lineHeight: 1.25}}>{line}</div>
+        {kaspi ? (
+          <div style={{marginTop: 40, display: 'flex', alignItems: 'center', gap: 26, background: KASPI_RED, borderRadius: 26,
+            padding: '20px 36px', opacity: b, transform: `scale(${interpolate(b, [0, 1], [0.7, 1])})`}}>
+            <KaspiLogo width={300} /><span style={rubik(64)}>0·0·24</span>
+          </div>
+        ) : null}
         <div style={{...serif(78), marginTop: 30, opacity: b}}>{wish}</div>
       </div>
     </AbsoluteFill>
@@ -346,8 +411,9 @@ const BrandEnd: React.FC<{line: string; wish: string}> = ({line, wish}) => {
 };
 
 const SCENES: Record<string, React.FC<SP>> = {logo: Intro, news: News, now: Now, brand: Brand, access: Access, nofull: NoFull,
-  installment: Installment, benefit: Benefit, info: Info, dm: DM};
-const NO_SMALL_LOGO = new Set(['logo', 'brand', 'dm']);
+  installment: Installment, benefit: Benefit, info: Info, dm: DM,
+  kaspi: Kaspi, kaspi_dark: KaspiDark};
+const NO_SMALL_LOGO = new Set(['logo', 'brand', 'dm', 'kaspi', 'kaspi_dark']);
 
 export const Promo: React.FC<{spec: PromoSpec}> = ({spec}) => {
   const {fps} = spec;
@@ -360,8 +426,10 @@ export const Promo: React.FC<{spec: PromoSpec}> = ({spec}) => {
           <Sequence key={i} from={fr(s.start)} durationInFrames={fr(s.end) - fr(s.start)}>
             <TimeCtx.Provider value={s.start}>
               <Camera impacts={spec.impacts} start={s.start}>
-                {PREMIUM.has(s.kind) ? <Premium /> : <Flat />}
-                <Particles />
+                {s.kind === 'kaspi' ? <AbsoluteFill style={{background: KASPI_RED}} />
+                  : s.kind === 'kaspi_dark' ? <Premium kaspi />
+                  : PREMIUM.has(s.kind) ? <Premium /> : <Flat />}
+                {s.kind.startsWith('kaspi') ? null : <Particles />}
                 {NO_SMALL_LOGO.has(s.kind) ? null : <SmallLogo />}
                 <Body m={spec.marks} s={s.start} />
               </Camera>
@@ -372,7 +440,7 @@ export const Promo: React.FC<{spec: PromoSpec}> = ({spec}) => {
       })}
       <Sequence durationInFrames={fr(spec.endCard.at)}><Subtitles phrases={spec.phrases} /></Sequence>
       <Sequence from={fr(spec.endCard.at)}>
-        <BrandEnd line={spec.endCard.line} wish={spec.endCard.wish} /><Flash />
+        <BrandEnd line={spec.endCard.line} wish={spec.endCard.wish} kaspi={spec.endCard.kaspi} /><Flash />
       </Sequence>
       <Audio src={staticFile(spec.voice.src)} startFrom={fr(spec.voice.from)} />
       <Audio src={staticFile(spec.music.src)} volume={(f) => {
