@@ -12,18 +12,20 @@ CLIPS = [
     ('IMG_2300', 'onscreen', 'voice_IMG_2300',
      'Ұзақ уақыт отырып жұмыс істеп, күн соңында беліңізде ауырлық сезесіз бе? Онда мына жаттығуларды жасап көріңіз.'),
     (ZKT, 'voiceover', 'voice_IMG_2303',
-     'Бастапқы қалып: шалқаңыздан жатып, бір тізеңізді кеудеңізге қарай ақырын жақындатыңыз. '
+     'Шалқаңыздан жатып, бір тізеңізді кеудеңізге қарай ақырын жақындатыңыз. '
      'Осы қалыпта 5–10 секунд ұстап, аяғыңызды түсіріңіз. Екінші аяқпен қайталаңыз. '
      'Бұл жаттығу бел айналасындағы бұлшықеттердің жеңіл созылуына көмектеседі.'),
 ]
-ALIAS = {'5–10': 'бес он', 'бастапқы': 'басталма'}
+ALIAS = {'5–10': 'бес он'}
+# the voice-over starts with «Бастапқы қалып» + a pause: the user asked to remove it
+CUT_BEFORE = {ZKT: 3.05}
 EMPH = {'отырып': 'accent', 'беліңізде': 'box', 'ауырлық': 'accent', 'жаттығуларды': 'box',
         'шалқаңыздан': 'box', 'тізеңізді': 'accent', 'кеудеңізге': 'box', 'ақырын': 'accent', '510': 'box', 'секунд': 'box',
         'екінші': 'accent', 'бел': 'box', 'созылуына': 'accent', 'жеңіл': 'pop'}
 PUNCH = {'күн', 'беліңізде'}
 # speaker clip: opens on B-roll of sitting work, then the speaker
 INSERTS = {'IMG_2300': [('ұзақ', 'IMG_1875', 0.2), ('күн', 'speaker', 0)]}
-VO = [('бастапқы', 'IMG_1866', 0.3, 0), ('бір', 'IMG_1865', 0.0, 20), ('осы', 'IMG_1889', 1.0, 20), ('екінші', 'IMG_1866', 2.0, 20),
+VO = [('шалқаңыздан', 'IMG_1866', 0.3, 0), ('бір', 'IMG_1865', 0.0, 20), ('осы', 'IMG_1889', 1.0, 20), ('екінші', 'IMG_1866', 2.0, 20),
       ('бұл', 'IMG_1869', 0.2, 0), ('бұлшықеттердің', 'IMG_1870', 0.6, 0)]
 
 norm = lambda w: re.sub(r'[^\wәғқңөұүһі]', '', w.lower())
@@ -36,6 +38,8 @@ def clip_len(f):
 
 def words_for(cid, script):
     hw = [w for s in json.load(open(HERE / f'audio/w16_{cid}.json'))['segments'] for w in s['words']]
+    cut = CUT_BEFORE.get(cid, 0)
+    hw = [dict(w, start=max(w['start'], cut + 0.05)) for w in hw if w['end'] > cut + 0.3]
     sw = script.replace('—', ' ').split()
     a = [norm(w['word']) for w in hw]; b = [norm(ALIAS.get(norm(w), w)) for w in sw]
     out = []
@@ -134,7 +138,7 @@ spec['exercises'] = [dict(kind='kneeChest', start=at(Z, 'бір', exact=True) - 
 spec['titles'] = [
     dict(start=at(S0, 'беліңізде'), end=at(S0, 'онда'), bold='БЕЛ', italic='ауырады ма?', y=0.14),
     dict(start=at(S0, 'жаттығуларды'), end=end_of(S0), bold='ЖАТТЫҒУ', italic='жасаңыз', y=0.14),
-    dict(start=at(Z, 'бастапқы'), end=at(Z, 'бір', exact=True), bold='ШАЛҚАДАН', italic='жатыңыз', y=0.14),
+    dict(start=at(Z, 'шалқаңыздан'), end=at(Z, 'бір', exact=True), bold='ШАЛҚАДАН', italic='жатыңыз', y=0.14),
     dict(start=at(Z, 'бұл', exact=True), end=end_of(Z), bold='БЕЛ', italic='бұлшықеттері созылады', y=0.14),
 ]
 spec['stats'] = []
