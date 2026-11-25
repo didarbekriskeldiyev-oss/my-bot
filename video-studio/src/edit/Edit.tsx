@@ -5,6 +5,8 @@ import {Subtitles, Phrase} from '../style/Subtitle';
 import {Title, Stat} from '../style/Title';
 import {EndCard} from '../style/EndCard';
 import {Exercise, ExerciseSpec} from '../style/Exercise';
+import {ListCard, ListSpec, ActivityIcons, IconsSpec} from '../style/ListCard';
+import {BrandEnd} from '../promo/Promo';
 
 ensureFonts();
 
@@ -15,15 +17,18 @@ export type Seg = {
   at: number; dur: number;
   voice?: {src: string; from: number};
   video: {src: string; from: number; zoom?: [number, number]; flip?: boolean; blur?: number};
+  flash?: boolean;  // quick light flash on this cut
 };
 export type TitleSpec = {start: number; end: number; bold: string; italic?: string; icon?: boolean; y?: number; num?: string};
 export type EditSpec = {
   fps: number; duration: number; segs: Seg[]; phrases: Phrase[]; titles: TitleSpec[];
   exercises?: ExerciseSpec[];
+  lists?: ListSpec[];
+  icons?: IconsSpec[];
   stats?: {start: number; end: number; from: number; to: number; caption: string}[];
-  music: {src: string; volume: number};
+  music: {src: string; volume: number; duckTo?: number; duck?: [number, number][]};
   sfx?: {src: string; at: number; volume: number}[];
-  endCard: {at: number; brand: string; tagline: string; line: string; wish: string};
+  endCard: {at: number; brand: string; tagline: string; line: string; wish: string; logo?: boolean};
 };
 
 const Clip: React.FC<{s: Seg}> = ({s}) => {
@@ -39,6 +44,11 @@ const Clip: React.FC<{s: Seg}> = ({s}) => {
   );
 };
 
+const Flash: React.FC = () => {
+  const f = useCurrentFrame();
+  return <AbsoluteFill style={{background: '#E8FFF7', opacity: interpolate(f, [0, 5], [0.5, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}} />;
+};
+
 export const Edit: React.FC<{spec: EditSpec}> = ({spec}) => {
   const {fps} = spec;
   const fr = (t: number) => Math.round(t * fps);
@@ -47,6 +57,7 @@ export const Edit: React.FC<{spec: EditSpec}> = ({spec}) => {
       {spec.segs.map((s, i) => (
         <Sequence key={i} from={fr(s.at)} durationInFrames={Math.max(1, fr(s.at + s.dur) - fr(s.at))}>
           <Clip s={s} />
+          {s.flash ? <Flash /> : null}
           {s.voice ? <Audio src={staticFile(s.voice.src)} startFrom={fr(s.voice.from)} /> : null}
         </Sequence>
       ))}
@@ -54,13 +65,20 @@ export const Edit: React.FC<{spec: EditSpec}> = ({spec}) => {
         {(spec.stats ?? []).map((st, i) => <Stat key={i} {...st} />)}
         {spec.titles.map((t, i) => <Title key={i} {...t} />)}
         {(spec.exercises ?? []).map((x, i) => <Exercise key={i} {...x} />)}
+        {(spec.lists ?? []).map((x, i) => <ListCard key={i} {...x} />)}
+        {(spec.icons ?? []).map((x, i) => <ActivityIcons key={i} {...x} />)}
         <Subtitles phrases={spec.phrases} />
       </Sequence>
       <Sequence from={fr(spec.endCard.at)}>
-        <EndCard {...spec.endCard} />
+        {spec.endCard.logo ? <BrandEnd line={spec.endCard.line} wish={spec.endCard.wish} /> : <EndCard {...spec.endCard} />}
       </Sequence>
-      <Audio src={staticFile(spec.music.src)} volume={(f) =>
-        interpolate(f, [fr(spec.duration) - fps * 1.5, fr(spec.duration)], [spec.music.volume, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})} />
+      <Audio src={staticFile(spec.music.src)} volume={(f) => {
+        // duck under the voice (0.15 s ramps), fade out at the end
+        const t = f / fps; const ramp = 0.15; const c = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
+        let d = 0;
+        for (const [a0, b0] of spec.music.duck ?? []) d = Math.max(d, Math.min(interpolate(t, [a0 - ramp, a0], [0, 1], c), interpolate(t, [b0, b0 + ramp], [1, 0], c)));
+        return spec.music.volume * (1 - d * (1 - (spec.music.duckTo ?? 1))) * interpolate(f, [fr(spec.duration) - fps * 1.2, fr(spec.duration)], [1, 0], c);
+      }} />
       {(spec.sfx ?? []).map((x, i) => (
         <Sequence key={i} from={fr(x.at)}><Audio src={staticFile(x.src)} volume={x.volume} /></Sequence>
       ))}

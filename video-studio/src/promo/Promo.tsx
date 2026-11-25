@@ -388,7 +388,7 @@ const DM: React.FC<SP> = ({m, s}) => {
   );
 };
 
-const BrandEnd: React.FC<{line: string; wish: string; kaspi?: boolean}> = ({line, wish, kaspi}) => {
+export const BrandEnd: React.FC<{line: string; wish: string; kaspi?: boolean}> = ({line, wish, kaspi}) => {
   const f = useCurrentFrame(); const {fps} = useVideoConfig();
   const b = spring({frame: f - 24, fps, config: {damping: 14}});
   return (
