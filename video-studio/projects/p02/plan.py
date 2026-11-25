@@ -55,6 +55,11 @@ for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).ge
     for k in range(j2 - j1):
         d = (t1 - t0) * lens[k] / sum(lens)
         words.append({'text': sw[j1 + k], 'start': acc, 'end': acc + d}); acc += d
+# Last sentence was said twice: first take had a slip ("…бөліп", "ой") at 31.2–33.6 s.
+# Keep only the clean retake (word times measured on the retake alone).
+RETAKE = [(33.70, 34.55), (34.55, 34.91), (34.91, 35.31)]
+for w, (s0, s1) in zip(words[-3:], RETAKE):
+    w['start'], w['end'] = s0, s1
 for w, nx in zip(words, words[1:]):           # Whisper word ends can overlap the next word
     w['end'] = min(w['end'], nx['start'])
 
