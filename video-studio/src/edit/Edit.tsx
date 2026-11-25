@@ -4,6 +4,7 @@ import {ensureFonts} from '../style/fonts';
 import {Subtitles, Phrase} from '../style/Subtitle';
 import {Title, Stat} from '../style/Title';
 import {EndCard} from '../style/EndCard';
+import {Exercise, ExerciseSpec} from '../style/Exercise';
 
 ensureFonts();
 
@@ -13,11 +14,12 @@ ensureFonts();
 export type Seg = {
   at: number; dur: number;
   voice?: {src: string; from: number};
-  video: {src: string; from: number; zoom?: [number, number]; flip?: boolean};
+  video: {src: string; from: number; zoom?: [number, number]; flip?: boolean; blur?: number};
 };
 export type TitleSpec = {start: number; end: number; bold: string; italic?: string; icon?: boolean; y?: number; num?: string};
 export type EditSpec = {
   fps: number; duration: number; segs: Seg[]; phrases: Phrase[]; titles: TitleSpec[];
+  exercises?: ExerciseSpec[];
   stats?: {start: number; end: number; from: number; to: number; caption: string}[];
   music: {src: string; volume: number};
   sfx?: {src: string; at: number; volume: number}[];
@@ -30,7 +32,7 @@ const Clip: React.FC<{s: Seg}> = ({s}) => {
   const [z0, z1] = s.video.zoom ?? [1, 1];
   const z = interpolate(f, [0, s.dur * fps], [z0, z1]);
   return (
-    <AbsoluteFill style={{transform: `scale(${z})`}}>
+    <AbsoluteFill style={{transform: `scale(${z})`, filter: s.video.blur ? `blur(${s.video.blur}px) brightness(0.8)` : undefined}}>
       <OffthreadVideo src={staticFile(s.video.src)} startFrom={Math.round(s.video.from * fps)} muted
         style={{width: '100%', height: '100%', objectFit: 'cover'}} />
     </AbsoluteFill>
@@ -51,6 +53,7 @@ export const Edit: React.FC<{spec: EditSpec}> = ({spec}) => {
       <Sequence durationInFrames={fr(spec.endCard.at)}>
         {(spec.stats ?? []).map((st, i) => <Stat key={i} {...st} />)}
         {spec.titles.map((t, i) => <Title key={i} {...t} />)}
+        {(spec.exercises ?? []).map((x, i) => <Exercise key={i} {...x} />)}
         <Subtitles phrases={spec.phrases} />
       </Sequence>
       <Sequence from={fr(spec.endCard.at)}>
