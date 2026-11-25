@@ -5,7 +5,7 @@ import parts from '../promo/logoParts.json';
 /** "Asyl Ine" logo cut from the wall photo (white letters + mint dots/tagline).
  *  Animated build: needle drops in -> dots spin in -> "Asyl" / "ne" wipe in -> tagline rises.
  *  startFrame: local frame when the build starts; static: show finished logo. */
-const BOX = {x: 342, y: 140, w: 1760, h: 874};
+const BOX = {x: 336, y: 131, w: 1763, h: 877}; // straightened (rotated 1°, perspective fixed)
 
 export const LogoAnim: React.FC<{width: number; startFrame?: number; static?: boolean; tagline?: boolean; spin?: boolean}> =
   ({width, startFrame = 0, static: still = false, tagline = true, spin = true}) => {

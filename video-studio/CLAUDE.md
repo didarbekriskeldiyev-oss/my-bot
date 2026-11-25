@@ -25,6 +25,14 @@
 - Пайдаланушы баяу видеоны ұнатпайды: сахна ≤ 3 с, әр сахнаға flash + zoom-in, кілт сөзде shake + pop,
   фонда ұшқан нүктелер, музыка ~124 BPM (`src/promo/Promo.tsx` үлгісі).
 
+## Қаріптер (қазақ әріптері тексерілген)
+
+`src/style/fonts.ts` → `FONTS`: Montserrat (негізгі), Geologica (тақырып), Rubik (сандар), Nunito (жұмсақ),
+Lora Italic (екпін), Cormorant Italic (премиум/тілек). Барлығында Ә Ғ Қ Ң Ө Ұ Ү Һ І бар (fontTools-пен тексерілді).
+Жаңа қаріп қоспас бұрын cmap-ты тексер: Jost, Manrope, Unbounded, Playfair Display, Tenor Sans, Prosto One,
+El Messiri — қазақ әріптері ЖОҚ. Әр файлдың subset-і (latin / cyrillic / cyrillic-ext) кестеде нақты жазылады.
+Логотип бөліктері түзетілген (1° айналдырылған + перспектива), `LogoAnim` BOX = 336,131,1763×877.
+
 ## Пайдаланушының ережелері
 
 - Ол екі түрлі файл жібереді: **сөйлеген кадрлар** және **B-roll**.
