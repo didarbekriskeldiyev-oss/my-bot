@@ -1,0 +1,958 @@
+{
+ "fps": 30,
+ "segs": [
+  {
+   "at": 0.0,
+   "dur": 4.82,
+   "voice": {
+    "src": "p11/voice_IMG_2470.wav",
+    "from": 0
+   },
+   "video": {
+    "src": "p11/IMG_2470.mp4",
+    "from": 0,
+    "zoom": [
+     1.0,
+     1.02
+    ]
+   },
+   "flash": true
+  },
+  {
+   "at": 4.82,
+   "dur": 2.12,
+   "voice": {
+    "src": "p11/voice_IMG_2470.wav",
+    "from": 4.82
+   },
+   "video": {
+    "src": "p09/IMG_2557.mp4",
+    "from": 0.0,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 6.94,
+   "dur": 1.06,
+   "voice": {
+    "src": "p11/voice_IMG_2470.wav",
+    "from": 6.94
+   },
+   "video": {
+    "src": "p11/IMG_2470.mp4",
+    "from": 6.94,
+    "zoom": [
+     1.14,
+     1.16
+    ]
+   },
+   "flash": true
+  },
+  {
+   "at": 8.0,
+   "dur": 3.56,
+   "voice": {
+    "src": "p11/voice_IMG_2472.wav",
+    "from": 0
+   },
+   "video": {
+    "src": "p11/IMG_2472.mp4",
+    "from": 0,
+    "zoom": [
+     1.0,
+     1.02
+    ]
+   },
+   "flash": true
+  },
+  {
+   "at": 11.56,
+   "dur": 2.56,
+   "voice": {
+    "src": "p11/voice_IMG_2472.wav",
+    "from": 3.56
+   },
+   "video": {
+    "src": "p09/IMG_2551.mp4",
+    "from": 0.3,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 14.12,
+   "dur": 2.22,
+   "voice": {
+    "src": "p11/voice_IMG_2479.wav",
+    "from": 0
+   },
+   "video": {
+    "src": "p09/IMG_2285.mp4",
+    "from": 0.0,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 16.34,
+   "dur": 0.72,
+   "voice": {
+    "src": "p11/voice_IMG_2479.wav",
+    "from": 2.22
+   },
+   "video": {
+    "src": "p09/IMG_2284.mp4",
+    "from": 0.0,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 17.06,
+   "dur": 2.3,
+   "voice": {
+    "src": "p11/voice_IMG_2479.wav",
+    "from": 2.94
+   },
+   "video": {
+    "src": "p01/IMG_1878.mp4",
+    "from": 0.3,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 19.36,
+   "dur": 1.9,
+   "voice": {
+    "src": "p11/voice_IMG_2479.wav",
+    "from": 5.24
+   },
+   "video": {
+    "src": "p09/IMG_2555.mp4",
+    "from": 0.0,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 21.26,
+   "dur": 2.26,
+   "voice": {
+    "src": "p11/voice_IMG_2479.wav",
+    "from": 7.14
+   },
+   "video": {
+    "src": "p09/IMG_2554.mp4",
+    "from": 0.2,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 23.52,
+   "dur": 3.14,
+   "voice": {
+    "src": "p11/voice_IMG_2479.wav",
+    "from": 9.4
+   },
+   "video": {
+    "src": "p01/IMG_1865.mp4",
+    "from": 0.2,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 26.66,
+   "dur": 1.82,
+   "voice": {
+    "src": "p11/voice_IMG_2479.wav",
+    "from": 12.54
+   },
+   "video": {
+    "src": "p01/IMG_1866.mp4",
+    "from": 3.0,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 28.48,
+   "dur": 2.28,
+   "voice": {
+    "src": "p11/voice_IMG_2485.wav",
+    "from": 0
+   },
+   "video": {
+    "src": "p11/IMG_2485.mp4",
+    "from": 0,
+    "zoom": [
+     1.14,
+     1.16
+    ]
+   },
+   "flash": true
+  },
+  {
+   "at": 30.76,
+   "dur": 2.64,
+   "voice": {
+    "src": "p11/voice_IMG_2485.wav",
+    "from": 2.28
+   },
+   "video": {
+    "src": "p01/IMG_1866.mp4",
+    "from": 1.0,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 33.4,
+   "dur": 3.24,
+   "voice": {
+    "src": "p11/voice_IMG_2485.wav",
+    "from": 4.92
+   },
+   "video": {
+    "src": "p11/IMG_2485.mp4",
+    "from": 4.92,
+    "zoom": [
+     1.0,
+     1.02
+    ]
+   },
+   "flash": true
+  }
+ ],
+ "phrases": [
+  {
+   "start": 0.0,
+   "end": 2.0,
+   "words": [
+    {
+     "text": "Ине",
+     "start": 0.0,
+     "end": 0.434,
+     "style": "accent"
+    },
+    {
+     "text": "терапиясы",
+     "start": 0.434,
+     "end": 1.52
+    },
+    {
+     "text": "Қытайдан",
+     "start": 1.52,
+     "end": 2.0,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 2.0,
+   "end": 3.3,
+   "words": [
+    {
+     "text": "шыққан",
+     "start": 2.0,
+     "end": 2.34
+    },
+    {
+     "text": "дәстүрлі",
+     "start": 2.34,
+     "end": 2.88,
+     "style": "accent"
+    },
+    {
+     "text": "емдеу",
+     "start": 2.88,
+     "end": 3.3
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 3.3,
+   "end": 4.86,
+   "words": [
+    {
+     "text": "әдістерінің",
+     "start": 3.3,
+     "end": 3.82
+    },
+    {
+     "text": "бірі",
+     "start": 3.82,
+     "end": 4.02
+    },
+    {
+     "text": "болып",
+     "start": 4.02,
+     "end": 4.22
+    },
+    {
+     "text": "табылады",
+     "start": 4.22,
+     "end": 4.72
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 4.86,
+   "end": 6.28,
+   "words": [
+    {
+     "text": "Оның",
+     "start": 4.86,
+     "end": 5.38
+    },
+    {
+     "text": "тарихы",
+     "start": 5.38,
+     "end": 5.82
+    },
+    {
+     "text": "2000",
+     "start": 5.82,
+     "end": 6.28,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 6.28,
+   "end": 8.0,
+   "words": [
+    {
+     "text": "жылдан",
+     "start": 6.28,
+     "end": 6.7,
+     "style": "accent"
+    },
+    {
+     "text": "астам",
+     "start": 6.7,
+     "end": 6.98
+    },
+    {
+     "text": "уақытты",
+     "start": 6.98,
+     "end": 7.48
+    },
+    {
+     "text": "құрайды",
+     "start": 7.48,
+     "end": 7.88
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 8.0,
+   "end": 9.92,
+   "words": [
+    {
+     "text": "Ол",
+     "start": 8.0,
+     "end": 9.16
+    },
+    {
+     "text": "кезде",
+     "start": 9.16,
+     "end": 9.38
+    },
+    {
+     "text": "адамдар",
+     "start": 9.38,
+     "end": 9.92
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 9.92,
+   "end": 11.6,
+   "words": [
+    {
+     "text": "денсаулыққа",
+     "start": 9.92,
+     "end": 10.56
+    },
+    {
+     "text": "қатысты",
+     "start": 10.56,
+     "end": 10.92
+    },
+    {
+     "text": "мәселелерді",
+     "start": 10.92,
+     "end": 11.6
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 11.6,
+   "end": 12.84,
+   "words": [
+    {
+     "text": "шешу",
+     "start": 11.6,
+     "end": 11.92
+    },
+    {
+     "text": "үшін",
+     "start": 11.92,
+     "end": 12.14
+    },
+    {
+     "text": "үшкір",
+     "start": 12.14,
+     "end": 12.84,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 12.84,
+   "end": 14.12,
+   "words": [
+    {
+     "text": "құралдарды",
+     "start": 12.84,
+     "end": 13.36,
+     "style": "accent"
+    },
+    {
+     "text": "пайдаланған",
+     "start": 13.36,
+     "end": 14.0
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 14.12,
+   "end": 15.76,
+   "words": [
+    {
+     "text": "Уақыт",
+     "start": 14.12,
+     "end": 15.22
+    },
+    {
+     "text": "өте",
+     "start": 15.22,
+     "end": 15.46
+    },
+    {
+     "text": "келе",
+     "start": 15.46,
+     "end": 15.76
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 15.76,
+   "end": 16.7,
+   "words": [
+    {
+     "text": "медицина",
+     "start": 15.76,
+     "end": 16.38,
+     "style": "box"
+    },
+    {
+     "text": "дамып",
+     "start": 16.38,
+     "end": 16.7,
+     "style": "accent"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 16.7,
+   "end": 17.74,
+   "words": [
+    {
+     "text": "емдеу",
+     "start": 16.7,
+     "end": 17.1
+    },
+    {
+     "text": "тәсілдері",
+     "start": 17.1,
+     "end": 17.592
+    },
+    {
+     "text": "де",
+     "start": 17.592,
+     "end": 17.74
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 17.74,
+   "end": 18.86,
+   "words": [
+    {
+     "text": "жетілдіріле",
+     "start": 17.74,
+     "end": 18.46
+    },
+    {
+     "text": "түсті",
+     "start": 18.46,
+     "end": 18.86
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 18.86,
+   "end": 20.0,
+   "words": [
+    {
+     "text": "Ал",
+     "start": 18.86,
+     "end": 19.4
+    },
+    {
+     "text": "Asyl",
+     "start": 19.4,
+     "end": 19.82,
+     "style": "box"
+    },
+    {
+     "text": "Ine",
+     "start": 19.82,
+     "end": 20.0
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 20.0,
+   "end": 21.3,
+   "words": [
+    {
+     "text": "медициналық",
+     "start": 20.0,
+     "end": 20.68
+    },
+    {
+     "text": "орталығында",
+     "start": 20.68,
+     "end": 21.3
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 21.3,
+   "end": 22.864,
+   "words": [
+    {
+     "text": "ине",
+     "start": 21.3,
+     "end": 21.66,
+     "style": "accent"
+    },
+    {
+     "text": "терапиясының",
+     "start": 21.66,
+     "end": 22.46
+    },
+    {
+     "text": "өзіндік",
+     "start": 22.46,
+     "end": 22.864
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 22.864,
+   "end": 23.56,
+   "words": [
+    {
+     "text": "ерекшелігі",
+     "start": 22.864,
+     "end": 23.42,
+     "style": "box"
+    },
+    {
+     "text": "бар",
+     "start": 23.42,
+     "end": 23.56
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 23.56,
+   "end": 25.16,
+   "words": [
+    {
+     "text": "Бізде",
+     "start": 23.56,
+     "end": 24.04
+    },
+    {
+     "text": "ине",
+     "start": 24.04,
+     "end": 24.36,
+     "style": "accent"
+    },
+    {
+     "text": "терапиясы",
+     "start": 24.36,
+     "end": 25.16
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 25.16,
+   "end": 26.7,
+   "words": [
+    {
+     "text": "арнайы",
+     "start": 25.16,
+     "end": 25.66
+    },
+    {
+     "text": "аппараттың",
+     "start": 25.66,
+     "end": 26.18,
+     "style": "accent"
+    },
+    {
+     "text": "көмегімен",
+     "start": 26.18,
+     "end": 26.7
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 26.7,
+   "end": 28.48,
+   "words": [
+    {
+     "text": "электр",
+     "start": 26.7,
+     "end": 27.22,
+     "style": "box"
+    },
+    {
+     "text": "тоғымен",
+     "start": 27.22,
+     "end": 27.68,
+     "style": "accent"
+    },
+    {
+     "text": "жүргізіледі",
+     "start": 27.68,
+     "end": 28.36
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 28.48,
+   "end": 30.111,
+   "words": [
+    {
+     "text": "Бұл",
+     "start": 28.48,
+     "end": 29.32
+    },
+    {
+     "text": "дәстүрлі",
+     "start": 29.32,
+     "end": 29.86,
+     "style": "accent"
+    },
+    {
+     "text": "ине",
+     "start": 29.86,
+     "end": 30.111,
+     "style": "accent"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 30.111,
+   "end": 32.3,
+   "words": [
+    {
+     "text": "терапиясын",
+     "start": 30.111,
+     "end": 30.8
+    },
+    {
+     "text": "заманауи",
+     "start": 30.8,
+     "end": 31.42,
+     "style": "box"
+    },
+    {
+     "text": "технологиялармен",
+     "start": 31.42,
+     "end": 32.3,
+     "style": "accent"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 32.3,
+   "end": 33.44,
+   "words": [
+    {
+     "text": "ұштастыру",
+     "start": 32.3,
+     "end": 32.98
+    },
+    {
+     "text": "тәсілі",
+     "start": 32.98,
+     "end": 33.44
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 33.44,
+   "end": 35.16,
+   "words": [
+    {
+     "text": "Әр",
+     "start": 33.44,
+     "end": 34.1
+    },
+    {
+     "text": "пациентке",
+     "start": 34.1,
+     "end": 34.74
+    },
+    {
+     "text": "жеке",
+     "start": 34.74,
+     "end": 35.16,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 35.16,
+   "end": 37.02,
+   "words": [
+    {
+     "text": "емдеу",
+     "start": 35.16,
+     "end": 35.531
+    },
+    {
+     "text": "әдісі",
+     "start": 35.531,
+     "end": 35.902
+    },
+    {
+     "text": "таңдалады",
+     "start": 35.902,
+     "end": 36.52
+    }
+   ],
+   "dot": true
+  }
+ ],
+ "titles": [
+  {
+   "start": 0.0,
+   "end": 4.86,
+   "bold": "ИНЕ",
+   "italic": "терапиясы",
+   "y": 0.14
+  },
+  {
+   "start": 8.0,
+   "end": 14.0,
+   "bold": "ҮШКІР",
+   "italic": "құралдар",
+   "y": 0.14
+  },
+  {
+   "start": 14.12,
+   "end": 18.86,
+   "bold": "МЕДИЦИНА",
+   "italic": "дамыды",
+   "y": 0.14
+  },
+  {
+   "start": 18.86,
+   "end": 23.56,
+   "bold": "ӨЗІНДІК",
+   "italic": "ерекшелігі",
+   "y": 0.14
+  },
+  {
+   "start": 23.56,
+   "end": 28.36,
+   "bold": "ЭЛЕКТР",
+   "italic": "тоғымен",
+   "icon": true,
+   "y": 0.14
+  },
+  {
+   "start": 28.48,
+   "end": 33.44,
+   "bold": "ДӘСТҮР +",
+   "italic": "технология",
+   "y": 0.14
+  },
+  {
+   "start": 33.44,
+   "end": 36.52,
+   "bold": "ЖЕКЕ",
+   "italic": "емдеу",
+   "y": 0.14
+  }
+ ],
+ "sfx": [
+  {
+   "src": "whoosh.wav",
+   "at": 0,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 7.8,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 13.92,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 18.66,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 23.36,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 28.28,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 33.24,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 5.62,
+   "volume": 0.35
+  },
+  {
+   "src": "pop.wav",
+   "at": 5.82,
+   "volume": 0.4
+  },
+  {
+   "src": "pop.wav",
+   "at": 26.7,
+   "volume": 0.4
+  }
+ ],
+ "lists": [],
+ "icons": [],
+ "stats": [
+  {
+   "start": 5.82,
+   "end": 7.88,
+   "from": 100,
+   "to": 2000,
+   "caption": "жылдан астам тарих"
+  }
+ ],
+ "endCard": {
+  "at": 36.94,
+  "brand": "Asyl Ine",
+  "tagline": "ШЫҒЫС МЕДИЦИНАСЫ ОРТАЛЫҒЫ",
+  "line": "Дәстүрлі ине терапиясы + заманауи технология",
+  "wish": "Деніңіз сау болсын!",
+  "logo": true
+ },
+ "duration": 39.64,
+ "music": {
+  "src": "p11/music.wav",
+  "volume": 0.3,
+  "duckTo": 0.33,
+  "duck": [
+   [
+    -0.08,
+    36.64
+   ]
+  ]
+ }
+}
