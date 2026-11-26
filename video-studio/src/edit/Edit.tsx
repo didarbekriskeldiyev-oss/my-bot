@@ -9,6 +9,7 @@ import {ListCard, ListSpec, ActivityIcons, IconsSpec} from '../style/ListCard';
 import {BrandEnd} from '../promo/Promo';
 import {KaspiBanner, KaspiSpec, Bubbles, BubblesSpec} from '../style/KaspiBanner';
 import {PointWords, PointGroup} from '../style/PointWords';
+import {ReviewClip, ReviewCard, AdvCard, AdvSpec} from '../style/Review';
 
 ensureFonts();
 
@@ -18,7 +19,7 @@ ensureFonts();
 export type Seg = {
   at: number; dur: number;
   voice?: {src: string; from: number};
-  video: {src: string; from: number; zoom?: [number, number]; flip?: boolean; blur?: number};
+  video: {src: string; from: number; zoom?: [number, number]; flip?: boolean; blur?: number; card?: ReviewCard};
   flash?: boolean;  // quick light flash on this cut
 };
 export type TitleSpec = {start: number; end: number; bold: string; italic?: string; icon?: boolean; y?: number; num?: string};
@@ -30,6 +31,7 @@ export type EditSpec = {
   kaspi?: KaspiSpec[];
   bubbles?: BubblesSpec[];
   points?: PointGroup[];
+  adv?: AdvSpec[];
   stats?: {start: number; end: number; from: number; to: number; caption: string}[];
   music: {src: string; volume: number; duckTo?: number; duck?: [number, number][]};
   sfx?: {src: string; at: number; volume: number}[];
@@ -38,6 +40,7 @@ export type EditSpec = {
 
 const Clip: React.FC<{s: Seg}> = ({s}) => {
   const f = useCurrentFrame();
+  if (s.video.card) return <ReviewClip src={s.video.src} from={s.video.from} card={s.video.card} />;
   const {fps} = useVideoConfig();
   const [z0, z1] = s.video.zoom ?? [1, 1];
   const z = interpolate(f, [0, s.dur * fps], [z0, z1]);
@@ -74,6 +77,7 @@ export const Edit: React.FC<{spec: EditSpec}> = ({spec}) => {
         {(spec.icons ?? []).map((x, i) => <ActivityIcons key={i} {...x} />)}
         {(spec.bubbles ?? []).map((x, i) => <Bubbles key={i} {...x} />)}
         {(spec.points ?? []).map((x, i) => <PointWords key={i} {...x} />)}
+        {(spec.adv ?? []).map((x, i) => <AdvCard key={i} {...x} />)}
         {(spec.kaspi ?? []).map((x, i) => <KaspiBanner key={i} {...x} />)}
         <Subtitles phrases={spec.phrases} />
       </Sequence>
