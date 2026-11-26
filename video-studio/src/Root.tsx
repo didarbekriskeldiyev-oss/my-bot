@@ -8,6 +8,7 @@ import p03 from './edit/p03.json';
 import p04 from './edit/p04.json';
 import p05 from './edit/p05.json';
 import p06 from './edit/p06.json';
+import p07 from './edit/p07.json';
 import {Promo, PromoSpec} from './promo/Promo';
 
 const spec01 = p01 as unknown as EditSpec;
@@ -16,6 +17,7 @@ const spec03 = p03 as unknown as PromoSpec;
 const spec04 = p04 as unknown as EditSpec;
 const spec05 = p05 as unknown as EditSpec;
 const spec06 = p06 as unknown as EditSpec;
+const spec07 = p07 as unknown as EditSpec;
 
 export const Root = () => (
   <>
@@ -34,5 +36,7 @@ export const Root = () => (
       durationInFrames={Math.round(spec05.duration * spec05.fps)} fps={spec05.fps} width={1080} height={1920} />
     <Composition id="P06" component={Edit} defaultProps={{spec: spec06}}
       durationInFrames={Math.round(spec06.duration * spec06.fps)} fps={spec06.fps} width={1080} height={1920} />
+    <Composition id="P07" component={Edit} defaultProps={{spec: spec07}}
+      durationInFrames={Math.round(spec07.duration * spec07.fps)} fps={spec07.fps} width={1080} height={1920} />
   </>
 );
