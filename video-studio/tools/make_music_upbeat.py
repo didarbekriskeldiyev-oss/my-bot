@@ -29,6 +29,8 @@ def env(N, att, dec):
 def put(sig, t, pan=0.5, g=1.0):
     i = int(t * SR)
     if i >= n or i + len(sig) <= 0: return
+    if i < 0:                      # starts before 0 (e.g. a riser before an early drop): keep only the tail
+        sig = sig[-i:]; i = 0
     j = min(n, i + len(sig)); s = sig[: j - i] * g
     L[i:j] += s * np.cos(pan * np.pi / 2); R[i:j] += s * np.sin(pan * np.pi / 2)
 def saw(f, N, detune=0.0):

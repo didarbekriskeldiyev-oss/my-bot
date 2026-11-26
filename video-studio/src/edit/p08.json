@@ -1,0 +1,396 @@
+{
+ "fps": 30,
+ "segs": [
+  {
+   "at": 0.0,
+   "dur": 4.08,
+   "voice": {
+    "src": "p08/voice_IMG_2433.wav",
+    "from": 1.84
+   },
+   "video": {
+    "src": "p08/IMG_2433.mp4",
+    "from": 1.84,
+    "zoom": [
+     1.0,
+     1.0
+    ]
+   },
+   "flash": true
+  },
+  {
+   "at": 4.08,
+   "dur": 1.2,
+   "voice": {
+    "src": "p08/voice_IMG_2433.wav",
+    "from": 5.92
+   },
+   "video": {
+    "src": "p08/IMG_2433.mp4",
+    "from": 5.92,
+    "zoom": [
+     1.0,
+     1.0
+    ]
+   }
+  },
+  {
+   "at": 5.28,
+   "dur": 0.86,
+   "voice": {
+    "src": "p08/voice_IMG_2433.wav",
+    "from": 7.12
+   },
+   "video": {
+    "src": "p08/IMG_2433.mp4",
+    "from": 7.12,
+    "zoom": [
+     1.0,
+     1.0
+    ]
+   }
+  },
+  {
+   "at": 6.14,
+   "dur": 4.2,
+   "voice": {
+    "src": "p08/voice_IMG_2433.wav",
+    "from": 7.98
+   },
+   "video": {
+    "src": "p08/IMG_2433.mp4",
+    "from": 7.98,
+    "zoom": [
+     1.0,
+     1.0
+    ]
+   }
+  },
+  {
+   "at": 10.34,
+   "dur": 1.2,
+   "voice": {
+    "src": "p08/voice_IMG_2433.wav",
+    "from": 12.18
+   },
+   "video": {
+    "src": "p08/IMG_2433.mp4",
+    "from": 12.18,
+    "zoom": [
+     1.0,
+     1.0
+    ]
+   }
+  },
+  {
+   "at": 11.54,
+   "dur": 1.26,
+   "voice": {
+    "src": "p08/voice_IMG_2433.wav",
+    "from": 13.38
+   },
+   "video": {
+    "src": "p08/IMG_2433.mp4",
+    "from": 13.38,
+    "zoom": [
+     1.0,
+     1.0
+    ]
+   }
+  }
+ ],
+ "phrases": [
+  {
+   "start": 0.06,
+   "end": 2.56,
+   "words": [
+    {
+     "text": "Грыжа",
+     "start": 0.06,
+     "end": 1.38,
+     "style": "box"
+    },
+    {
+     "text": "кезінде",
+     "start": 1.38,
+     "end": 1.86
+    },
+    {
+     "text": "ауырсынуды",
+     "start": 1.86,
+     "end": 2.56,
+     "style": "accent"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 2.56,
+   "end": 6.18,
+   "words": [
+    {
+     "text": "басады",
+     "start": 2.56,
+     "end": 3.14,
+     "style": "pop"
+    },
+    {
+     "text": "укол",
+     "start": 3.14,
+     "end": 4.12
+    },
+    {
+     "text": "таблетка",
+     "start": 4.12,
+     "end": 5.32
+    },
+    {
+     "text": "корсет",
+     "start": 5.32,
+     "end": 6.18
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 6.18,
+   "end": 8.12,
+   "words": [
+    {
+     "text": "Ал",
+     "start": 6.18,
+     "end": 7.1
+    },
+    {
+     "text": "емдейтін",
+     "start": 7.1,
+     "end": 7.56,
+     "style": "box"
+    },
+    {
+     "text": "тәсілдеріне",
+     "start": 7.56,
+     "end": 8.12,
+     "style": "accent"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 8.12,
+   "end": 10.38,
+   "words": [
+    {
+     "text": "келетін",
+     "start": 8.12,
+     "end": 8.5
+    },
+    {
+     "text": "болсақ",
+     "start": 8.5,
+     "end": 8.96
+    },
+    {
+     "text": "ине",
+     "start": 8.96,
+     "end": 9.366
+    },
+    {
+     "text": "терапиясы",
+     "start": 9.366,
+     "end": 10.38
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 10.38,
+   "end": 11.58,
+   "words": [
+    {
+     "text": "физиотерапия",
+     "start": 10.38,
+     "end": 11.58
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 11.58,
+   "end": 13.18,
+   "words": [
+    {
+     "text": "емдік",
+     "start": 11.58,
+     "end": 12.2
+    },
+    {
+     "text": "массаж",
+     "start": 12.2,
+     "end": 12.68
+    }
+   ],
+   "dot": true
+  }
+ ],
+ "titles": [
+  {
+   "start": 0.06,
+   "end": 2.89,
+   "bold": "ГРЫЖА",
+   "italic": "кезінде",
+   "y": 0.14
+  }
+ ],
+ "sfx": [
+  {
+   "src": "whoosh.wav",
+   "at": 0,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 2.69,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 8.51,
+   "volume": 0.35
+  },
+  {
+   "src": "pop.wav",
+   "at": 3.14,
+   "volume": 0.4
+  },
+  {
+   "src": "pop.wav",
+   "at": 4.12,
+   "volume": 0.4
+  },
+  {
+   "src": "pop.wav",
+   "at": 5.32,
+   "volume": 0.4
+  },
+  {
+   "src": "pop.wav",
+   "at": 8.96,
+   "volume": 0.4
+  },
+  {
+   "src": "pop.wav",
+   "at": 10.38,
+   "volume": 0.4
+  },
+  {
+   "src": "pop.wav",
+   "at": 11.58,
+   "volume": 0.4
+  }
+ ],
+ "lists": [],
+ "icons": [],
+ "stats": [],
+ "exercises": [],
+ "points": [
+  {
+   "start": 2.89,
+   "end": 6.43,
+   "kind": "relief",
+   "header": {
+    "bold": "АУЫРСЫНУДЫ",
+    "italic": "ғана басады",
+    "x": 60,
+    "y": 150,
+    "align": "left"
+   },
+   "items": [
+    {
+     "text": "Укол",
+     "at": 3.14,
+     "x": 60,
+     "y": 400,
+     "icon": "syringe"
+    },
+    {
+     "text": "Таблетка",
+     "at": 4.12,
+     "x": 60,
+     "y": 520,
+     "icon": "pill"
+    },
+    {
+     "text": "Корсет",
+     "at": 5.32,
+     "x": 60,
+     "y": 640,
+     "icon": "corset"
+    }
+   ],
+   "from": {
+    "x": 280,
+    "y": 813
+   }
+  },
+  {
+   "start": 8.71,
+   "end": 13.28,
+   "kind": "treat",
+   "header": {
+    "bold": "ЕМДЕЙТІН",
+    "italic": "әдістер",
+    "x": 1030,
+    "y": 150,
+    "align": "right"
+   },
+   "items": [
+    {
+     "text": "Ине терапиясы",
+     "at": 8.96,
+     "x": 1030,
+     "y": 400,
+     "icon": "needle"
+    },
+    {
+     "text": "Физиотерапия",
+     "at": 10.38,
+     "x": 1030,
+     "y": 520,
+     "icon": "physio"
+    },
+    {
+     "text": "Емдік массаж",
+     "at": 11.58,
+     "x": 1030,
+     "y": 640,
+     "icon": "massage"
+    }
+   ],
+   "from": {
+    "x": 740,
+    "y": 905
+   }
+  }
+ ],
+ "endCard": {
+  "at": 13.1,
+  "brand": "Asyl Ine",
+  "tagline": "ШЫҒЫС МЕДИЦИНАСЫ ОРТАЛЫҒЫ",
+  "line": "Грыжаны емдейміз: ине терапиясы, физиотерапия, массаж",
+  "wish": "Деніңіз сау болсын!",
+  "logo": true
+ },
+ "duration": 16.1,
+ "music": {
+  "src": "p08/music.wav",
+  "volume": 0.3,
+  "duckTo": 0.33,
+  "duck": [
+   [
+    -0.02,
+    12.8
+   ]
+  ]
+ }
+}

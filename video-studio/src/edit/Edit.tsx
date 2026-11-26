@@ -8,6 +8,7 @@ import {Exercise, ExerciseSpec} from '../style/Exercise';
 import {ListCard, ListSpec, ActivityIcons, IconsSpec} from '../style/ListCard';
 import {BrandEnd} from '../promo/Promo';
 import {KaspiBanner, KaspiSpec, Bubbles, BubblesSpec} from '../style/KaspiBanner';
+import {PointWords, PointGroup} from '../style/PointWords';
 
 ensureFonts();
 
@@ -28,6 +29,7 @@ export type EditSpec = {
   icons?: IconsSpec[];
   kaspi?: KaspiSpec[];
   bubbles?: BubblesSpec[];
+  points?: PointGroup[];
   stats?: {start: number; end: number; from: number; to: number; caption: string}[];
   music: {src: string; volume: number; duckTo?: number; duck?: [number, number][]};
   sfx?: {src: string; at: number; volume: number}[];
@@ -71,6 +73,7 @@ export const Edit: React.FC<{spec: EditSpec}> = ({spec}) => {
         {(spec.lists ?? []).map((x, i) => <ListCard key={i} {...x} />)}
         {(spec.icons ?? []).map((x, i) => <ActivityIcons key={i} {...x} />)}
         {(spec.bubbles ?? []).map((x, i) => <Bubbles key={i} {...x} />)}
+        {(spec.points ?? []).map((x, i) => <PointWords key={i} {...x} />)}
         {(spec.kaspi ?? []).map((x, i) => <KaspiBanner key={i} {...x} />)}
         <Subtitles phrases={spec.phrases} />
       </Sequence>
