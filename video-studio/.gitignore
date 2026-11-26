@@ -8,3 +8,7 @@ projects/*/*.MOV
 projects/*/audio/*.txt
 projects/*/source.mp4
 public/kaspi/
+projects/**/*.MOV
+projects/**/*.mov
+projects/**/*.mp4
+projects/*/broll*/
