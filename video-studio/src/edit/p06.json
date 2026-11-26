@@ -816,8 +816,8 @@
  "duration": 33.88,
  "music": {
   "src": "p06/music.wav",
-  "volume": 0.36,
-  "duckTo": 0.6,
+  "volume": 0.3,
+  "duckTo": 0.33,
   "duck": [
    [
     -0.02,

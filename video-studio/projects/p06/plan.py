@@ -152,7 +152,7 @@ for ws in allw.values():
         a0, b0 = w['os'] - 0.08, w['oe'] + 0.12
         if iv and a0 - iv[-1][1] < 0.35: iv[-1][1] = max(iv[-1][1], b0)
         else: iv.append([a0, b0])
-spec['music'] = {'src': 'p06/music.wav', 'volume': 0.36, 'duckTo': 0.6, 'duck': [[round(a, 3), round(b, 3)] for a, b in iv]}
+spec['music'] = {'src': 'p06/music.wav', 'volume': 0.30, 'duckTo': 0.33, 'duck': [[round(a, 3), round(b, 3)] for a, b in iv]}
 json.dump(spec, open(HERE / '../../src/edit/p06.json', 'w'), ensure_ascii=False, indent=1)
 print(f"segs {len(spec['segs'])}, phrases {len(spec['phrases'])}, duration {spec['duration']:.1f}s, end card at {end_at}")
 for g in spec['segs']:
