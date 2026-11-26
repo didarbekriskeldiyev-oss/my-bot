@@ -7,6 +7,7 @@ import {EndCard} from '../style/EndCard';
 import {Exercise, ExerciseSpec} from '../style/Exercise';
 import {ListCard, ListSpec, ActivityIcons, IconsSpec} from '../style/ListCard';
 import {BrandEnd} from '../promo/Promo';
+import {KaspiBanner, KaspiSpec, Bubbles, BubblesSpec} from '../style/KaspiBanner';
 
 ensureFonts();
 
@@ -25,10 +26,12 @@ export type EditSpec = {
   exercises?: ExerciseSpec[];
   lists?: ListSpec[];
   icons?: IconsSpec[];
+  kaspi?: KaspiSpec[];
+  bubbles?: BubblesSpec[];
   stats?: {start: number; end: number; from: number; to: number; caption: string}[];
   music: {src: string; volume: number; duckTo?: number; duck?: [number, number][]};
   sfx?: {src: string; at: number; volume: number}[];
-  endCard: {at: number; brand: string; tagline: string; line: string; wish: string; logo?: boolean};
+  endCard: {at: number; brand: string; tagline: string; line: string; wish: string; logo?: boolean; kaspi?: boolean};
 };
 
 const Clip: React.FC<{s: Seg}> = ({s}) => {
@@ -67,10 +70,12 @@ export const Edit: React.FC<{spec: EditSpec}> = ({spec}) => {
         {(spec.exercises ?? []).map((x, i) => <Exercise key={i} {...x} />)}
         {(spec.lists ?? []).map((x, i) => <ListCard key={i} {...x} />)}
         {(spec.icons ?? []).map((x, i) => <ActivityIcons key={i} {...x} />)}
+        {(spec.bubbles ?? []).map((x, i) => <Bubbles key={i} {...x} />)}
+        {(spec.kaspi ?? []).map((x, i) => <KaspiBanner key={i} {...x} />)}
         <Subtitles phrases={spec.phrases} />
       </Sequence>
       <Sequence from={fr(spec.endCard.at)}>
-        {spec.endCard.logo ? <BrandEnd line={spec.endCard.line} wish={spec.endCard.wish} /> : <EndCard {...spec.endCard} />}
+        {spec.endCard.logo ? <BrandEnd line={spec.endCard.line} wish={spec.endCard.wish} kaspi={spec.endCard.kaspi} /> : <EndCard {...spec.endCard} />}
       </Sequence>
       <Audio src={staticFile(spec.music.src)} volume={(f) => {
         // duck under the voice (0.15 s ramps), fade out at the end
