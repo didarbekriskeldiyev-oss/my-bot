@@ -9,31 +9,31 @@ ZKT = 'ZKT'          # words: audio/w16_ZKT.json, voice: p09/voice_IMG_2446_a9f7
 SKIP = {ZKT: [(56.5, 61.15)]}   # first, stumbled take of the last sentence
 
 # (whisper id, mode, voice file, spoken text, source time window)
-CLIPS = [
-    (ZKT, 'voiceover', 'voice_IMG_2446_a9f7',
-     'Жүргенде тізеңіз ауырып немесе баспалдақпен көтерілгенде жайсыздық сезесіз бе?', (0, 7.55)),
+CLIPS = [   # order follows the final script
     ('IMG_2441_772c', 'onscreen', 'voice_IMG_2441_772c',
      'Комплекс ем — бірнеше емдеу тәсілдерінің бір бағдарламада үйлестірілуі. Яғни бір массаж немесе ине терапиясы ғана емес, '
-     'пациенттің денсаулығына байланысты емдеу әдістері кезең-кезеңмен белгіленеді.', (0, 99)),
+     'пациенттің денсаулығына байланысты емдеу әдістері кезең-кезеңімен жүргізіледі.', (0, 99)),
+    (ZKT, 'voiceover', 'voice_IMG_2446_a9f7',
+     'Жүргенде тізеңіз ауырып немесе баспалдақпен көтерілгенде жайсыздық сезесіз бе?', (0, 7.55)),
     (ZKT, 'voiceover', 'voice_IMG_2446_a9f7',
      '«Asyl Ine»-де тізе буынына арналған комплекс ем алты негізгі кезең бойынша жүргізіледі. '
-     'Бірінші — ток пен емдеу және ине терапиясы. Тізе аймағына арнайы аппарат пен ине терапиясы қолданылады. '
+     'Бірінші — тоқпен емдеу және ине терапиясы. Тізе аймағына арнайы аппарат пен ине терапиясы қолданылады. '
      'Екінші — емдік массаж. Тізе айналасындағы бұлшықеттерге массаж жасалады. '
      'Үшінші — физиотерапия. Тізе буынына арналған арнайы физиотерапиялық процедуралар жүргізіледі. '
-     'Төртінші — бамбук банкасы. Аяқтың арнайы аймақтарына бамбук банкасымен процедура жасалады. '
+     'Төртінші — бамбук банкісі. Аяқтың арнайы аймақтарына бамбук банкісімен процедура жасалады. '
      'Бесінші — арнайы нүктелерден қан алу. Яғни дәрігердің көрсетілімі бойынша арнайы нүктелерге қан алу процедурасы жүргізіледі. '
      'Алтыншы — буынға арналған қосымша ем. Яғни дәрігер буын жағдайын бағалап, қажет болғанда тиісті препараттар мен қосымша емді тағайындайды. '
      'Бұлшықет түйілуіне арналған шөптік құралдар да ұсынылады.', (7.55, 99)),
+    ('IMG_2455_7830', 'onscreen', 'voice_IMG_2455_7830',
+     'Бір бағдарламада — бірнеше емдеу әдісі. Егер сізді тізе, бел, мойын, иық, буын аурулары мазалайтын болса, '
+     '«Asyl Ine» медициналық орталығы сізді күтеді.', (0, 99)),
     ('IMG_2455_aa4a', 'onscreen', 'voice_IMG_2455_aa4a',
      '20 жылдық тәжірибесі бар мамандар сізді күтіп, денсаулық жағдайыңызға байланысты комплекс емін ұсынады. '
      'Және ең маңыздысы, комплекс емге арнайы жеңілдіктер жүріп жатыр. Және де 24 айға бөліп төлеп алу мүмкіндігі бар. '
      'Мүмкіндікті жіберіп алмаңыз.', (0, 99)),
-    ('IMG_2455_7830', 'onscreen', 'voice_IMG_2455_7830',
-     'Бір бағдарламада — бірнеше емдеу әдісі. Егер сізді тізе, бел, мойын, иық, буын аурулары мазалайтын болса, '
-     '«Asyl Ine» медициналық орталығы сізді күтеді.', (0, 99)),
 ]
 ALIAS = {'asyl': 'асылы', 'ine': 'ине'}
-EMPH = {'тізеңіз': 'box', 'жайсыздық': 'accent', 'комплекс': 'box', 'бағдарламада': 'accent', 'кезеңкезеңмен': 'pop',
+EMPH = {'тізеңіз': 'box', 'жайсыздық': 'accent', 'комплекс': 'box', 'бағдарламада': 'accent', 'кезеңкезеңімен': 'pop',
         'алты': 'box', 'бірінші': 'box', 'екінші': 'box', 'үшінші': 'box', 'төртінші': 'box', 'бесінші': 'box', 'алтыншы': 'box',
         'ине': 'accent', 'массаж': 'accent', 'физиотерапия': 'accent', 'бамбук': 'accent', 'шөптік': 'accent',
         '20': 'accent', 'жылдық': 'box', 'жеңілдіктер': 'box', '24': 'box', 'айға': 'accent', 'мүмкіндікті': 'pop',
@@ -154,13 +154,12 @@ def at(i, prefix, n=1, exact=False):
     return round(hit[n - 1], 3)
 def end_of(i): return round(allw[i][-1]['oe'], 3)
 
-H, D, M, S1, S2 = 0, 1, 2, 3, 4   # hook, definition, main voice-over, offer, call-to-action
-stages = [('бірінші', 'ТОК + ИНЕ', 'терапиясы'), ('екінші', 'ЕМДІК', 'массаж'), ('үшінші', 'ФИЗИО', 'терапия'),
-          ('төртінші', 'БАМБУК', 'банкасы'), ('бесінші', 'ҚАН АЛУ', 'нүктелерден'), ('алтыншы', 'ҚОСЫМША', 'ем')]
+D, H, M, S2, S1 = 0, 1, 2, 3, 4   # definition, hook, main voice-over, call-to-action, offer
+stages = [('бірінші', 'ТОҚ + ИНЕ', 'терапиясы'), ('екінші', 'ЕМДІК', 'массаж'), ('үшінші', 'ФИЗИО', 'терапия'),
+          ('төртінші', 'БАМБУК', 'банкісі'), ('бесінші', 'ҚАН АЛУ', 'нүктелерден'), ('алтыншы', 'ҚОСЫМША', 'ем')]
 spec['titles'] = [
     dict(start=at(H, 'тізеңіз'), end=end_of(H), bold='ТІЗЕҢІЗ', italic='ауыра ма?', y=0.14),
-    dict(start=at(D, 'комплекс'), end=at(D, 'яғни'), bold='КОМПЛЕКС', italic='ем', y=0.14),
-    dict(start=at(D, 'кезеңкезеңмен'), end=end_of(D), bold='КЕЗЕҢ-КЕЗЕҢМЕН', y=0.14),
+    dict(start=at(D, 'кезеңкезеңімен'), end=end_of(D), bold='КЕЗЕҢ-КЕЗЕҢІМЕН', y=0.14),
     dict(start=at(M, 'алты'), end=at(M, 'бірінші') - 0.05, bold='6', italic='кезең', y=0.14),
 ]
 for i, (w, bold, it) in enumerate(stages):
@@ -168,22 +167,30 @@ for i, (w, bold, it) in enumerate(stages):
     spec['titles'].append(dict(start=at(M, w), end=nxt, bold=bold, italic=it, num=f'0{i + 1}', y=0.12))
 spec['titles'] += [
     dict(start=at(M, 'бұлшықет', exact=True), end=end_of(M), bold='ШӨПТІК', italic='құралдар', y=0.14),
-    dict(start=at(S1, 'жеңілдіктер') - 0.3, end=at(S1, 'және', 2), bold='АРНАЙЫ', italic='жеңілдіктер', y=0.14),
-    dict(start=at(S1, '24'), end=at(S1, 'мүмкіндікті'), bold='24 АЙ', italic='бөліп төлеу', y=0.14),
     dict(start=at(S1, 'мүмкіндікті'), end=end_of(S1), bold='ЖІБЕРІП', italic='алмаңыз!', y=0.14),
-    dict(start=at(S2, 'бір', 1), end=at(S2, 'егер'), bold='БІР', italic='бағдарламада', y=0.14),
 ]
 spec['stats'] = [dict(start=at(S1, '20'), end=at(S1, 'денсаулық'), **{'from': 12, 'to': 20}, caption='жыл тәжірибе')]
+# big all-caps lines of the script hit the screen with an impact
+spec['slams'] = [
+    dict(start=at(D, 'комплекс') + 0.05, end=at(D, 'яғни') - 0.05, text='КОМПЛЕКС ЕМ'),
+    dict(start=at(S2, 'бір', 1) + 0.05, end=at(S2, 'егер') - 0.05, text='БІР БАҒДАРЛАМАДА', sub='бірнеше емдеу әдісі!'),
+    dict(start=at(S1, 'жеңілдіктер') - 0.25, end=at(S1, 'және', 2) - 0.05, text='ЖЕҢІЛДІК!', sub='комплекс емге'),
+]
+# Kaspi 0·0·24 cutaway while the speaker says "24 айға бөліп төлеп алу мүмкіндігі бар"
+spec['kaspi'] = [dict(start=at(S1, '24') - 0.12, end=at(S1, 'мүмкіндікті') - 0.05, numbersAt=at(S1, '24'),
+                      darkAt=at(S1, 'бөліп'), zeroAt=at(S1, 'мүмкіндігі'))]
 spec['lists'] = [dict(start=at(S2, 'тізе') - 0.1, end=at(S2, 'asyl') - 0.05, bold='МАЗАЛАСА', italic='', icon='warn', items=[
     dict(text='Тізе', at=at(S2, 'тізе')), dict(text='Бел', at=at(S2, 'бел', exact=True)), dict(text='Мойын', at=at(S2, 'мойын')),
     dict(text='Иық', at=at(S2, 'иық')), dict(text='Буын аурулары', at=at(S2, 'буын'))])]
-starts = [t['start'] for t in spec['titles']] + [l['start'] for l in spec['lists']]
+starts = [t['start'] for t in spec['titles']] + [l['start'] for l in spec['lists']] + [k['darkAt'] for k in spec['kaspi']]
 pops = [it['at'] for l in spec['lists'] for it in l['items']] + [at(M, w) for w, _, _ in stages]
-spec['sfx'] = [{'src': 'whoosh.wav', 'at': round(max(0, s - 0.2), 3), 'volume': 0.35} for s in starts] + \
+spec['sfx'] = [{'src': 'impact.wav', 'at': round(x['start'], 3), 'volume': 0.5} for x in spec['slams']] + \
+              [{'src': 'impact.wav', 'at': round(k['start'], 3), 'volume': 0.45} for k in spec['kaspi']] + \
+              [{'src': 'whoosh.wav', 'at': round(max(0, s - 0.2), 3), 'volume': 0.35} for s in starts] + \
               [{'src': 'pop.wav', 'at': round(p, 3), 'volume': 0.4} for p in pops]
 end_at = round(T + 0.3, 3)
 spec['endCard'] = {'at': end_at, 'brand': 'Asyl Ine', 'tagline': 'ШЫҒЫС МЕДИЦИНАСЫ ОРТАЛЫҒЫ',
-                   'line': 'Тізеге арналған комплекс ем — 6 кезең', 'wish': 'Деніңіз сау болсын!', 'logo': True}
+                   'line': 'Қабылдауға жазылу үшін Direct-ке хабарласыңыз', 'wish': 'Біз сізді күтеміз!', 'logo': True, 'kaspi': True}
 spec['duration'] = round(end_at + 2.7, 3)
 iv = []
 for ws in allw.values():
