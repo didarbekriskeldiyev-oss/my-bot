@@ -6,14 +6,15 @@ import {T} from './tokens';
  *  (y0..y1 of the 1080×1920 source), a blurred copy fills the background, stars + a short label on top. */
 export type ReviewCard = {y0: number; y1: number; label: string};
 
-export const ReviewClip: React.FC<{src: string; from: number; card: ReviewCard}> = ({src, from, card}) => {
+export const ReviewClip: React.FC<{src: string; from: number; card: ReviewCard; shake?: boolean}> = ({src, from, card, shake}) => {
   const f = useCurrentFrame();
   const {fps} = useVideoConfig();
   const p = spring({frame: f, fps, config: {damping: 14, stiffness: 180}});
   const W = 960, k = W / 1080, H = (card.y1 - card.y0) * k;
   const startFrom = Math.round(from * fps);
+  const d = f / fps, amp = shake && d < 0.3 ? (1 - d / 0.3) * 22 : 0;
   return (
-    <AbsoluteFill style={{background: '#0B2A23'}}>
+    <AbsoluteFill style={{background: '#0B2A23', transform: `translate(${Math.sin(d * 90) * amp}px, ${Math.cos(d * 75) * amp * 0.7}px) scale(${1 + amp / 400})`}}>
       <AbsoluteFill style={{filter: 'blur(28px) brightness(0.55)', transform: 'scale(1.15)'}}>
         <OffthreadVideo src={staticFile(src)} startFrom={startFrom} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
       </AbsoluteFill>
@@ -70,6 +71,35 @@ export const AdvCard: React.FC<AdvSpec> = ({start, end, num, big, unit, title, i
         <div style={{marginTop: 34, width: 860, fontFamily: T.sans, fontWeight: 700, fontSize: 46, lineHeight: 1.3, color: '#D7EFE7', opacity: c}}>{line}</div>
       </div>
       <AbsoluteFill style={{background: '#E8FFF7', opacity: flash}} />
+    </AbsoluteFill>
+  );
+};
+
+/** Hook "slam" word: huge text hits the screen (3x → 1x) with a white flash; times are absolute seconds. */
+export type SlamSpec = {start: number; end: number; text: string; sub?: string};
+export const SlamText: React.FC<SlamSpec> = ({start, end, text, sub}) => {
+  const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const t = frame / fps;
+  if (t < start || t >= end) return null;
+  const p = spring({frame: Math.round((t - start) * fps), fps, config: {damping: 11, stiffness: 320, mass: 0.6}});
+  const flash = interpolate(t - start, [0, 0.12], [0.75, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const d = t - start;
+  const shake = d < 0.3 ? (1 - d / 0.3) * 16 : 0;
+  const size = Math.min(150, 980 / (0.78 * text.length));
+  return (
+    <AbsoluteFill>
+      <AbsoluteFill style={{background: 'radial-gradient(circle at 50% 55%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.45) 100%)'}} />
+      <div style={{position: 'absolute', top: 1050, width: '100%', textAlign: 'center',
+        transform: `translate(${Math.sin(d * 95) * shake}px, ${Math.cos(d * 80) * shake * 0.6}px) scale(${interpolate(p, [0, 1], [3, 1])}) rotate(${interpolate(p, [0, 1], [-6, -2])}deg)`,
+        opacity: interpolate(p, [0, 0.3], [0, 1], {extrapolateRight: 'clamp'})}}>
+        <span style={{display: 'inline-block', background: T.green, padding: '6px 34px 14px', borderRadius: 18, border: `6px solid ${T.mint}`,
+          fontFamily: T.sans, fontWeight: 800, fontSize: size, color: T.white, lineHeight: 1.05, whiteSpace: 'nowrap',
+          boxShadow: '0 18px 50px rgba(0,0,0,0.55)'}}>{text}</span>
+        {sub ? <div style={{marginTop: 14, fontFamily: T.serif, fontStyle: 'italic', fontWeight: 700, fontSize: 52, color: T.mint,
+          textShadow: '0 4px 16px rgba(0,0,0,0.7)'}}>{sub}</div> : null}
+      </div>
+      <AbsoluteFill style={{background: '#FFFFFF', opacity: flash}} />
     </AbsoluteFill>
   );
 };

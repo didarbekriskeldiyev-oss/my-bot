@@ -66,16 +66,35 @@ def add_phrases(groups, shift):
         spec['phrases'].append({'start': ws[0]['start'], 'end': None, 'words': ws, 'dot': False})
         voice_iv.append([ws[0]['start'] - 0.1, ws[-1]['end'] + 0.15])
 
+# 0) HOOK: the strongest patient quotes, one after another, each with an impact (slam word + flash + shake + boom)
+HOOK = [  # (clip, in, out, slam word, subtitle words)
+    ('R1', 28.28, 31.05, 'МНЕ ПОМОГЛИ', [W('именно', 28.28, 28.9), W('вот', 28.9, 29.1), W('в', 29.1, 29.2), W('этой', 29.2, 29.5),
+                                        W('клинике', 29.5, 29.98, 'box'), W('мне', 29.98, 30.3), W('помогли', 30.3, 31.0, 'accent')]),
+    ('R1', 80.55, 82.2, 'НА НОГИ!', [W('они', 80.60, 80.80), W('меня', 80.80, 81.02), W('подняли', 81.02, 81.64, 'box'), W('на', 81.64, 81.82), W('ноги', 81.82, 82.12, 'accent')]),
+    ('R3', 9.9, 11.95, '4 КҮНДЕ!', [W('өте', 9.95, 10.35, 'pop'), W('көп', 10.35, 10.6), W('результат', 10.6, 11.25, 'box'), W('берді', 11.25, 11.8)]),
+    ('R3', 57.55, 59.55, 'КЕРЕМЕТ!', [W('прям', 57.65, 58.6), W('керемет', 58.6, 59.0, 'box'), W('боп', 59.0, 59.4)]),
+]
+spec['slams'] = []
+for clip, a, b, slam, ws in HOOK:
+    spec['segs'].append({'at': round(T, 3), 'dur': round(b - a, 3), 'voice': {'src': f'p10/voice_{clip}.wav', 'from': a},
+                         'video': {'src': f'p10/{clip}.mp4', 'from': a, 'card': CARD[clip], 'shake': True}})
+    spec['slams'].append({'start': round(T + 0.05, 3), 'end': round(T + (b - a), 3), 'text': slam})
+    spec['sfx'].append({'src': 'impact.wav', 'at': round(T, 3), 'volume': 0.55})
+    add_phrases([ws], T - a)
+    T += b - a
+HOOK_END = T
+
 # 1) opening speaker clip, two shots (punch-in at the second sentence)
 o_in, o_mid, o_out = 0.0, 4.9, 11.4
-spec['segs'].append({'at': 0.0, 'dur': o_mid - o_in, 'voice': {'src': 'p10/voice_IMG_2497.wav', 'from': o_in},
-                     'video': {'src': 'p10/IMG_2497.mp4', 'from': o_in, 'zoom': [1.0, 1.03]}})
-spec['segs'].append({'at': o_mid, 'dur': o_out - o_mid, 'voice': {'src': 'p10/voice_IMG_2497.wav', 'from': o_mid},
+spec['segs'].append({'at': round(T, 3), 'dur': o_mid - o_in, 'voice': {'src': 'p10/voice_IMG_2497.wav', 'from': o_in},
+                     'video': {'src': 'p10/IMG_2497.mp4', 'from': o_in, 'zoom': [1.0, 1.03]}, 'flash': True})
+spec['segs'].append({'at': round(T + o_mid, 3), 'dur': o_out - o_mid, 'voice': {'src': 'p10/voice_IMG_2497.wav', 'from': o_mid},
                      'video': {'src': 'p10/IMG_2497.mp4', 'from': o_mid, 'zoom': [1.14, 1.17]}})
-add_phrases([OPEN[a:b] for a, b in OPEN_GROUPS], -o_in)
-spec['titles'].append(dict(start=0.3, end=4.8, bold='НЕЛІКТЕН', italic='Asyl Ine?', y=0.14))
-spec['titles'].append(dict(start=4.98, end=o_out, bold='5', italic='артықшылық', y=0.14))
-T = o_out
+add_phrases([OPEN[a:b] for a, b in OPEN_GROUPS], T - o_in)
+spec['titles'].append(dict(start=round(T + 0.3, 3), end=round(T + 4.8, 3), bold='НЕЛІКТЕН', italic='Asyl Ine?', y=0.14))
+spec['titles'].append(dict(start=round(T + 4.98, 3), end=round(T + o_out, 3), bold='5', italic='артықшылық', y=0.14))
+spec['sfx'].append({'src': 'whoosh.wav', 'at': round(T - 0.15, 3), 'volume': 0.4})
+T += o_out
 
 def add_review(key):
     global T
@@ -99,7 +118,7 @@ for i, c in enumerate(ADV):
     add_review(f'adv{i + 1}')
 # 3) thanks: card + reviews
 add_card(dict(num='', title='АЛҒЫС', italic='айтамыз!', line='Бізге сенім артып, пікірімен бөліскен барлық пациенттерімізге'), 2.6)
-for k in ('th1', 'th2', 'th3', 'th4', 'th5'):
+for k in ('th1', 'th2', 'th3', 'th5'):
     add_review(k)
 # 4) call to action card
 add_card(dict(num='', title='БІЗ СІЗДІ', italic='күтеміз!',
