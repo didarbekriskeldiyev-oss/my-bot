@@ -3,24 +3,6 @@
  "segs": [
   {
    "at": 0.0,
-   "dur": 2.77,
-   "voice": {
-    "src": "p10/voice_R1.wav",
-    "from": 28.28
-   },
-   "video": {
-    "src": "p10/R1.mp4",
-    "from": 28.28,
-    "card": {
-     "y0": 120,
-     "y1": 1300,
-     "label": "Мойын · иық"
-    },
-    "shake": true
-   }
-  },
-  {
-   "at": 2.77,
    "dur": 1.65,
    "voice": {
     "src": "p10/voice_R1.wav",
@@ -38,7 +20,25 @@
    }
   },
   {
-   "at": 4.42,
+   "at": 1.65,
+   "dur": 1.57,
+   "voice": {
+    "src": "p10/voice_R1.wav",
+    "from": 82.38
+   },
+   "video": {
+    "src": "p10/R1.mp4",
+    "from": 82.38,
+    "card": {
+     "y0": 120,
+     "y1": 1300,
+     "label": "Мойын · иық"
+    },
+    "shake": true
+   }
+  },
+  {
+   "at": 3.22,
    "dur": 2.05,
    "voice": {
     "src": "p10/voice_R3.wav",
@@ -56,7 +56,7 @@
    }
   },
   {
-   "at": 6.47,
+   "at": 5.27,
    "dur": 2.0,
    "voice": {
     "src": "p10/voice_R3.wav",
@@ -74,7 +74,7 @@
    }
   },
   {
-   "at": 8.47,
+   "at": 7.27,
    "dur": 4.9,
    "voice": {
     "src": "p10/voice_IMG_2497.wav",
@@ -91,7 +91,7 @@
    "flash": true
   },
   {
-   "at": 13.37,
+   "at": 12.17,
    "dur": 6.5,
    "voice": {
     "src": "p10/voice_IMG_2497.wav",
@@ -107,7 +107,7 @@
    }
   },
   {
-   "at": 19.87,
+   "at": 18.67,
    "dur": 2.4,
    "video": {
     "src": "p09/IMG_2558.mp4",
@@ -119,7 +119,7 @@
    }
   },
   {
-   "at": 22.27,
+   "at": 21.07,
    "dur": 3.5,
    "voice": {
     "src": "p10/voice_R1.wav",
@@ -137,7 +137,7 @@
    "flash": true
   },
   {
-   "at": 25.77,
+   "at": 24.57,
    "dur": 2.4,
    "video": {
     "src": "p09/IMG_2558.mp4",
@@ -149,7 +149,7 @@
    }
   },
   {
-   "at": 28.17,
+   "at": 26.97,
    "dur": 4.7,
    "voice": {
     "src": "p10/voice_R1.wav",
@@ -167,7 +167,7 @@
    "flash": true
   },
   {
-   "at": 32.87,
+   "at": 31.67,
    "dur": 2.4,
    "video": {
     "src": "p09/IMG_2558.mp4",
@@ -179,7 +179,7 @@
    }
   },
   {
-   "at": 35.27,
+   "at": 34.07,
    "dur": 4.0,
    "voice": {
     "src": "p10/voice_R1.wav",
@@ -197,7 +197,7 @@
    "flash": true
   },
   {
-   "at": 39.27,
+   "at": 38.07,
    "dur": 2.4,
    "video": {
     "src": "p09/IMG_2558.mp4",
@@ -209,7 +209,7 @@
    }
   },
   {
-   "at": 41.67,
+   "at": 40.47,
    "dur": 5.75,
    "voice": {
     "src": "p10/voice_R1.wav",
@@ -227,7 +227,7 @@
    "flash": true
   },
   {
-   "at": 47.42,
+   "at": 46.22,
    "dur": 2.4,
    "video": {
     "src": "p09/IMG_2558.mp4",
@@ -239,7 +239,7 @@
    }
   },
   {
-   "at": 49.82,
+   "at": 48.62,
    "dur": 3.35,
    "voice": {
     "src": "p10/voice_R1.wav",
@@ -257,7 +257,7 @@
    "flash": true
   },
   {
-   "at": 53.17,
+   "at": 51.97,
    "dur": 2.6,
    "video": {
     "src": "p09/IMG_2558.mp4",
@@ -269,7 +269,25 @@
    }
   },
   {
-   "at": 55.77,
+   "at": 54.57,
+   "dur": 7.9,
+   "voice": {
+    "src": "p10/voice_R1.wav",
+    "from": 23.2
+   },
+   "video": {
+    "src": "p10/R1.mp4",
+    "from": 23.2,
+    "card": {
+     "y0": 120,
+     "y1": 1300,
+     "label": "Мойын · иық"
+    }
+   },
+   "flash": true
+  },
+  {
+   "at": 62.47,
    "dur": 1.45,
    "voice": {
     "src": "p10/voice_R2.wav",
@@ -287,7 +305,7 @@
    "flash": true
   },
   {
-   "at": 57.22,
+   "at": 63.92,
    "dur": 4.45,
    "voice": {
     "src": "p10/voice_R2.wav",
@@ -305,7 +323,7 @@
    "flash": true
   },
   {
-   "at": 61.67,
+   "at": 68.37,
    "dur": 5.8,
    "voice": {
     "src": "p10/voice_R3.wav",
@@ -323,7 +341,7 @@
    "flash": true
   },
   {
-   "at": 67.47,
+   "at": 74.17,
    "dur": 5.2,
    "voice": {
     "src": "p10/voice_R1.wav",
@@ -341,7 +359,7 @@
    "flash": true
   },
   {
-   "at": 72.67,
+   "at": 79.37,
    "dur": 3.2,
    "video": {
     "src": "p09/IMG_2558.mp4",
@@ -355,839 +373,978 @@
  ],
  "phrases": [
   {
-   "start": 0.0,
-   "end": 2.82,
-   "words": [
-    {
-     "text": "именно",
-     "start": 0.0,
-     "end": 0.62
-    },
-    {
-     "text": "вот",
-     "start": 0.62,
-     "end": 0.82
-    },
-    {
-     "text": "в",
-     "start": 0.82,
-     "end": 0.92
-    },
-    {
-     "text": "этой",
-     "start": 0.92,
-     "end": 1.22
-    },
-    {
-     "text": "клинике",
-     "start": 1.22,
-     "end": 1.7,
-     "style": "box"
-    },
-    {
-     "text": "мне",
-     "start": 1.7,
-     "end": 2.02
-    },
-    {
-     "text": "помогли",
-     "start": 2.02,
-     "end": 2.72,
-     "style": "accent"
-    }
-   ],
-   "dot": false
-  },
-  {
-   "start": 2.82,
-   "end": 4.47,
+   "start": 0.05,
+   "end": 1.71,
    "words": [
     {
      "text": "они",
-     "start": 2.82,
-     "end": 3.02
+     "start": 0.05,
+     "end": 0.25
     },
     {
      "text": "меня",
-     "start": 3.02,
-     "end": 3.24
+     "start": 0.25,
+     "end": 0.47
     },
     {
      "text": "подняли",
-     "start": 3.24,
-     "end": 3.86,
+     "start": 0.47,
+     "end": 1.09,
      "style": "box"
     },
     {
      "text": "на",
-     "start": 3.86,
-     "end": 4.04
+     "start": 1.09,
+     "end": 1.27
     },
     {
      "text": "ноги",
-     "start": 4.04,
-     "end": 4.34,
+     "start": 1.27,
+     "end": 1.57,
      "style": "accent"
     }
    ],
    "dot": false
   },
   {
-   "start": 4.47,
-   "end": 6.57,
+   "start": 1.71,
+   "end": 3.27,
+   "words": [
+    {
+     "text": "Мне",
+     "start": 1.71,
+     "end": 2.03
+    },
+    {
+     "text": "стало",
+     "start": 2.03,
+     "end": 2.27
+    },
+    {
+     "text": "намного",
+     "start": 2.27,
+     "end": 2.75,
+     "style": "accent"
+    },
+    {
+     "text": "легче",
+     "start": 2.75,
+     "end": 3.13,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 3.27,
+   "end": 5.37,
    "words": [
     {
      "text": "өте",
-     "start": 4.47,
-     "end": 4.87,
+     "start": 3.27,
+     "end": 3.67,
      "style": "pop"
     },
     {
      "text": "көп",
-     "start": 4.87,
-     "end": 5.12
+     "start": 3.67,
+     "end": 3.92
     },
     {
      "text": "результат",
-     "start": 5.12,
-     "end": 5.77,
+     "start": 3.92,
+     "end": 4.57,
      "style": "box"
     },
     {
      "text": "берді",
-     "start": 5.77,
-     "end": 6.32
+     "start": 4.57,
+     "end": 5.12
     }
    ],
    "dot": false
   },
   {
-   "start": 6.57,
-   "end": 8.77,
+   "start": 5.37,
+   "end": 7.57,
    "words": [
     {
      "text": "прям",
-     "start": 6.57,
-     "end": 7.52
+     "start": 5.37,
+     "end": 6.32
     },
     {
      "text": "керемет",
-     "start": 7.52,
-     "end": 7.92,
+     "start": 6.32,
+     "end": 6.72,
      "style": "box"
     },
     {
      "text": "боп",
-     "start": 7.92,
-     "end": 8.32
+     "start": 6.72,
+     "end": 7.12
     }
    ],
    "dot": false
   },
   {
-   "start": 8.77,
-   "end": 11.03,
+   "start": 7.57,
+   "end": 9.83,
    "words": [
     {
      "text": "Неліктен",
-     "start": 8.77,
-     "end": 9.95
+     "start": 7.57,
+     "end": 8.75
     },
     {
      "text": "пациенттеріміз",
-     "start": 9.95,
-     "end": 10.73
+     "start": 8.75,
+     "end": 9.53
     },
     {
      "text": "дәл",
-     "start": 10.73,
-     "end": 11.03
+     "start": 9.53,
+     "end": 9.83
     }
    ],
    "dot": false
   },
   {
-   "start": 11.03,
-   "end": 13.45,
+   "start": 9.83,
+   "end": 12.25,
    "words": [
     {
      "text": "Asyl",
-     "start": 11.03,
-     "end": 11.57,
+     "start": 9.83,
+     "end": 10.37,
      "style": "box"
     },
     {
      "text": "Ine",
-     "start": 11.57,
-     "end": 11.97,
+     "start": 10.37,
+     "end": 10.77,
      "style": "box"
     },
     {
      "text": "медициналық",
-     "start": 11.97,
-     "end": 12.31
+     "start": 10.77,
+     "end": 11.11
     },
     {
      "text": "орталығын",
-     "start": 12.31,
-     "end": 12.73
+     "start": 11.11,
+     "end": 11.53
     },
     {
      "text": "таңдайды?",
-     "start": 12.73,
-     "end": 13.19,
+     "start": 11.53,
+     "end": 11.99,
      "style": "pop"
     }
    ],
    "dot": false
   },
   {
-   "start": 13.45,
-   "end": 15.09,
+   "start": 12.25,
+   "end": 13.89,
    "words": [
     {
      "text": "Біздің",
-     "start": 13.45,
-     "end": 14.11
+     "start": 12.25,
+     "end": 12.91
     },
     {
      "text": "жұмысымызға",
-     "start": 14.11,
-     "end": 14.73
+     "start": 12.91,
+     "end": 13.53
     },
     {
      "text": "беріліп",
-     "start": 14.73,
-     "end": 15.09
+     "start": 13.53,
+     "end": 13.89
     }
    ],
    "dot": false
   },
   {
-   "start": 15.09,
-   "end": 16.55,
+   "start": 13.89,
+   "end": 15.35,
    "words": [
     {
      "text": "жатқан",
-     "start": 15.09,
-     "end": 15.49
+     "start": 13.89,
+     "end": 14.29
     },
     {
      "text": "жылы",
-     "start": 15.49,
-     "end": 15.93,
+     "start": 14.29,
+     "end": 14.73,
      "style": "accent"
     },
     {
      "text": "бағалар",
-     "start": 15.93,
-     "end": 16.41,
+     "start": 14.73,
+     "end": 15.21,
      "style": "accent"
     },
     {
      "text": "мен",
-     "start": 16.41,
-     "end": 16.55
+     "start": 15.21,
+     "end": 15.35
     }
    ],
    "dot": false
   },
   {
-   "start": 16.55,
-   "end": 18.03,
+   "start": 15.35,
+   "end": 16.83,
    "words": [
     {
      "text": "шынайы",
-     "start": 16.55,
-     "end": 17.03,
+     "start": 15.35,
+     "end": 15.83,
      "style": "accent"
     },
     {
      "text": "пікірлердің",
-     "start": 17.03,
-     "end": 17.63,
+     "start": 15.83,
+     "end": 16.43,
      "style": "box"
     },
     {
      "text": "артында",
-     "start": 17.63,
-     "end": 18.03
+     "start": 16.43,
+     "end": 16.83
     }
    ],
    "dot": false
   },
   {
-   "start": 18.03,
-   "end": 20.45,
+   "start": 16.83,
+   "end": 19.25,
    "words": [
     {
      "text": "қандай",
-     "start": 18.03,
-     "end": 18.83
+     "start": 16.83,
+     "end": 17.63
     },
     {
      "text": "артықшылықтар",
-     "start": 18.83,
-     "end": 19.49,
+     "start": 17.63,
+     "end": 18.29,
      "style": "box"
     },
     {
      "text": "бар?",
-     "start": 19.49,
-     "end": 19.65
+     "start": 18.29,
+     "end": 18.45
     }
    ],
    "dot": false
   },
   {
-   "start": 22.34,
-   "end": 23.7,
+   "start": 21.14,
+   "end": 22.5,
    "words": [
     {
      "text": "Об",
-     "start": 22.34,
-     "end": 22.94
+     "start": 21.14,
+     "end": 21.74
     },
     {
      "text": "этой",
-     "start": 22.94,
-     "end": 23.1
+     "start": 21.74,
+     "end": 21.9
     },
     {
      "text": "поликлинике",
-     "start": 23.1,
-     "end": 23.7
+     "start": 21.9,
+     "end": 22.5
     }
    ],
    "dot": false
   },
   {
-   "start": 23.7,
-   "end": 26.44,
+   "start": 22.5,
+   "end": 25.240000000000002,
    "words": [
     {
      "text": "я",
-     "start": 23.7,
-     "end": 24.0
+     "start": 22.5,
+     "end": 22.8
     },
     {
      "text": "узнала",
-     "start": 24.0,
-     "end": 24.76
+     "start": 22.8,
+     "end": 23.56
     },
     {
      "text": "ещё",
-     "start": 24.76,
-     "end": 24.94
+     "start": 23.56,
+     "end": 23.74
     },
     {
      "text": "лет",
-     "start": 24.94,
-     "end": 25.12
+     "start": 23.74,
+     "end": 23.92
     },
     {
      "text": "5",
-     "start": 25.12,
-     "end": 25.28,
+     "start": 23.92,
+     "end": 24.08,
      "style": "box"
     },
     {
      "text": "назад",
-     "start": 25.28,
-     "end": 25.64
+     "start": 24.08,
+     "end": 24.44
     }
    ],
    "dot": false
   },
   {
-   "start": 28.3,
-   "end": 31.3,
+   "start": 27.1,
+   "end": 30.1,
    "words": [
     {
      "text": "их",
-     "start": 28.3,
-     "end": 28.46
+     "start": 27.1,
+     "end": 27.26
     },
     {
      "text": "профессиональный",
-     "start": 29.38,
-     "end": 30.3,
+     "start": 28.18,
+     "end": 29.1,
      "style": "box"
     },
     {
      "text": "подход",
-     "start": 30.3,
-     "end": 30.66
+     "start": 29.1,
+     "end": 29.46
     }
    ],
    "dot": false
   },
   {
-   "start": 31.3,
-   "end": 33.5,
+   "start": 30.1,
+   "end": 32.3,
    "words": [
     {
      "text": "их",
-     "start": 31.3,
-     "end": 31.44
+     "start": 30.1,
+     "end": 30.24
     },
     {
      "text": "забота",
-     "start": 31.44,
-     "end": 32.0,
+     "start": 30.24,
+     "end": 30.8,
      "style": "accent"
     },
     {
      "text": "их",
-     "start": 32.06,
-     "end": 32.18
+     "start": 30.86,
+     "end": 30.98
     },
     {
      "text": "внимание",
-     "start": 32.18,
-     "end": 32.7,
+     "start": 30.98,
+     "end": 31.5,
      "style": "accent"
     }
    ],
    "dot": false
   },
   {
-   "start": 35.33,
-   "end": 36.45,
+   "start": 34.13,
+   "end": 35.25,
    "words": [
     {
      "text": "И",
-     "start": 35.33,
-     "end": 35.63
+     "start": 34.13,
+     "end": 34.43
     },
     {
      "text": "самое",
-     "start": 35.63,
-     "end": 35.85
+     "start": 34.43,
+     "end": 34.65
     },
     {
      "text": "главное",
-     "start": 35.85,
-     "end": 36.15
+     "start": 34.65,
+     "end": 34.95
     }
    ],
    "dot": false
   },
   {
-   "start": 36.45,
-   "end": 37.35,
+   "start": 35.25,
+   "end": 36.15,
    "words": [
     {
      "text": "что",
-     "start": 36.45,
-     "end": 36.49
+     "start": 35.25,
+     "end": 35.29
     },
     {
      "text": "нравится",
-     "start": 36.49,
-     "end": 36.83
+     "start": 35.29,
+     "end": 35.63
     },
     {
      "text": "здесь",
-     "start": 36.83,
-     "end": 37.15
+     "start": 35.63,
+     "end": 35.95
     }
    ],
    "dot": false
   },
   {
-   "start": 37.35,
-   "end": 39.91,
+   "start": 36.15,
+   "end": 38.709999999999994,
    "words": [
     {
      "text": "комплексный",
-     "start": 37.35,
-     "end": 38.13,
+     "start": 36.15,
+     "end": 36.93,
      "style": "box"
     },
     {
      "text": "подход",
-     "start": 38.13,
-     "end": 38.43
+     "start": 36.93,
+     "end": 37.23
     },
     {
      "text": "к",
-     "start": 38.43,
-     "end": 38.63
+     "start": 37.23,
+     "end": 37.43
     },
     {
      "text": "лечению",
-     "start": 38.63,
-     "end": 39.11
+     "start": 37.43,
+     "end": 37.91
     }
    ],
    "dot": false
   },
   {
-   "start": 41.71,
-   "end": 44.75,
+   "start": 40.51,
+   "end": 43.55,
    "words": [
     {
      "text": "В",
-     "start": 41.71,
-     "end": 42.49
+     "start": 40.51,
+     "end": 41.29
     },
     {
      "text": "течение",
-     "start": 42.49,
-     "end": 42.85
+     "start": 41.29,
+     "end": 41.65
     },
     {
      "text": "15–30",
-     "start": 42.85,
-     "end": 44.31,
+     "start": 41.65,
+     "end": 43.11,
      "style": "box"
     },
     {
      "text": "минут",
-     "start": 44.31,
-     "end": 44.75
+     "start": 43.11,
+     "end": 43.55
     }
    ],
    "dot": false
   },
   {
-   "start": 44.75,
-   "end": 45.51,
+   "start": 43.55,
+   "end": 44.31,
    "words": [
     {
      "text": "он",
-     "start": 44.75,
-     "end": 44.89
+     "start": 43.55,
+     "end": 43.69
     },
     {
      "text": "мне",
-     "start": 44.89,
-     "end": 45.03
+     "start": 43.69,
+     "end": 43.83
     },
     {
      "text": "объяснял",
-     "start": 45.03,
-     "end": 45.51,
+     "start": 43.83,
+     "end": 44.31,
      "style": "accent"
     }
    ],
    "dot": false
   },
   {
-   "start": 45.51,
-   "end": 48.07,
+   "start": 44.31,
+   "end": 46.87,
    "words": [
     {
      "text": "все",
-     "start": 45.51,
-     "end": 45.97
+     "start": 44.31,
+     "end": 44.77
     },
     {
      "text": "причины",
-     "start": 45.97,
-     "end": 46.45,
+     "start": 44.77,
+     "end": 45.25,
      "style": "box"
     },
     {
      "text": "моих",
-     "start": 46.45,
-     "end": 46.71
+     "start": 45.25,
+     "end": 45.51
     },
     {
      "text": "болезней",
-     "start": 46.71,
-     "end": 47.27
+     "start": 45.51,
+     "end": 46.07
     }
    ],
    "dot": false
   },
   {
-   "start": 49.91,
-   "end": 51.59,
+   "start": 48.71,
+   "end": 50.39,
    "words": [
     {
      "text": "Провёл",
-     "start": 49.91,
-     "end": 50.83
+     "start": 48.71,
+     "end": 49.63
     },
     {
      "text": "бесплатную",
-     "start": 50.83,
-     "end": 51.47,
+     "start": 49.63,
+     "end": 50.27,
      "style": "accent"
     }
    ],
    "dot": false
   },
   {
-   "start": 51.59,
-   "end": 53.89,
+   "start": 50.39,
+   "end": 52.69,
    "words": [
     {
      "text": "совершенно",
-     "start": 51.59,
-     "end": 51.85
+     "start": 50.39,
+     "end": 50.65
     },
     {
      "text": "бесплатную",
-     "start": 51.85,
-     "end": 52.39,
+     "start": 50.65,
+     "end": 51.19,
      "style": "box"
     },
     {
      "text": "консультацию",
-     "start": 52.39,
-     "end": 53.09
+     "start": 51.19,
+     "end": 51.89
     }
    ],
    "dot": false
   },
   {
-   "start": 55.87,
-   "end": 57.32,
+   "start": 54.63,
+   "end": 56.09,
    "words": [
     {
-     "text": "Әйтеуір",
-     "start": 55.87,
-     "end": 56.22
+     "text": "Куда",
+     "start": 54.63,
+     "end": 54.93
     },
     {
-     "text": "жақсы",
-     "start": 56.22,
-     "end": 56.52,
+     "text": "я",
+     "start": 54.93,
+     "end": 55.03
+    },
+    {
+     "text": "только",
+     "start": 55.03,
+     "end": 55.21
+    },
+    {
+     "text": "не",
+     "start": 55.21,
+     "end": 55.37
+    },
+    {
+     "text": "обращалась",
+     "start": 55.37,
+     "end": 55.91,
      "style": "box"
-    },
-    {
-     "text": "боп",
-     "start": 56.52,
-     "end": 56.82
-    },
-    {
-     "text": "қалдым",
-     "start": 56.82,
-     "end": 57.17
     }
    ],
    "dot": false
   },
   {
-   "start": 57.32,
-   "end": 58.67,
+   "start": 56.09,
+   "end": 58.19,
    "words": [
     {
-     "text": "Рақмет",
-     "start": 57.32,
-     "end": 57.97,
+     "text": "какие",
+     "start": 56.09,
+     "end": 56.25
+    },
+    {
+     "text": "только",
+     "start": 56.25,
+     "end": 56.43
+    },
+    {
+     "text": "процедуры",
+     "start": 56.43,
+     "end": 56.99,
+     "style": "accent"
+    },
+    {
+     "text": "не",
+     "start": 56.99,
+     "end": 57.13
+    },
+    {
+     "text": "принимала",
+     "start": 57.13,
+     "end": 57.65
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 58.19,
+   "end": 59.65,
+   "words": [
+    {
+     "text": "и",
+     "start": 58.19,
+     "end": 58.23
+    },
+    {
+     "text": "системы",
+     "start": 58.23,
+     "end": 58.73
+    },
+    {
+     "text": "и",
+     "start": 58.81,
+     "end": 58.83
+    },
+    {
+     "text": "уколы",
+     "start": 58.83,
+     "end": 59.15
+    },
+    {
+     "text": "и",
+     "start": 59.23,
+     "end": 59.23
+    },
+    {
+     "text": "таблетки",
+     "start": 59.23,
+     "end": 59.65
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 59.65,
+   "end": 61.35,
+   "words": [
+    {
+     "text": "именно",
+     "start": 59.65,
+     "end": 60.15
+    },
+    {
+     "text": "вот",
+     "start": 60.15,
+     "end": 60.57
+    },
+    {
+     "text": "в",
+     "start": 60.57,
+     "end": 60.75
+    },
+    {
+     "text": "этой",
+     "start": 60.75,
+     "end": 60.89
+    },
+    {
+     "text": "клинике",
+     "start": 60.89,
+     "end": 61.35,
      "style": "box"
-    },
-    {
-     "text": "қолдарына",
-     "start": 57.97,
-     "end": 58.62
     }
    ],
    "dot": false
   },
   {
-   "start": 58.67,
-   "end": 60.07,
+   "start": 61.35,
+   "end": 62.57,
    "words": [
     {
-     "text": "балаларым",
-     "start": 58.67,
-     "end": 59.07
+     "text": "мне",
+     "start": 61.35,
+     "end": 61.91
     },
     {
-     "text": "дерт",
-     "start": 59.07,
-     "end": 59.37
-    },
-    {
-     "text": "бермесін",
-     "start": 59.37,
-     "end": 60.02
-    }
-   ],
-   "dot": false
-  },
-  {
-   "start": 60.07,
-   "end": 61.82,
-   "words": [
-    {
-     "text": "осылай",
-     "start": 60.07,
-     "end": 60.47
-    },
-    {
-     "text": "жұмыстары",
-     "start": 60.47,
-     "end": 61.02
-    },
-    {
-     "text": "жүріп",
-     "start": 61.05,
-     "end": 61.32
-    },
-    {
-     "text": "тұрсын",
-     "start": 61.32,
-     "end": 61.57,
+     "text": "помогли",
+     "start": 61.91,
+     "end": 62.39,
      "style": "accent"
     }
    ],
    "dot": false
   },
   {
-   "start": 61.82,
-   "end": 64.12,
+   "start": 62.57,
+   "end": 64.02,
    "words": [
     {
-     "text": "Мен",
-     "start": 61.82,
-     "end": 62.52
-    },
-    {
-     "text": "емді",
-     "start": 62.52,
+     "text": "Әйтеуір",
+     "start": 62.57,
      "end": 62.92
     },
     {
-     "text": "4",
+     "text": "жақсы",
      "start": 62.92,
      "end": 63.22,
      "style": "box"
     },
     {
-     "text": "күн",
+     "text": "боп",
      "start": 63.22,
-     "end": 63.47,
+     "end": 63.52
+    },
+    {
+     "text": "қалдым",
+     "start": 63.52,
+     "end": 63.87
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 64.02,
+   "end": 65.37,
+   "words": [
+    {
+     "text": "Рақмет",
+     "start": 64.02,
+     "end": 64.67,
+     "style": "box"
+    },
+    {
+     "text": "қолдарына",
+     "start": 64.67,
+     "end": 65.32
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 65.37,
+   "end": 66.77,
+   "words": [
+    {
+     "text": "балаларым",
+     "start": 65.37,
+     "end": 65.77
+    },
+    {
+     "text": "дерт",
+     "start": 65.77,
+     "end": 66.07
+    },
+    {
+     "text": "бермесін",
+     "start": 66.07,
+     "end": 66.72
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 66.77,
+   "end": 68.52,
+   "words": [
+    {
+     "text": "осылай",
+     "start": 66.77,
+     "end": 67.17
+    },
+    {
+     "text": "жұмыстары",
+     "start": 67.17,
+     "end": 67.72
+    },
+    {
+     "text": "жүріп",
+     "start": 67.75,
+     "end": 68.02
+    },
+    {
+     "text": "тұрсын",
+     "start": 68.02,
+     "end": 68.27,
+     "style": "accent"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 68.52,
+   "end": 70.82,
+   "words": [
+    {
+     "text": "Мен",
+     "start": 68.52,
+     "end": 69.22
+    },
+    {
+     "text": "емді",
+     "start": 69.22,
+     "end": 69.62
+    },
+    {
+     "text": "4",
+     "start": 69.62,
+     "end": 69.92,
+     "style": "box"
+    },
+    {
+     "text": "күн",
+     "start": 69.92,
+     "end": 70.17,
      "style": "box"
     },
     {
      "text": "алдым",
-     "start": 63.47,
-     "end": 64.02
+     "start": 70.17,
+     "end": 70.72
     }
    ],
    "dot": false
   },
   {
-   "start": 64.12,
-   "end": 65.47,
+   "start": 70.82,
+   "end": 72.17,
    "words": [
     {
      "text": "4",
-     "start": 64.12,
-     "end": 64.47
+     "start": 70.82,
+     "end": 71.17
     },
     {
      "text": "күн",
-     "start": 64.47,
-     "end": 64.82
+     "start": 71.17,
+     "end": 71.52
     },
     {
      "text": "ішінде",
-     "start": 64.82,
-     "end": 65.12
+     "start": 71.52,
+     "end": 71.82
     },
     {
      "text": "маған",
-     "start": 65.12,
-     "end": 65.47
+     "start": 71.82,
+     "end": 72.17
     }
    ],
    "dot": false
   },
   {
-   "start": 65.47,
-   "end": 67.55,
+   "start": 72.17,
+   "end": 74.25,
    "words": [
     {
      "text": "өте",
-     "start": 65.47,
-     "end": 65.87,
+     "start": 72.17,
+     "end": 72.57,
      "style": "pop"
     },
     {
      "text": "көп",
-     "start": 65.87,
-     "end": 66.12
+     "start": 72.57,
+     "end": 72.82
     },
     {
      "text": "результат",
-     "start": 66.12,
-     "end": 66.77,
+     "start": 72.82,
+     "end": 73.47,
      "style": "box"
     },
     {
      "text": "берді",
-     "start": 66.77,
-     "end": 67.32
+     "start": 73.47,
+     "end": 74.02
     }
    ],
    "dot": false
   },
   {
-   "start": 67.55,
-   "end": 69.17,
+   "start": 74.25,
+   "end": 75.87,
    "words": [
     {
      "text": "Я",
-     "start": 67.55,
-     "end": 67.93
+     "start": 74.25,
+     "end": 74.63
     },
     {
      "text": "всем",
-     "start": 67.93,
-     "end": 68.39
+     "start": 74.63,
+     "end": 75.09
     },
     {
      "text": "рекомендую",
-     "start": 68.39,
-     "end": 69.17,
+     "start": 75.09,
+     "end": 75.87,
      "style": "box"
     }
    ],
    "dot": false
   },
   {
-   "start": 69.17,
-   "end": 71.35,
+   "start": 75.87,
+   "end": 78.05,
    "words": [
     {
      "text": "обращаться",
-     "start": 69.17,
-     "end": 70.29
+     "start": 75.87,
+     "end": 76.99
     },
     {
      "text": "в",
-     "start": 70.29,
-     "end": 70.91
+     "start": 76.99,
+     "end": 77.61
     },
     {
      "text": "клинику",
-     "start": 70.91,
-     "end": 71.35
+     "start": 77.61,
+     "end": 78.05
     }
    ],
    "dot": false
   },
   {
-   "start": 71.35,
-   "end": 73.21,
+   "start": 78.05,
+   "end": 79.91,
    "words": [
     {
      "text": "Asyl",
-     "start": 71.35,
-     "end": 71.97,
+     "start": 78.05,
+     "end": 78.67,
      "style": "box"
     },
     {
      "text": "Ine",
-     "start": 71.97,
-     "end": 72.61,
+     "start": 78.67,
+     "end": 79.31,
      "style": "box"
     }
    ],
@@ -1196,15 +1353,15 @@
  ],
  "titles": [
   {
-   "start": 8.77,
-   "end": 13.27,
+   "start": 7.57,
+   "end": 12.07,
    "bold": "НЕЛІКТЕН",
    "italic": "Asyl Ine?",
    "y": 0.14
   },
   {
-   "start": 13.45,
-   "end": 19.87,
+   "start": 12.25,
+   "end": 18.67,
    "bold": "5",
    "italic": "артықшылық",
    "y": 0.14
@@ -1218,102 +1375,107 @@
   },
   {
    "src": "impact.wav",
-   "at": 2.77,
+   "at": 1.65,
    "volume": 0.55
   },
   {
    "src": "impact.wav",
-   "at": 4.42,
+   "at": 3.22,
    "volume": 0.55
   },
   {
    "src": "impact.wav",
-   "at": 6.47,
+   "at": 5.27,
    "volume": 0.55
   },
   {
    "src": "whoosh.wav",
-   "at": 8.32,
+   "at": 7.12,
    "volume": 0.4
   },
   {
    "src": "whoosh.wav",
-   "at": 19.72,
+   "at": 18.52,
    "volume": 0.4
   },
   {
    "src": "pop.wav",
-   "at": 22.37,
+   "at": 21.17,
    "volume": 0.35
   },
   {
    "src": "whoosh.wav",
-   "at": 25.62,
+   "at": 24.42,
    "volume": 0.4
   },
   {
    "src": "pop.wav",
-   "at": 28.27,
+   "at": 27.07,
    "volume": 0.35
   },
   {
    "src": "whoosh.wav",
-   "at": 32.72,
+   "at": 31.52,
    "volume": 0.4
   },
   {
    "src": "pop.wav",
-   "at": 35.37,
+   "at": 34.17,
    "volume": 0.35
   },
   {
    "src": "whoosh.wav",
-   "at": 39.12,
+   "at": 37.92,
    "volume": 0.4
   },
   {
    "src": "pop.wav",
-   "at": 41.77,
+   "at": 40.57,
    "volume": 0.35
   },
   {
    "src": "whoosh.wav",
-   "at": 47.27,
+   "at": 46.07,
    "volume": 0.4
   },
   {
    "src": "pop.wav",
-   "at": 49.92,
+   "at": 48.72,
    "volume": 0.35
   },
   {
    "src": "whoosh.wav",
-   "at": 53.02,
+   "at": 51.82,
    "volume": 0.4
   },
   {
    "src": "pop.wav",
-   "at": 55.87,
+   "at": 54.67,
    "volume": 0.35
   },
   {
    "src": "pop.wav",
-   "at": 57.32,
+   "at": 62.57,
    "volume": 0.35
   },
   {
    "src": "pop.wav",
-   "at": 61.77,
+   "at": 64.02,
    "volume": 0.35
   },
   {
    "src": "pop.wav",
-   "at": 67.57,
+   "at": 68.47,
+   "volume": 0.35
+  },
+  {
+   "src": "pop.wav",
+   "at": 74.27,
    "volume": 0.35
   },
   {
    "src": "whoosh.wav",
-   "at": 72.52,
+   "at": 79.22,
    "volume": 0.4
   }
  ],
@@ -1325,8 +1487,8 @@
    "title": "ТӘЖІРИБЕ",
    "italic": "",
    "line": "Мыңдаған пациенттің сеніміне ие болдық",
-   "start": 19.87,
-   "end": 22.27
+   "start": 18.67,
+   "end": 21.07
   },
   {
    "num": "02",
@@ -1335,118 +1497,118 @@
    "title": "МАМАНДАР",
    "italic": "тәжірибесі",
    "line": "Әр пациентке жеке көңіл бөледі",
-   "start": 25.77,
-   "end": 28.17
+   "start": 24.57,
+   "end": 26.97
   },
   {
    "num": "03",
    "title": "КОМПЛЕКС",
    "italic": "ем",
    "line": "Бірнеше емдеу әдісі бір бағдарламада",
-   "start": 32.87,
-   "end": 35.27
+   "start": 31.67,
+   "end": 34.07
   },
   {
    "num": "04",
    "title": "ЖЕКЕ",
    "italic": "көзқарас",
    "line": "Емдеу жоспары жағдайыңызға қарай жасалады",
-   "start": 39.27,
-   "end": 41.67
+   "start": 38.07,
+   "end": 40.47
   },
   {
    "num": "05",
    "title": "ҚОЛЖЕТІМДІ",
    "italic": "баға",
    "line": "Сапалы қызмет — тиімді бағамен",
-   "start": 47.42,
-   "end": 49.82
+   "start": 46.22,
+   "end": 48.62
   },
   {
    "num": "",
    "title": "АЛҒЫС",
    "italic": "айтамыз!",
    "line": "Бізге сенім артып, пікірімен бөліскен барлық пациенттерімізге",
-   "start": 53.17,
-   "end": 55.77
+   "start": 51.97,
+   "end": 54.57
   },
   {
    "num": "",
    "title": "БІЗ СІЗДІ",
    "italic": "күтеміз!",
    "line": "Бел, мойын, тізе немесе буын аурулары мазаласа — «Asyl Ine» медициналық орталығына келіңіз",
-   "start": 72.67,
-   "end": 75.87
+   "start": 79.37,
+   "end": 82.57
   }
  ],
  "lists": [],
  "slams": [
   {
    "start": 0.05,
-   "end": 2.77,
-   "text": "МНЕ ПОМОГЛИ"
-  },
-  {
-   "start": 2.82,
-   "end": 4.42,
+   "end": 1.65,
    "text": "НА НОГИ!"
   },
   {
-   "start": 4.47,
-   "end": 6.47,
+   "start": 1.7,
+   "end": 3.22,
+   "text": "ЛЕГЧЕ!"
+  },
+  {
+   "start": 3.27,
+   "end": 5.27,
    "text": "4 КҮНДЕ!"
   },
   {
-   "start": 6.52,
-   "end": 8.47,
+   "start": 5.32,
+   "end": 7.27,
    "text": "КЕРЕМЕТ!"
   }
  ],
  "endCard": {
-  "at": 75.87,
+  "at": 82.57,
   "brand": "Asyl Ine",
   "tagline": "ШЫҒЫС МЕДИЦИНАСЫ ОРТАЛЫҒЫ",
   "line": "Денсаулығыңызға көңіл бөліңіз!",
   "wish": "Біз сізді күтеміз!",
   "logo": true
  },
- "duration": 78.67,
+ "duration": 85.37,
  "music": {
   "src": "p10/music.wav",
   "volume": 0.3,
   "duckTo": 0.2,
   "duck": [
    [
-    -0.1,
-    19.8
+    -0.05,
+    18.6
    ],
    [
-    22.24,
-    25.79
+    21.04,
+    24.59
    ],
    [
-    28.2,
-    30.81
+    27.0,
+    29.61
    ],
    [
-    31.2,
-    32.85
+    30.0,
+    31.65
    ],
    [
-    35.23,
-    39.26
+    34.03,
+    38.06
    ],
    [
-    41.61,
-    47.42
+    40.41,
+    46.22
    ],
    [
-    49.81,
-    53.24
+    48.61,
+    52.04
    ],
    [
-    55.77,
-    72.76
+    54.53,
+    79.46
    ]
   ]
  }
