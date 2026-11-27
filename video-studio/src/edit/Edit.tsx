@@ -10,6 +10,7 @@ import {BrandEnd} from '../promo/Promo';
 import {KaspiBanner, KaspiSpec, Bubbles, BubblesSpec} from '../style/KaspiBanner';
 import {PointWords, PointGroup} from '../style/PointWords';
 import {ReviewClip, ReviewCard, AdvCard, AdvSpec, SlamText, SlamSpec} from '../style/Review';
+import {BodyMap, BodyMapSpec} from '../style/BodyMap';
 
 ensureFonts();
 
@@ -33,6 +34,7 @@ export type EditSpec = {
   points?: PointGroup[];
   adv?: AdvSpec[];
   slams?: SlamSpec[];
+  bodymaps?: BodyMapSpec[];
   stats?: {start: number; end: number; from: number; to: number; caption: string}[];
   music: {src: string; volume: number; duckTo?: number; duck?: [number, number][]};
   sfx?: {src: string; at: number; volume: number}[];
@@ -80,6 +82,7 @@ export const Edit: React.FC<{spec: EditSpec}> = ({spec}) => {
         {(spec.points ?? []).map((x, i) => <PointWords key={i} {...x} />)}
         {(spec.adv ?? []).map((x, i) => <AdvCard key={i} {...x} />)}
         {(spec.slams ?? []).map((x, i) => <SlamText key={i} {...x} />)}
+        {(spec.bodymaps ?? []).map((x, i) => <BodyMap key={i} {...x} />)}
         {(spec.kaspi ?? []).map((x, i) => <KaspiBanner key={i} {...x} />)}
         <Subtitles phrases={spec.phrases} />
       </Sequence>
