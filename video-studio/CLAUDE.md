@@ -70,6 +70,7 @@ El Messiri — қазақ әріптері ЖОҚ. Әр файлдың subset-і
      тегіс жасыл және күңгірт премиум фон). Kaspi логотипі/қызылы қолданылмайды. Талдау: `style-base/kaspi-reference/ANALYSIS.md`.
    - `projects/p14/plan.py` — B-roll жоқ кезде: ЗКТ жасыл фонда (`bg:green`) анимациямен; `src/style/SpineDisc.tsx` —
      бел омыртқасы, протрузия/грыжа анимациясы (painAt, herniaAt, protrusionAt).
+   - `src/style/StageAnim.tsx` — кадр жоқ ем кезеңдері (тізе): `needle` (ине + тоқ), `physio`, `points` (нүктелер), `meds` (препарат + шөп).
    Нәтиже `src/edit/pNN.json` → `src/Root.tsx`-ке `Composition` қос.
 7. Тексер: әр B-roll үзіндісі клип ұзындығынан аспасын; `npx tsc --noEmit`; бірнеше `remotion still` кадр.
 8. Рендер (`--concurrency=4`, фонда), сосын loudnorm −14, әр секундтан кадр алып қара.

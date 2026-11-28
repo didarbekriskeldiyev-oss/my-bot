@@ -42,8 +42,8 @@
     "from": 5.64
    },
    "video": {
-    "src": "p09/IMG_2550.mp4",
-    "from": 0.5,
+    "src": "p09/IMG_2294.mp4",
+    "from": 0.3,
     "zoom": [
      1.0,
      1.06
@@ -95,8 +95,8 @@
     "from": 4.98
    },
    "video": {
-    "src": "p09/IMG_2281.mp4",
-    "from": 0.113,
+    "src": "bg:green",
+    "from": 0.0,
     "zoom": [
      1.0,
      1.06
@@ -167,8 +167,8 @@
     "from": 13.5
    },
    "video": {
-    "src": "p01/IMG_1865.mp4",
-    "from": 0.2,
+    "src": "p09/IMG_2293.mp4",
+    "from": 0.0,
     "zoom": [
      1.0,
      1.06
@@ -185,8 +185,8 @@
     "from": 14.66
    },
    "video": {
-    "src": "p01/IMG_1865.mp4",
-    "from": 1.2,
+    "src": "p09/IMG_2293.mp4",
+    "from": 0.983,
     "zoom": [
      1.0,
      1.06
@@ -202,8 +202,8 @@
     "from": 17.46
    },
    "video": {
-    "src": "p01/IMG_1866.mp4",
-    "from": 0.5,
+    "src": "bg:green",
+    "from": 0.0,
     "zoom": [
      1.0,
      1.06
@@ -214,10 +214,28 @@
   },
   {
    "at": 30.07,
-   "dur": 2.52,
+   "dur": 1.44,
    "voice": {
     "src": "p09/voice_IMG_2446_a9f7.wav",
     "from": 20.94
+   },
+   "video": {
+    "src": "p09/IMG_2552.mp4",
+    "from": 0.0,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 31.51,
+   "dur": 1.08,
+   "voice": {
+    "src": "p09/voice_IMG_2446_a9f7.wav",
+    "from": 22.38
    },
    "video": {
     "src": "p09/IMG_2550.mp4",
@@ -232,7 +250,7 @@
   },
   {
    "at": 32.59,
-   "dur": 2.64,
+   "dur": 1.48,
    "voice": {
     "src": "p09/voice_IMG_2446_a9f7.wav",
     "from": 23.46
@@ -247,6 +265,23 @@
     "blur": 0
    },
    "flash": true
+  },
+  {
+   "at": 34.07,
+   "dur": 1.16,
+   "voice": {
+    "src": "p09/voice_IMG_2446_a9f7.wav",
+    "from": 24.94
+   },
+   "video": {
+    "src": "p09/IMG_2295.mp4",
+    "from": 1.68,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   }
   },
   {
    "at": 35.23,
@@ -308,8 +343,8 @@
     "from": 30.3
    },
    "video": {
-    "src": "p09/IMG_2293.mp4",
-    "from": 0.2,
+    "src": "bg:green",
+    "from": 0.0,
     "zoom": [
      1.0,
      1.06
@@ -326,7 +361,7 @@
     "from": 32.791
    },
    "video": {
-    "src": "p09/IMG_2557.mp4",
+    "src": "bg:green",
     "from": 0.0,
     "zoom": [
      1.0,
@@ -338,13 +373,13 @@
   },
   {
    "at": 42.33,
-   "dur": 1.26,
+   "dur": 5.28,
    "voice": {
     "src": "p09/voice_IMG_2446_a9f7.wav",
     "from": 33.9
    },
    "video": {
-    "src": "p09/IMG_2557.mp4",
+    "src": "bg:green",
     "from": 0.769,
     "zoom": [
      1.0,
@@ -354,24 +389,6 @@
    }
   },
   {
-   "at": 43.59,
-   "dur": 4.02,
-   "voice": {
-    "src": "p09/voice_IMG_2446_a9f7.wav",
-    "from": 35.16
-   },
-   "video": {
-    "src": "p09/IMG_2294.mp4",
-    "from": 0.3,
-    "zoom": [
-     1.0,
-     1.06
-    ],
-    "blur": 0
-   },
-   "flash": true
-  },
-  {
    "at": 47.61,
    "dur": 1.04,
    "voice": {
@@ -379,8 +396,8 @@
     "from": 39.3
    },
    "video": {
-    "src": "p09/IMG_2551.mp4",
-    "from": 0.3,
+    "src": "bg:green",
+    "from": 0.0,
     "zoom": [
      1.0,
      1.06
@@ -397,8 +414,8 @@
     "from": 40.5
    },
    "video": {
-    "src": "p09/IMG_2551.mp4",
-    "from": 1.34,
+    "src": "bg:green",
+    "from": 1.04,
     "zoom": [
      1.0,
      1.06
@@ -415,7 +432,7 @@
    },
    "video": {
     "src": "p09/IMG_2551.mp4",
-    "from": 4.5,
+    "from": 0.3,
     "zoom": [
      1.0,
      1.06
@@ -478,14 +495,32 @@
   },
   {
    "at": 58.87,
-   "dur": 3.16,
+   "dur": 1.36,
    "voice": {
     "src": "p09/voice_IMG_2446_a9f7.wav",
     "from": 51.16
    },
    "video": {
-    "src": "p01/IMG_1877.mp4",
+    "src": "p09/IMG_2285.mp4",
     "from": 0.0,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 60.23,
+   "dur": 1.8,
+   "voice": {
+    "src": "p09/voice_IMG_2446_a9f7.wav",
+    "from": 52.52
+   },
+   "video": {
+    "src": "p09/IMG_2284.mp4",
+    "from": 0.517,
     "zoom": [
      1.0,
      1.06
@@ -502,7 +537,7 @@
     "from": 54.32
    },
    "video": {
-    "src": "p01/IMG_1878.mp4",
+    "src": "bg:green",
     "from": 0.0,
     "zoom": [
      1.0,
@@ -514,39 +549,20 @@
   },
   {
    "at": 64.57,
-   "dur": 2.88,
+   "dur": 4.66,
    "voice": {
     "src": "p09/voice_IMG_2446_a9f7.wav",
     "from": 61.3
    },
    "video": {
-    "src": "p01/IMG_1869.mp4",
-    "from": 0.0,
+    "src": "bg:green",
+    "from": 2.54,
     "zoom": [
      1.0,
      1.06
     ],
     "blur": 0
-   },
-   "flash": true
-  },
-  {
-   "at": 67.45,
-   "dur": 1.78,
-   "voice": {
-    "src": "p09/voice_IMG_2446_a9f7.wav",
-    "from": 64.18
-   },
-   "video": {
-    "src": "p09/IMG_2557.mp4",
-    "from": 0.5,
-    "zoom": [
-     1.0,
-     1.06
-    ],
-    "blur": 0
-   },
-   "flash": true
+   }
   },
   {
    "at": 69.23,
@@ -690,8 +706,8 @@
     "from": 1.7
    },
    "video": {
-    "src": "p09/IMG_2281.mp4",
-    "from": 0.0,
+    "src": "p09/IMG_2551.mp4",
+    "from": 5.5,
     "zoom": [
      1.0,
      1.06
@@ -2185,7 +2201,7 @@
    "end": 17.33,
    "bold": "ТІЗЕҢІЗ",
    "italic": "ауыра ма?",
-   "y": 0.14
+   "y": 0.42
   },
   {
    "start": 11.185,
@@ -2436,7 +2452,24 @@
    ]
   }
  ],
- "icons": [],
+ "icons": [
+  {
+   "start": 12.53,
+   "end": 17.33,
+   "items": [
+    {
+     "kind": "walk",
+     "label": "Жүргенде",
+     "at": 12.58
+    },
+    {
+     "kind": "stairs",
+     "label": "Баспалдақ",
+     "at": 14.8
+    }
+   ]
+  }
+ ],
  "stats": [
   {
    "start": 80.23,
@@ -2444,6 +2477,48 @@
    "from": 12,
    "to": 20,
    "caption": "жыл тәжірибе"
+  }
+ ],
+ "stages": [
+  {
+   "start": 26.7,
+   "end": 30.08,
+   "kind": "needle",
+   "bold": "",
+   "italic": ""
+  },
+  {
+   "start": 39.06,
+   "end": 41.551,
+   "kind": "physio",
+   "bold": "",
+   "italic": ""
+  },
+  {
+   "start": 47.620000000000005,
+   "end": 50.980000000000004,
+   "kind": "points",
+   "bold": "",
+   "italic": ""
+  },
+  {
+   "start": 62.02,
+   "end": 69.21,
+   "kind": "meds",
+   "bold": "",
+   "italic": "",
+   "herbsAt": 67.49
+  }
+ ],
+ "xsections": [
+  {
+   "start": 41.551,
+   "end": 47.620000000000005,
+   "placeAt": 41.900999999999996,
+   "suctionAt": 43.63,
+   "labels": true,
+   "bold": "БАМБУК",
+   "italic": "банкісі"
   }
  ],
  "slams": [

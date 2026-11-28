@@ -1,5 +1,7 @@
 """p09: knee "complex treatment in 6 stages". 3 speaker clips + a 67 s voice-over (black video),
-16 new clinic B-roll clips (p09/IMG_2xxx) + older ones (p01). Writes ../../src/edit/p09.json."""
+clinic B-roll of this video only (p09/IMG_2xxx; the doctor-with-patient shot IMG_2281 and the reused p01 clips were removed
+on the user's request). Stages without matching footage use animations on the green background (StageAnim, CrossSection,
+ActivityIcons). Writes ../../src/edit/p09.json."""
 import json, re, difflib, pathlib, subprocess
 
 HERE = pathlib.Path(__file__).parent
@@ -40,19 +42,18 @@ EMPH = {'тізеңіз': 'box', 'жайсыздық': 'accent', 'комплек
         'asyl': 'box', 'тізе': 'accent', 'күтеді': 'accent'}
 PUNCH = {'яғни', 'пациенттің', 'және', 'егер'}
 # speaker clips: B-roll inserts (trigger -> clip path, in-point); 'speaker' returns to the speaker
-INSERTS = {'IMG_2441_772c': [('массаж', 'p09/IMG_2550', 0.5), ('пациенттің', 'speaker', 0)],
-           'IMG_2455_aa4a': [('мамандар', 'p09/IMG_2281', 0.0), ('денсаулық', 'speaker', 0)],
+INSERTS = {'IMG_2441_772c': [('массаж', 'p09/IMG_2294', 0.3), ('пациенттің', 'speaker', 0)],
+           'IMG_2455_aa4a': [('мамандар', 'p09/IMG_2551', 5.5), ('денсаулық', 'speaker', 0)],
            'IMG_2455_7830': [('asyl', 'p09/IMG_2555', 0.0), ('медициналық', 'p09/IMG_2558', 1.0)]}
-# voice-over background (trigger -> clip path, in-point, blur)
-VO = [('жүргенде', 'p09/IMG_2558', 0.5, 0), ('баспалдақпен', 'p09/IMG_2281', 0.2, 0),
+# voice-over background (trigger -> clip path or 'bg:green' for an animation, in-point, blur)
+VO = [('жүргенде', 'p09/IMG_2558', 0.5, 0), ('баспалдақпен', 'bg:green', 0.0, 0),
       ('asyl', 'p09/IMG_2555', 0.0, 0), ('буынына', 'p09/IMG_2556', 0.2, 0), ('алты', 'p09/IMG_2554', 0.2, 0),
-      ('бірінші', 'p01/IMG_1865', 0.2, 0), ('аймағына', 'p01/IMG_1866', 0.5, 0),
-      ('екінші', 'p09/IMG_2550', 0.3, 0), ('айналасындағы', 'p09/IMG_2295', 0.2, 0),
-      ('үшінші', 'p09/IMG_2553', 0.2, 0), ('физиотерапиялық', 'p09/IMG_2293', 0.2, 0),
-      ('төртінші', 'p09/IMG_2557', 0.0, 0), ('аяқтың', 'p09/IMG_2294', 0.3, 0),
-      ('бесінші', 'p09/IMG_2551', 0.3, 0), ('дәрігердің', 'p09/IMG_2551', 4.5, 0),
-      ('алтыншы', 'p09/IMG_2284', 0.0, 0), ('дәрігер', 'p01/IMG_1877', 0.0, 0), ('препараттар', 'p01/IMG_1878', 0.0, 0),
-      ('бұлшықет', 'p01/IMG_1869', 0.0, 0), ('шөптік', 'p09/IMG_2557', 0.5, 0)]
+      ('бірінші', 'p09/IMG_2293', 0.0, 0), ('аймағына', 'bg:green', 0.0, 0),
+      ('екінші', 'p09/IMG_2552', 0.0, 0), ('массаж', 'p09/IMG_2550', 0.3, 0), ('айналасындағы', 'p09/IMG_2295', 0.2, 0),
+      ('үшінші', 'p09/IMG_2553', 0.2, 0), ('физиотерапиялық', 'bg:green', 0.0, 0),
+      ('төртінші', 'bg:green', 0.0, 0),
+      ('бесінші', 'bg:green', 0.0, 0), ('дәрігердің', 'p09/IMG_2551', 0.3, 0),
+      ('алтыншы', 'p09/IMG_2284', 0.0, 0), ('дәрігер', 'p09/IMG_2285', 0.0, 0), ('бағалап', 'p09/IMG_2284', 1.0, 0), ('препараттар', 'bg:green', 0.0, 0)]
 
 norm = lambda w: re.sub(r'[^\wәғқңөұүһі]', '', w.lower())
 _len = {}
@@ -127,8 +128,8 @@ for idx, (cid, mode, voice, script, win) in enumerate(CLIPS):
             if on and on[0] == 'speaker': on = None
             if mode == 'voiceover' or on:
                 if on is None: on = ['p09/IMG_2558', 0.0, 0]
-                src, s0 = on[0] + '.mp4', on[1]; bl = on[2] if len(on) > 2 else 0
-                s0 = min(s0, max(0, clip_len(src) - (x1 - x0) - 0.05))
+                src, s0 = (on[0] if on[0].startswith('bg:') else on[0] + '.mp4'), on[1]; bl = on[2] if len(on) > 2 else 0
+                if not src.startswith('bg:'): s0 = min(s0, max(0, clip_len(src) - (x1 - x0) - 0.05))
                 vid = {'src': src, 'from': round(s0, 3), 'zoom': [1.1, 1.14] if bl else [1.0, 1.06], 'blur': bl}
                 on[1] = s0 + (x1 - x0)
             else:
@@ -158,7 +159,7 @@ D, H, M, S2, S1 = 0, 1, 2, 3, 4   # definition, hook, main voice-over, call-to-a
 stages = [('бірінші', 'ТОҚ + ИНЕ', 'терапиясы'), ('екінші', 'ЕМДІК', 'массаж'), ('үшінші', 'ФИЗИО', 'терапия'),
           ('төртінші', 'БАМБУК', 'банкісі'), ('бесінші', 'ҚАН АЛУ', 'нүктелерден'), ('алтыншы', 'ҚОСЫМША', 'ем')]
 spec['titles'] = [
-    dict(start=at(H, 'тізеңіз'), end=end_of(H), bold='ТІЗЕҢІЗ', italic='ауыра ма?', y=0.14),
+    dict(start=at(H, 'тізеңіз'), end=end_of(H), bold='ТІЗЕҢІЗ', italic='ауыра ма?', y=0.42),
     dict(start=at(D, 'кезеңкезеңімен'), end=end_of(D), bold='КЕЗЕҢ-КЕЗЕҢІМЕН', y=0.14),
     dict(start=at(M, 'алты'), end=at(M, 'бірінші') - 0.05, bold='6', italic='кезең', y=0.14),
 ]
@@ -169,6 +170,16 @@ spec['titles'] += [
     dict(start=at(M, 'бұлшықет', exact=True), end=end_of(M), bold='ШӨПТІК', italic='құралдар', y=0.14),
     dict(start=at(S1, 'мүмкіндікті'), end=end_of(S1), bold='ЖІБЕРІП', italic='алмаңыз!', y=0.14),
 ]
+spec['icons'] = [dict(start=at(H, 'жүргенде') - 0.05, end=end_of(H), items=[
+    dict(kind='walk', label='Жүргенде', at=at(H, 'жүргенде')), dict(kind='stairs', label='Баспалдақ', at=at(H, 'баспалдақпен'))])]
+spec['stages'] = [
+    dict(start=at(M, 'аймағына') - 0.05, end=at(M, 'екінші') - 0.05, kind='needle', bold='', italic=''),
+    dict(start=at(M, 'физиотерапиялық') - 0.05, end=at(M, 'төртінші') - 0.05, kind='physio', bold='', italic=''),
+    dict(start=at(M, 'бесінші') - 0.05, end=at(M, 'дәрігердің') - 0.05, kind='points', bold='', italic=''),
+    dict(start=at(M, 'препараттар') - 0.05, end=end_of(M) + 0.1, kind='meds', bold='', italic='', herbsAt=at(M, 'шөптік')),
+]
+spec['xsections'] = [dict(start=at(M, 'төртінші') - 0.05, end=at(M, 'бесінші') - 0.05, placeAt=at(M, 'төртінші') + 0.3,
+                          suctionAt=at(M, 'аяқтың'), labels=True, bold='БАМБУК', italic='банкісі')]
 spec['stats'] = [dict(start=at(S1, '20'), end=at(S1, 'денсаулық'), **{'from': 12, 'to': 20}, caption='жыл тәжірибе')]
 # big all-caps lines of the script hit the screen with an impact
 spec['slams'] = [
@@ -202,5 +213,5 @@ spec['music'] = {'src': 'p09/music.wav', 'volume': 0.30, 'duckTo': 0.33, 'duck':
 json.dump(spec, open(HERE / '../../src/edit/p09.json', 'w'), ensure_ascii=False, indent=1)
 print(f"segs {len(spec['segs'])}, phrases {len(spec['phrases'])}, duration {spec['duration']:.1f}s, end card at {end_at}")
 for g in spec['segs']:
-    need = g['video']['from'] + g['dur']; L = clip_len(g['video']['src'])
+    need = g['video']['from'] + g['dur']; L = 999 if g['video']['src'].startswith('bg:') else clip_len(g['video']['src'])
     print('%6.2f %5.2f %-24s from %5.2f %s' % (g['at'], g['dur'], g['video']['src'], g['video']['from'], 'TOO SHORT (%.1f)' % L if need > L - 0.03 else ''))
