@@ -17,6 +17,7 @@ import p12 from './edit/p12.json';
 import p13 from './edit/p13.json';
 import p14 from './edit/p14.json';
 import p15 from './edit/p15.json';
+import p16 from './edit/p16.json';
 import {Promo, PromoSpec} from './promo/Promo';
 
 const spec01 = p01 as unknown as EditSpec;
@@ -34,6 +35,7 @@ const spec12 = p12 as unknown as EditSpec;
 const spec13 = p13 as unknown as EditSpec;
 const spec14 = p14 as unknown as EditSpec;
 const spec15 = p15 as unknown as EditSpec;
+const spec16 = p16 as unknown as EditSpec;
 
 export const Root = () => (
   <>
@@ -70,5 +72,7 @@ export const Root = () => (
       durationInFrames={Math.round(spec14.duration * spec14.fps)} fps={spec14.fps} width={1080} height={1920} />
     <Composition id="P15" component={Edit} defaultProps={{spec: spec15}}
       durationInFrames={Math.round(spec15.duration * spec15.fps)} fps={spec15.fps} width={1080} height={1920} />
+    <Composition id="P16" component={Edit} defaultProps={{spec: spec16}}
+      durationInFrames={Math.round(spec16.duration * spec16.fps)} fps={spec16.fps} width={1080} height={1920} />
   </>
 );
