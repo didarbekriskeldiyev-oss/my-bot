@@ -77,28 +77,47 @@ export const StageAnim: React.FC<StageSpec> = ({start, end, kind, bold, italic, 
       </g>
     );
   } else if (kind === 'points') {
+    // gentle bloodletting scheme: points light up -> a lancet taps three of them -> vacuum cups go on, a little red rises inside
     const pts = [[232, 192], [252, 250], [230, 302], [198, 172], [194, 322]];
+    const tapAt = (i: number) => start + 2.6 + i * 0.6;
+    const cups = [[232, 192], [230, 302]];
+    const cupAt = (i: number) => start + 4.6 + i * 0.5;
+    const tapping = [0, 2, 1].find((i) => t >= tapAt(i) - 0.25 && t < tapAt(i) + 0.3);
     scene = (
       <g>
         <Knee />
         {pts.map(([x, y], i) => {
-          const p = sp(start + 0.35 + i * 0.45, 9, 220);
+          const p = sp(start + 0.35 + i * 0.4, 9, 220);
           const glow = 0.6 + 0.4 * Math.sin(t * 6 + i);
+          const tapped = i < 3 && t >= tapAt(i);
           return (
             <g key={i} opacity={p}>
-              <circle cx={x} cy={y} r={20 * glow} fill="#E0564A" opacity="0.25" />
-              <circle cx={x} cy={y} r={7 * p} fill="#C0392B" stroke="#fff" strokeWidth="2" />
+              <circle cx={x} cy={y} r={20 * glow} fill={tapped ? '#E0564A' : T.mint} opacity="0.3" />
+              <circle cx={x} cy={y} r={7 * p} fill={tapped ? '#C0392B' : T.mint} stroke="#fff" strokeWidth="2" />
             </g>
           );
         })}
-        {(() => {
-          const c = sp(start + 0.35 + pts.length * 0.45 + 0.2, 12);
+        {tapping !== undefined ? (() => {
+          const [x, y] = pts[tapping];
+          const k = interpolate(t, [tapAt(tapping) - 0.25, tapAt(tapping), tapAt(tapping) + 0.3], [40, 0, 40], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
           return (
-            <g opacity={c} transform={`translate(0 ${(1 - c) * -60})`}>
-              <rect x="236" y="216" width="58" height="66" rx="12" fill="rgba(200,235,255,0.35)" stroke="#E8F6FF" strokeWidth="3" />
+            <g transform={`translate(${x + 6 + k} ${y - 6 - k}) rotate(45)`}>
+              <rect x="-6" y="-70" width="12" height="52" rx="5" fill="#E8F6FF" stroke="#9FB" strokeWidth="2" />
+              <path d="M-3 -18 L0 0 L3 -18 Z" fill="#C9D2D6" />
             </g>
           );
-        })()}
+        })() : null}
+        {cups.map(([x, y], i) => {
+          const c = sp(cupAt(i), 12);
+          const fill = interpolate(t, [cupAt(i) + 0.4, cupAt(i) + 2.2], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+          return (
+            <g key={i} opacity={c} transform={`translate(${x - 8} ${y}) translate(${(1 - c) * 70} 0)`}>
+              <path d="M0 -30 L44 -36 Q58 -36 58 -22 L58 22 Q58 36 44 36 L0 30 Z" fill="rgba(200,235,255,0.28)" stroke="#E8F6FF" strokeWidth="3" />
+              <path d={`M4 ${30 - 8 * fill} L${4 + 14 * fill} ${30 - 10 * fill} L${4 + 14 * fill} 30 Z`} fill="#B0342A" opacity={0.85} />
+              <ellipse cx="6" cy="0" rx="5" ry="22" fill="#E0564A" opacity={0.25 * fill} />
+            </g>
+          );
+        })}
       </g>
     );
   } else {

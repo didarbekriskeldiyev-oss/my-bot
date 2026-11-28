@@ -42,17 +42,17 @@ EMPH = {'тізеңіз': 'box', 'жайсыздық': 'accent', 'комплек
         'asyl': 'box', 'тізе': 'accent', 'күтеді': 'accent'}
 PUNCH = {'яғни', 'пациенттің', 'және', 'егер'}
 # speaker clips: B-roll inserts (trigger -> clip path, in-point); 'speaker' returns to the speaker
-INSERTS = {'IMG_2441_772c': [('массаж', 'p09/IMG_2294', 0.3), ('пациенттің', 'speaker', 0)],
+INSERTS = {'IMG_2441_772c': [('массаж', 'p09/IMG_2294', 0.3), ('ине', 'p09/NEW3', 14.0), ('пациенттің', 'speaker', 0)],
            'IMG_2455_aa4a': [('мамандар', 'p09/IMG_2551', 5.5), ('денсаулық', 'speaker', 0)],
            'IMG_2455_7830': [('asyl', 'p09/IMG_2555', 0.0), ('медициналық', 'p09/IMG_2558', 1.0)]}
 # voice-over background (trigger -> clip path or 'bg:green' for an animation, in-point, blur)
 VO = [('жүргенде', 'p09/IMG_2558', 0.5, 0), ('баспалдақпен', 'bg:green', 0.0, 0),
       ('asyl', 'p09/IMG_2555', 0.0, 0), ('буынына', 'p09/IMG_2556', 0.2, 0), ('алты', 'p09/IMG_2554', 0.2, 0),
-      ('бірінші', 'p09/IMG_2293', 0.0, 0), ('аймағына', 'bg:green', 0.0, 0),
+      ('бірінші', 'p09/NEW3', 1.0, 0), ('аймағына', 'p09/NEW2', 0.0, 0),
       ('екінші', 'p09/IMG_2552', 0.0, 0), ('массаж', 'p09/IMG_2550', 0.3, 0), ('айналасындағы', 'p09/IMG_2295', 0.2, 0),
       ('үшінші', 'p09/IMG_2553', 0.2, 0), ('физиотерапиялық', 'bg:green', 0.0, 0),
-      ('төртінші', 'bg:green', 0.0, 0),
-      ('бесінші', 'bg:green', 0.0, 0), ('дәрігердің', 'p09/IMG_2551', 0.3, 0),
+      ('төртінші', 'p09/NEW1_slow', 0.0, 0),
+      ('бесінші', 'bg:green', 0.0, 0),
       ('алтыншы', 'p09/IMG_2284', 0.0, 0), ('дәрігер', 'p09/IMG_2285', 0.0, 0), ('бағалап', 'p09/IMG_2284', 1.0, 0), ('препараттар', 'bg:green', 0.0, 0)]
 
 norm = lambda w: re.sub(r'[^\wәғқңөұүһі]', '', w.lower())
@@ -173,13 +173,11 @@ spec['titles'] += [
 spec['icons'] = [dict(start=at(H, 'жүргенде') - 0.05, end=end_of(H), items=[
     dict(kind='walk', label='Жүргенде', at=at(H, 'жүргенде')), dict(kind='stairs', label='Баспалдақ', at=at(H, 'баспалдақпен'))])]
 spec['stages'] = [
-    dict(start=at(M, 'аймағына') - 0.05, end=at(M, 'екінші') - 0.05, kind='needle', bold='', italic=''),
     dict(start=at(M, 'физиотерапиялық') - 0.05, end=at(M, 'төртінші') - 0.05, kind='physio', bold='', italic=''),
-    dict(start=at(M, 'бесінші') - 0.05, end=at(M, 'дәрігердің') - 0.05, kind='points', bold='', italic=''),
+    dict(start=at(M, 'бесінші') - 0.05, end=at(M, 'алтыншы') - 0.05, kind='points', bold='', italic=''),
     dict(start=at(M, 'препараттар') - 0.05, end=end_of(M) + 0.1, kind='meds', bold='', italic='', herbsAt=at(M, 'шөптік')),
 ]
-spec['xsections'] = [dict(start=at(M, 'төртінші') - 0.05, end=at(M, 'бесінші') - 0.05, placeAt=at(M, 'төртінші') + 0.3,
-                          suctionAt=at(M, 'аяқтың'), labels=True, bold='БАМБУК', italic='банкісі')]
+spec['xsections'] = []
 spec['stats'] = [dict(start=at(S1, '20'), end=at(S1, 'денсаулық'), **{'from': 12, 'to': 20}, caption='жыл тәжірибе')]
 # big all-caps lines of the script hit the screen with an impact
 spec['slams'] = [

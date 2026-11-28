@@ -36,7 +36,7 @@
   },
   {
    "at": 5.64,
-   "dur": 2.32,
+   "dur": 0.92,
    "voice": {
     "src": "p09/voice_IMG_2441_772c.wav",
     "from": 5.64
@@ -44,6 +44,24 @@
    "video": {
     "src": "p09/IMG_2294.mp4",
     "from": 0.3,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 6.56,
+   "dur": 1.4,
+   "voice": {
+    "src": "p09/voice_IMG_2441_772c.wav",
+    "from": 6.56
+   },
+   "video": {
+    "src": "p09/NEW3.mp4",
+    "from": 14.0,
     "zoom": [
      1.0,
      1.06
@@ -167,8 +185,8 @@
     "from": 13.5
    },
    "video": {
-    "src": "p09/IMG_2293.mp4",
-    "from": 0.0,
+    "src": "p09/NEW3.mp4",
+    "from": 1.0,
     "zoom": [
      1.0,
      1.06
@@ -185,8 +203,8 @@
     "from": 14.66
    },
    "video": {
-    "src": "p09/IMG_2293.mp4",
-    "from": 0.983,
+    "src": "p09/NEW3.mp4",
+    "from": 2.0,
     "zoom": [
      1.0,
      1.06
@@ -202,7 +220,7 @@
     "from": 17.46
    },
    "video": {
-    "src": "bg:green",
+    "src": "p09/NEW2.mp4",
     "from": 0.0,
     "zoom": [
      1.0,
@@ -361,7 +379,7 @@
     "from": 32.791
    },
    "video": {
-    "src": "bg:green",
+    "src": "p09/NEW1_slow.mp4",
     "from": 0.0,
     "zoom": [
      1.0,
@@ -379,7 +397,7 @@
     "from": 33.9
    },
    "video": {
-    "src": "bg:green",
+    "src": "p09/NEW1_slow.mp4",
     "from": 0.769,
     "zoom": [
      1.0,
@@ -408,7 +426,7 @@
   },
   {
    "at": 48.65,
-   "dur": 2.34,
+   "dur": 7.04,
    "voice": {
     "src": "p09/voice_IMG_2446_a9f7.wav",
     "from": 40.5
@@ -422,24 +440,6 @@
     ],
     "blur": 0
    }
-  },
-  {
-   "at": 50.99,
-   "dur": 4.7,
-   "voice": {
-    "src": "p09/voice_IMG_2446_a9f7.wav",
-    "from": 42.84
-   },
-   "video": {
-    "src": "p09/IMG_2551.mp4",
-    "from": 0.3,
-    "zoom": [
-     1.0,
-     1.06
-    ],
-    "blur": 0
-   },
-   "flash": true
   },
   {
    "at": 55.69,
@@ -2481,13 +2481,6 @@
  ],
  "stages": [
   {
-   "start": 26.7,
-   "end": 30.08,
-   "kind": "needle",
-   "bold": "",
-   "italic": ""
-  },
-  {
    "start": 39.06,
    "end": 41.551,
    "kind": "physio",
@@ -2496,7 +2489,7 @@
   },
   {
    "start": 47.620000000000005,
-   "end": 50.980000000000004,
+   "end": 55.7,
    "kind": "points",
    "bold": "",
    "italic": ""
@@ -2510,17 +2503,7 @@
    "herbsAt": 67.49
   }
  ],
- "xsections": [
-  {
-   "start": 41.551,
-   "end": 47.620000000000005,
-   "placeAt": 41.900999999999996,
-   "suctionAt": 43.63,
-   "labels": true,
-   "bold": "БАМБУК",
-   "italic": "банкісі"
-  }
- ],
+ "xsections": [],
  "slams": [
   {
    "start": 0.05,
