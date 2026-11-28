@@ -1,0 +1,1007 @@
+{
+ "fps": 30,
+ "segs": [
+  {
+   "at": 0.0,
+   "dur": 2.84,
+   "voice": {
+    "src": "p13/voice_IMG_2845.wav",
+    "from": 1.42
+   },
+   "video": {
+    "src": "p13/IMG_2845.mp4",
+    "from": 1.42,
+    "zoom": [
+     1.0,
+     1.02
+    ]
+   },
+   "flash": true
+  },
+  {
+   "at": 2.84,
+   "dur": 4.79,
+   "voice": {
+    "src": "p13/voice_IMG_2845.wav",
+    "from": 4.26
+   },
+   "video": {
+    "src": "p13/IMG_2845.mp4",
+    "from": 4.26,
+    "zoom": [
+     1.14,
+     1.16
+    ]
+   }
+  },
+  {
+   "at": 7.63,
+   "dur": 3.26,
+   "voice": {
+    "src": "p13/voice_IMG_2846.wav",
+    "from": 0
+   },
+   "video": {
+    "src": "p13/IMG_2846.mp4",
+    "from": 0,
+    "zoom": [
+     1.0,
+     1.02
+    ]
+   },
+   "flash": true
+  },
+  {
+   "at": 10.89,
+   "dur": 2.48,
+   "voice": {
+    "src": "p13/voice_IMG_2846.wav",
+    "from": 3.26
+   },
+   "video": {
+    "src": "p13/IMG_2846.mp4",
+    "from": 3.26,
+    "zoom": [
+     1.14,
+     1.16
+    ]
+   }
+  },
+  {
+   "at": 13.37,
+   "dur": 2.96,
+   "voice": {
+    "src": "p13/voice_IMG_2846.wav",
+    "from": 5.74
+   },
+   "video": {
+    "src": "p13/IMG_2846.mp4",
+    "from": 5.74,
+    "zoom": [
+     1.0,
+     1.02
+    ]
+   }
+  },
+  {
+   "at": 16.33,
+   "dur": 5.46,
+   "voice": {
+    "src": "p13/voice_IMG_2847.wav",
+    "from": 0
+   },
+   "video": {
+    "src": "p09/IMG_2551.mp4",
+    "from": 0.0,
+    "zoom": [
+     1.1,
+     1.14
+    ],
+    "blur": 18
+   },
+   "flash": true
+  },
+  {
+   "at": 21.79,
+   "dur": 2.5,
+   "voice": {
+    "src": "p13/voice_IMG_2847.wav",
+    "from": 5.46
+   },
+   "video": {
+    "src": "p01/IMG_1866.mp4",
+    "from": 0.5,
+    "zoom": [
+     1.1,
+     1.14
+    ],
+    "blur": 18
+   },
+   "flash": true
+  },
+  {
+   "at": 24.29,
+   "dur": 4.38,
+   "voice": {
+    "src": "p13/voice_IMG_2847.wav",
+    "from": 7.96
+   },
+   "video": {
+    "src": "p09/IMG_2550.mp4",
+    "from": 0.0,
+    "zoom": [
+     1.1,
+     1.14
+    ],
+    "blur": 18
+   },
+   "flash": true
+  },
+  {
+   "at": 28.67,
+   "dur": 2.54,
+   "voice": {
+    "src": "p13/voice_IMG_2847.wav",
+    "from": 12.34
+   },
+   "video": {
+    "src": "p09/IMG_2281.mp4",
+    "from": 0.0,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 31.21,
+   "dur": 2.74,
+   "voice": {
+    "src": "p13/voice_IMG_2847.wav",
+    "from": 14.88
+   },
+   "video": {
+    "src": "p01/IMG_1877.mp4",
+    "from": 0.3,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 33.95,
+   "dur": 2.18,
+   "voice": {
+    "src": "p13/voice_IMG_2847.wav",
+    "from": 17.62
+   },
+   "video": {
+    "src": "p09/IMG_2558.mp4",
+    "from": 0.5,
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "blur": 0
+   },
+   "flash": true
+  },
+  {
+   "at": 36.13,
+   "dur": 5.26,
+   "voice": {
+    "src": "p13/voice_IMG_2850.wav",
+    "from": 0
+   },
+   "video": {
+    "src": "p13/IMG_2850.mp4",
+    "from": 0,
+    "zoom": [
+     1.14,
+     1.16
+    ]
+   },
+   "flash": true
+  },
+  {
+   "at": 41.39,
+   "dur": 3.3,
+   "voice": {
+    "src": "p13/voice_IMG_2850.wav",
+    "from": 5.26
+   },
+   "video": {
+    "src": "p13/IMG_2850.mp4",
+    "from": 5.26,
+    "zoom": [
+     1.0,
+     1.02
+    ]
+   }
+  },
+  {
+   "at": 44.69,
+   "dur": 1.84,
+   "voice": {
+    "src": "p13/voice_IMG_2850.wav",
+    "from": 8.56
+   },
+   "video": {
+    "src": "p13/IMG_2850.mp4",
+    "from": 8.56,
+    "zoom": [
+     1.14,
+     1.16
+    ]
+   }
+  }
+ ],
+ "phrases": [
+  {
+   "start": 0.06,
+   "end": 2.32,
+   "words": [
+    {
+     "text": "Бамбук",
+     "start": 0.06,
+     "end": 1.18,
+     "style": "box"
+    },
+    {
+     "text": "банкасымен",
+     "start": 1.18,
+     "end": 1.76,
+     "style": "accent"
+    },
+    {
+     "text": "жасалатын",
+     "start": 1.76,
+     "end": 2.32
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 2.32,
+   "end": 4.08,
+   "words": [
+    {
+     "text": "процедура",
+     "start": 2.32,
+     "end": 2.88
+    },
+    {
+     "text": "денедегі",
+     "start": 2.88,
+     "end": 3.68
+    },
+    {
+     "text": "белгілі",
+     "start": 3.68,
+     "end": 4.08
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 4.08,
+   "end": 5.24,
+   "words": [
+    {
+     "text": "бір",
+     "start": 4.08,
+     "end": 4.22
+    },
+    {
+     "text": "аймақтарға",
+     "start": 4.22,
+     "end": 4.8
+    },
+    {
+     "text": "бамбук",
+     "start": 4.8,
+     "end": 5.24,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 5.24,
+   "end": 6.4,
+   "words": [
+    {
+     "text": "құралдарын",
+     "start": 5.24,
+     "end": 5.7
+    },
+    {
+     "text": "қою",
+     "start": 5.7,
+     "end": 5.92
+    },
+    {
+     "text": "арқылы",
+     "start": 5.92,
+     "end": 6.4
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 6.4,
+   "end": 7.63,
+   "words": [
+    {
+     "text": "жасалатын",
+     "start": 6.4,
+     "end": 7.4
+    },
+    {
+     "text": "әдіс",
+     "start": 7.4,
+     "end": 7.63
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 7.63,
+   "end": 9.861,
+   "words": [
+    {
+     "text": "Бұл",
+     "start": 7.63,
+     "end": 8.83
+    },
+    {
+     "text": "әдіс",
+     "start": 8.83,
+     "end": 9.03
+    },
+    {
+     "text": "бұлшықеттердің",
+     "start": 9.03,
+     "end": 9.861
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 9.861,
+   "end": 11.53,
+   "words": [
+    {
+     "text": "босаңсуына",
+     "start": 9.861,
+     "end": 10.47,
+     "style": "accent"
+    },
+    {
+     "text": "және",
+     "start": 10.47,
+     "end": 10.81
+    },
+    {
+     "text": "денедегі",
+     "start": 10.93,
+     "end": 11.53
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 11.53,
+   "end": 13.41,
+   "words": [
+    {
+     "text": "кернеудің",
+     "start": 11.53,
+     "end": 12.09,
+     "style": "box"
+    },
+    {
+     "text": "азайтылуына",
+     "start": 12.09,
+     "end": 12.77
+    },
+    {
+     "text": "бағытталған",
+     "start": 12.77,
+     "end": 13.41
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 13.41,
+   "end": 15.05,
+   "words": [
+    {
+     "text": "Бұл",
+     "start": 13.41,
+     "end": 14.07
+    },
+    {
+     "text": "процедура",
+     "start": 14.07,
+     "end": 14.61
+    },
+    {
+     "text": "мына",
+     "start": 14.61,
+     "end": 15.05
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 15.05,
+   "end": 16.33,
+   "words": [
+    {
+     "text": "жағдайларда",
+     "start": 15.05,
+     "end": 15.57
+    },
+    {
+     "text": "қолданылады",
+     "start": 15.57,
+     "end": 16.21
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 16.33,
+   "end": 19.11,
+   "words": [
+    {
+     "text": "Бұлшықеттердің",
+     "start": 16.33,
+     "end": 18.45
+    },
+    {
+     "text": "тартылуы",
+     "start": 18.45,
+     "end": 19.11
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 19.11,
+   "end": 20.53,
+   "words": [
+    {
+     "text": "арқа",
+     "start": 19.11,
+     "end": 19.777
+    },
+    {
+     "text": "мен",
+     "start": 19.777,
+     "end": 20.31
+    },
+    {
+     "text": "бел",
+     "start": 20.31,
+     "end": 20.53
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 20.53,
+   "end": 21.83,
+   "words": [
+    {
+     "text": "аймағындағы",
+     "start": 20.53,
+     "end": 21.17
+    },
+    {
+     "text": "жайсыздық",
+     "start": 21.17,
+     "end": 21.83
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 21.83,
+   "end": 24.33,
+   "words": [
+    {
+     "text": "мойын",
+     "start": 21.83,
+     "end": 23.03
+    },
+    {
+     "text": "мен",
+     "start": 23.03,
+     "end": 23.17
+    },
+    {
+     "text": "иықтың",
+     "start": 23.17,
+     "end": 23.71
+    },
+    {
+     "text": "керілуі",
+     "start": 23.71,
+     "end": 24.33
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 24.33,
+   "end": 26.25,
+   "words": [
+    {
+     "text": "бұлшықет",
+     "start": 24.33,
+     "end": 25.346
+    },
+    {
+     "text": "шаршауы",
+     "start": 25.346,
+     "end": 26.25
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 26.25,
+   "end": 28.71,
+   "words": [
+    {
+     "text": "қозғалыс",
+     "start": 26.25,
+     "end": 27.51
+    },
+    {
+     "text": "кезіндегі",
+     "start": 27.51,
+     "end": 28.05
+    },
+    {
+     "text": "жайсыздық",
+     "start": 28.05,
+     "end": 28.71
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 28.71,
+   "end": 29.83,
+   "words": [
+    {
+     "text": "Asyl",
+     "start": 28.71,
+     "end": 29.83,
+     "style": "box"
+    },
+    {
+     "text": "Ine",
+     "start": 29.83,
+     "end": 29.83,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 29.83,
+   "end": 31.25,
+   "words": [
+    {
+     "text": "медициналық",
+     "start": 29.83,
+     "end": 30.57
+    },
+    {
+     "text": "орталығында",
+     "start": 30.57,
+     "end": 31.25
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 31.25,
+   "end": 33.29,
+   "words": [
+    {
+     "text": "процедура",
+     "start": 31.25,
+     "end": 32.05
+    },
+    {
+     "text": "маманның",
+     "start": 32.05,
+     "end": 32.581,
+     "style": "accent"
+    },
+    {
+     "text": "тексеруінен",
+     "start": 32.581,
+     "end": 33.29,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 33.29,
+   "end": 33.65,
+   "words": [
+    {
+     "text": "кейін",
+     "start": 33.29,
+     "end": 33.65
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 33.65,
+   "end": 35.05,
+   "words": [
+    {
+     "text": "әр",
+     "start": 33.65,
+     "end": 33.99
+    },
+    {
+     "text": "пациенттің",
+     "start": 33.99,
+     "end": 34.57
+    },
+    {
+     "text": "жағдайына",
+     "start": 34.57,
+     "end": 35.05
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 35.05,
+   "end": 36.13,
+   "words": [
+    {
+     "text": "қарай",
+     "start": 35.05,
+     "end": 35.37
+    },
+    {
+     "text": "тағайындалады",
+     "start": 35.37,
+     "end": 36.13
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 36.13,
+   "end": 38.11,
+   "words": [
+    {
+     "text": "Процедураның",
+     "start": 36.13,
+     "end": 37.53
+    },
+    {
+     "text": "жарамдылығы",
+     "start": 37.53,
+     "end": 38.11
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 38.11,
+   "end": 39.67,
+   "words": [
+    {
+     "text": "мен",
+     "start": 38.11,
+     "end": 38.21
+    },
+    {
+     "text": "қауіпсіздігін",
+     "start": 38.21,
+     "end": 38.99,
+     "style": "box"
+    },
+    {
+     "text": "Asyl",
+     "start": 38.99,
+     "end": 39.423,
+     "style": "box"
+    },
+    {
+     "text": "Ine",
+     "start": 39.423,
+     "end": 39.67,
+     "style": "box"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 39.67,
+   "end": 40.91,
+   "words": [
+    {
+     "text": "медициналық",
+     "start": 39.67,
+     "end": 40.31
+    },
+    {
+     "text": "орталығының",
+     "start": 40.31,
+     "end": 40.91
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 40.91,
+   "end": 42.65,
+   "words": [
+    {
+     "text": "мамандары",
+     "start": 40.91,
+     "end": 41.43
+    },
+    {
+     "text": "пациенттің",
+     "start": 41.43,
+     "end": 42.31
+    },
+    {
+     "text": "жеке",
+     "start": 42.31,
+     "end": 42.65,
+     "style": "accent"
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 42.65,
+   "end": 44.35,
+   "words": [
+    {
+     "text": "жағдайына",
+     "start": 42.65,
+     "end": 43.15
+    },
+    {
+     "text": "қарап",
+     "start": 43.15,
+     "end": 43.47
+    },
+    {
+     "text": "анықтайтын",
+     "start": 43.47,
+     "end": 44.35
+    }
+   ],
+   "dot": false
+  },
+  {
+   "start": 44.35,
+   "end": 44.73,
+   "words": [
+    {
+     "text": "болады",
+     "start": 44.35,
+     "end": 44.73
+    }
+   ],
+   "dot": true
+  },
+  {
+   "start": 44.73,
+   "end": 46.91,
+   "words": [
+    {
+     "text": "Біз",
+     "start": 44.73,
+     "end": 45.31
+    },
+    {
+     "text": "сіздерді",
+     "start": 45.31,
+     "end": 45.81
+    },
+    {
+     "text": "күтеміз!",
+     "start": 45.81,
+     "end": 46.41,
+     "style": "accent"
+    }
+   ],
+   "dot": false
+  }
+ ],
+ "titles": [
+  {
+   "start": 0.06,
+   "end": 2.78,
+   "bold": "БАМБУК",
+   "italic": "банкасы",
+   "y": 0.14
+  },
+  {
+   "start": 13.41,
+   "end": 16.21,
+   "bold": "ҚАЙ КЕЗДЕ",
+   "italic": "қолданылады?",
+   "y": 0.14
+  },
+  {
+   "start": 28.71,
+   "end": 36.13,
+   "bold": "МАМАН",
+   "italic": "тағайындайды",
+   "y": 0.14
+  },
+  {
+   "start": 36.13,
+   "end": 44.73,
+   "bold": "ЖЕКЕ",
+   "italic": "жағдайға қарай",
+   "y": 0.14
+  },
+  {
+   "start": 44.73,
+   "end": 46.41,
+   "bold": "БІЗ СІЗДІ",
+   "italic": "күтеміз!",
+   "y": 0.14
+  }
+ ],
+ "sfx": [
+  {
+   "src": "whoosh.wav",
+   "at": 0,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 13.21,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 28.51,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 35.93,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 44.53,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 2.58,
+   "volume": 0.35
+  },
+  {
+   "src": "whoosh.wav",
+   "at": 16.03,
+   "volume": 0.35
+  },
+  {
+   "src": "pop.wav",
+   "at": 16.33,
+   "volume": 0.4
+  },
+  {
+   "src": "pop.wav",
+   "at": 19.11,
+   "volume": 0.4
+  },
+  {
+   "src": "pop.wav",
+   "at": 21.83,
+   "volume": 0.4
+  },
+  {
+   "src": "pop.wav",
+   "at": 24.33,
+   "volume": 0.4
+  },
+  {
+   "src": "pop.wav",
+   "at": 26.25,
+   "volume": 0.4
+  },
+  {
+   "src": "pop.wav",
+   "at": 4.8,
+   "volume": 0.4
+  }
+ ],
+ "lists": [
+  {
+   "start": 16.229999999999997,
+   "end": 28.66,
+   "bold": "ҚАЙ КЕЗДЕ",
+   "italic": "қолданылады",
+   "icon": "num",
+   "items": [
+    {
+     "text": "Бұлшықеттің тартылуы",
+     "at": 16.33
+    },
+    {
+     "text": "Арқа мен бел жайсыздығы",
+     "at": 19.11
+    },
+    {
+     "text": "Мойын мен иықтың керілуі",
+     "at": 21.83
+    },
+    {
+     "text": "Бұлшықет шаршауы",
+     "at": 24.33
+    },
+    {
+     "text": "Қозғалыстағы жайсыздық",
+     "at": 26.25
+    }
+   ]
+  }
+ ],
+ "icons": [],
+ "stats": [],
+ "bodymaps": [],
+ "xsections": [
+  {
+   "start": 2.78,
+   "end": 13.36,
+   "placeAt": 4.8,
+   "suctionAt": 5.7,
+   "relaxAt": 9.03,
+   "bold": "БАМБУК",
+   "italic": "банкасы"
+  }
+ ],
+ "endCard": {
+  "at": 46.83,
+  "brand": "Asyl Ine",
+  "tagline": "ШЫҒЫС МЕДИЦИНАСЫ ОРТАЛЫҒЫ",
+  "line": "Бамбук банкасы — маман тағайындауымен",
+  "wish": "Деніңіз сау болсын!",
+  "logo": true
+ },
+ "duration": 49.53,
+ "music": {
+  "src": "p13/music.wav",
+  "volume": 0.3,
+  "duckTo": 0.33,
+  "duck": [
+   [
+    -0.02,
+    46.53
+   ]
+  ]
+ }
+}

@@ -11,6 +11,7 @@ import {KaspiBanner, KaspiSpec, Bubbles, BubblesSpec} from '../style/KaspiBanner
 import {PointWords, PointGroup} from '../style/PointWords';
 import {ReviewClip, ReviewCard, AdvCard, AdvSpec, SlamText, SlamSpec} from '../style/Review';
 import {BodyMap, BodyMapSpec} from '../style/BodyMap';
+import {CrossSection, XSectionSpec} from '../style/CrossSection';
 
 ensureFonts();
 
@@ -35,6 +36,7 @@ export type EditSpec = {
   adv?: AdvSpec[];
   slams?: SlamSpec[];
   bodymaps?: BodyMapSpec[];
+  xsections?: XSectionSpec[];
   stats?: {start: number; end: number; from: number; to: number; caption: string}[];
   music: {src: string; volume: number; duckTo?: number; duck?: [number, number][]};
   sfx?: {src: string; at: number; volume: number}[];
@@ -83,6 +85,7 @@ export const Edit: React.FC<{spec: EditSpec}> = ({spec}) => {
         {(spec.adv ?? []).map((x, i) => <AdvCard key={i} {...x} />)}
         {(spec.slams ?? []).map((x, i) => <SlamText key={i} {...x} />)}
         {(spec.bodymaps ?? []).map((x, i) => <BodyMap key={i} {...x} />)}
+        {(spec.xsections ?? []).map((x, i) => <CrossSection key={i} {...x} />)}
         {(spec.kaspi ?? []).map((x, i) => <KaspiBanner key={i} {...x} />)}
         <Subtitles phrases={spec.phrases} />
       </Sequence>
