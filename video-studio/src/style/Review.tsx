@@ -53,6 +53,7 @@ export const AdvCard: React.FC<AdvSpec> = ({start, end, num, big, unit, title, i
   const a = sp(start), b = sp(start + 0.15, 9), c = sp(start + 0.45);
   const flash = interpolate(t - start, [0, 0.15], [0.5, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const out = interpolate(t, [end - 0.15, end], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const ts = Math.min(big ? 84 : 110, 1000 / (0.68 * (title.length + italic.length + 1)));  // one line, always fits
   const n = big && /^\d+$/.test(big) ? Math.round(interpolate(t - start - 0.1, [0, 0.6], [1, Number(big)], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})) : big;
   return (
     <AbsoluteFill style={{background: `radial-gradient(circle at 50% 42%, #1F8A70 0%, ${T.greenDeep} 55%, #0B4A3C 100%)`, opacity: out}}>
@@ -65,8 +66,8 @@ export const AdvCard: React.FC<AdvSpec> = ({start, end, num, big, unit, title, i
           </div>
         ) : null}
         <div style={{marginTop: big ? 40 : 60, opacity: c, transform: `translateY(${(1 - c) * 40}px)`, whiteSpace: 'nowrap'}}>
-          <span style={{fontFamily: T.sans, fontWeight: 800, fontSize: big ? 84 : 110, color: T.white}}>{title}</span>
-          <span style={{fontFamily: T.serif, fontStyle: 'italic', fontWeight: 700, fontSize: big ? 84 : 110, color: T.mint, marginLeft: 20}}>{italic}</span>
+          <span style={{fontFamily: T.sans, fontWeight: 800, fontSize: ts, color: T.white}}>{title}</span>
+          <span style={{fontFamily: T.serif, fontStyle: 'italic', fontWeight: 700, fontSize: ts, color: T.mint, marginLeft: 20}}>{italic}</span>
         </div>
         <div style={{marginTop: 34, width: 860, fontFamily: T.sans, fontWeight: 700, fontSize: 46, lineHeight: 1.3, color: '#D7EFE7', opacity: c}}>{line}</div>
       </div>
@@ -86,7 +87,7 @@ export const SlamText: React.FC<SlamSpec> = ({start, end, text, sub}) => {
   const flash = interpolate(t - start, [0, 0.12], [0.75, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const d = t - start;
   const shake = d < 0.3 ? (1 - d / 0.3) * 16 : 0;
-  const size = Math.min(150, 980 / (0.78 * text.length));
+  const size = Math.min(150, 900 / (0.92 * text.length));  // wide Kazakh caps must fit
   return (
     <AbsoluteFill>
       <AbsoluteFill style={{background: 'radial-gradient(circle at 50% 55%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.45) 100%)'}} />
