@@ -23,8 +23,8 @@ EMPH = {'бамбук': 'box', 'банкасымен': 'accent', 'босаңсу
         'маманның': 'accent', 'тексеруінен': 'box', 'қауіпсіздігін': 'box', 'жеке': 'accent', 'күтеміз': 'accent'}
 PUNCH = {'денедегі', 'бұл', 'пациенттің', 'біз'}
 INSERTS = {}
-VO = [('бұлшықеттердің', 'p09/IMG_2551', 0.0, 18), ('мойын', 'p01/IMG_1866', 0.5, 18), ('бұлшықет', 'p09/IMG_2550', 0.0, 18),
-      ('asyl', 'p09/IMG_2281', 0.0, 0), ('процедура', 'p01/IMG_1877', 0.3, 0), ('пациенттің', 'p09/IMG_2558', 0.5, 0)]
+# B-roll rule: every B-roll clip is used once, in one video only, then deleted. Only the new clip (BROLL_new) here.
+VO = [('бұлшықеттердің', 'bg:green', 0.0, 0), ('asyl', 'p13/BROLL_new', 1.75, 0)]
 
 norm = lambda w: re.sub(r'[^\wәғқңөұүһі]', '', w.lower())
 _len = {}
@@ -99,8 +99,8 @@ for idx, (cid, mode, voice, script, win) in enumerate(CLIPS):
             if on and on[0] == 'speaker': on = None
             if mode == 'voiceover' or on:
                 if on is None: on = ['p09/IMG_2557', 0.0, 0]
-                src, s0 = on[0] + '.mp4', on[1]; bl = on[2] if len(on) > 2 else 0
-                s0 = min(s0, max(0, clip_len(src) - (x1 - x0) - 0.05))
+                src, s0 = (on[0] if on[0].startswith('bg:') else on[0] + '.mp4'), on[1]; bl = on[2] if len(on) > 2 else 0
+                if not src.startswith('bg:'): s0 = min(s0, max(0, clip_len(src) - (x1 - x0) - 0.05))
                 vid = {'src': src, 'from': round(s0, 3), 'zoom': [1.1, 1.14] if bl else [1.0, 1.06], 'blur': bl}
                 on[1] = s0 + (x1 - x0)
             else:
@@ -160,5 +160,5 @@ spec['music'] = {'src': 'p13/music.wav', 'volume': 0.30, 'duckTo': 0.33, 'duck':
 json.dump(spec, open(HERE / '../../src/edit/p13.json', 'w'), ensure_ascii=False, indent=1)
 print(f"segs {len(spec['segs'])}, phrases {len(spec['phrases'])}, duration {spec['duration']:.1f}s, end card at {end_at}")
 for g in spec['segs']:
-    need = g['video']['from'] + g['dur']; L = clip_len(g['video']['src'])
+    L = 999 if g['video']['src'].startswith('bg:') else clip_len(g['video']['src']); need = g['video']['from'] + g['dur']
     print('%6.2f %5.2f %-24s from %5.2f %s' % (g['at'], g['dur'], g['video']['src'], g['video']['from'], 'TOO SHORT (%.1f)' % L if need > L - 0.03 else ''))

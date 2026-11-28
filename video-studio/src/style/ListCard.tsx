@@ -15,14 +15,15 @@ export const ListCard: React.FC<ListSpec> = ({start, end, bold, italic, icon, it
   const sp = (at: number, d = 12) => spring({frame: Math.round((t - at) * fps), fps, config: {damping: d, stiffness: 200}});
   const panel = sp(start);
   const out = interpolate(t, [end - 0.2, end], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const hs = Math.min(92, 980 / (0.7 * (bold.length + italic.length + 2)));  // header always fits on one line
   const current = items.reduce((k, it, i) => (t >= it.at ? i : k), -1);
   return (
     <AbsoluteFill style={{opacity: out}}>
       <div style={{position: 'absolute', top: 250, width: '100%', textAlign: 'center', whiteSpace: 'nowrap',
         transform: `scale(${interpolate(panel, [0, 1], [1.5, 1])})`, opacity: panel, textShadow: '0 4px 20px rgba(0,0,0,0.5)'}}>
-        <span style={{fontFamily: T.sans, fontWeight: 800, fontSize: 92, color: T.white}}>{bold}</span>
-        {italic ? <span style={{fontFamily: T.serif, fontStyle: 'italic', fontWeight: 700, fontSize: 92, color: T.mint, marginLeft: 22}}>{italic}</span> : null}
-        <span style={{color: T.mint, fontSize: 92}}>.</span>
+        <span style={{fontFamily: T.sans, fontWeight: 800, fontSize: hs, color: T.white}}>{bold}</span>
+        {italic ? <span style={{fontFamily: T.serif, fontStyle: 'italic', fontWeight: 700, fontSize: hs, color: T.mint, marginLeft: 22}}>{italic}</span> : null}
+        <span style={{color: T.mint, fontSize: hs}}>.</span>
       </div>
       <div style={{position: 'absolute', left: 70, right: 70, top: 430, padding: '34px 38px', borderRadius: 40,
         background: 'rgba(6,40,33,0.72)', border: '3px solid rgba(120,206,183,0.45)', backdropFilter: 'blur(6px)',

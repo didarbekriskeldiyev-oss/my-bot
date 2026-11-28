@@ -85,104 +85,32 @@
   },
   {
    "at": 16.33,
-   "dur": 5.46,
+   "dur": 12.34,
    "voice": {
     "src": "p13/voice_IMG_2847.wav",
     "from": 0
    },
    "video": {
-    "src": "p09/IMG_2551.mp4",
+    "src": "bg:green",
     "from": 0.0,
     "zoom": [
-     1.1,
-     1.14
+     1.0,
+     1.06
     ],
-    "blur": 18
-   },
-   "flash": true
-  },
-  {
-   "at": 21.79,
-   "dur": 2.5,
-   "voice": {
-    "src": "p13/voice_IMG_2847.wav",
-    "from": 5.46
-   },
-   "video": {
-    "src": "p01/IMG_1866.mp4",
-    "from": 0.5,
-    "zoom": [
-     1.1,
-     1.14
-    ],
-    "blur": 18
-   },
-   "flash": true
-  },
-  {
-   "at": 24.29,
-   "dur": 4.38,
-   "voice": {
-    "src": "p13/voice_IMG_2847.wav",
-    "from": 7.96
-   },
-   "video": {
-    "src": "p09/IMG_2550.mp4",
-    "from": 0.0,
-    "zoom": [
-     1.1,
-     1.14
-    ],
-    "blur": 18
+    "blur": 0
    },
    "flash": true
   },
   {
    "at": 28.67,
-   "dur": 2.54,
+   "dur": 7.46,
    "voice": {
     "src": "p13/voice_IMG_2847.wav",
     "from": 12.34
    },
    "video": {
-    "src": "p09/IMG_2281.mp4",
-    "from": 0.0,
-    "zoom": [
-     1.0,
-     1.06
-    ],
-    "blur": 0
-   },
-   "flash": true
-  },
-  {
-   "at": 31.21,
-   "dur": 2.74,
-   "voice": {
-    "src": "p13/voice_IMG_2847.wav",
-    "from": 14.88
-   },
-   "video": {
-    "src": "p01/IMG_1877.mp4",
-    "from": 0.3,
-    "zoom": [
-     1.0,
-     1.06
-    ],
-    "blur": 0
-   },
-   "flash": true
-  },
-  {
-   "at": 33.95,
-   "dur": 2.18,
-   "voice": {
-    "src": "p13/voice_IMG_2847.wav",
-    "from": 17.62
-   },
-   "video": {
-    "src": "p09/IMG_2558.mp4",
-    "from": 0.5,
+    "src": "p13/BROLL_new.mp4",
+    "from": 1.657,
     "zoom": [
      1.0,
      1.06

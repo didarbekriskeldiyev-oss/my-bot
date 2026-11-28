@@ -46,6 +46,8 @@ export type EditSpec = {
 const Clip: React.FC<{s: Seg}> = ({s}) => {
   const f = useCurrentFrame();
   if (s.video.card) return <ReviewClip src={s.video.src} from={s.video.from} card={s.video.card} shake={s.video.shake} />;
+  // 'bg:green' = no footage, branded animated background (used when there is no fresh B-roll left)
+  if (s.video.src === 'bg:green') return <AbsoluteFill style={{background: `radial-gradient(circle at ${50 + 10 * Math.sin(f / 40)}% 40%, #22947A 0%, #156E5A 50%, #0B3F33 100%)`}} />;
   const {fps} = useVideoConfig();
   const [z0, z1] = s.video.zoom ?? [1, 1];
   const z = interpolate(f, [0, s.dur * fps], [z0, z1]);
